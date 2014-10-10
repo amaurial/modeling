@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Events" version="3">
+  <DEPS>
+    <ID name="Events" mc="Component" uid="484ebb76-e434-4c90-abeb-1cc07b973ef2"/>
+    <COMPID name="Event" mc="Class" uid="e888c47c-88f0-42c7-8843-93e0ef0dff4f"/>
+    <COMPID name="Event handler" mc="Class" uid="ba60fe44-233a-411b-8959-b419b9d61abf"/>
+    <COMPID name="EventRouter" mc="Class" uid="e508ec02-4f0e-4b16-8c39-78bbbced53ad"/>
+    <COMPID name="EventType" mc="Class" uid="24ed0863-3c89-4d9a-9b1d-b70e92d53d21"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Events" mc="Component" uid="484ebb76-e434-4c90-abeb-1cc07b973ef2"/>
+    <PID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Events]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Event handler" mc="Class" uid="ba60fe44-233a-411b-8959-b419b9d61abf"/>
+        <COMPID name="Event" mc="Class" uid="e888c47c-88f0-42c7-8843-93e0ef0dff4f"/>
+        <COMPID name="EventType" mc="Class" uid="24ed0863-3c89-4d9a-9b1d-b70e92d53d21"/>
+        <COMPID name="EventRouter" mc="Class" uid="e508ec02-4f0e-4b16-8c39-78bbbced53ad"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

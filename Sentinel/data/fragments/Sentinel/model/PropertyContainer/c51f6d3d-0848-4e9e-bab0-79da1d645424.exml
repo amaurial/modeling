@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Sentinel" version="3">
+  <DEPS>
+    <ID name="Sentinel" mc="PropertyContainer" uid="c51f6d3d-0848-4e9e-bab0-79da1d645424"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Sentinel" mc="PropertyContainer" uid="c51f6d3d-0848-4e9e-bab0-79da1d645424"/>
+    <PID name="Sentinel" mc="AnalystProject" uid="58814d1d-f449-4f48-b32b-c268e3995f26"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Sentinel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

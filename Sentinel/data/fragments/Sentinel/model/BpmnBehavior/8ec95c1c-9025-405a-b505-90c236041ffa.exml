@@ -1,0 +1,1154 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="BPMN" version="3">
+  <DEPS>
+    <ID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+    <COMPID name="CreditCheck" mc="BpmnProcessCollaborationDiagram" uid="0398b236-83e5-4959-a058-97a1c06645b1"/>
+    <COMPID name="Major Process" mc="BpmnProcessCollaborationDiagram" uid="1b5c4303-c578-47bb-a834-5cdfb7296582"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+    <PID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[BPMN]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="RootElement">
+        <OBJECT>
+          <ID name="Process" mc="BpmnProcess" uid="591bf4bc-e704-449a-935c-29b251c1f9bf"/>
+          <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+          <ATTRIBUTES>
+            <ATT name="ProcessType">NoneProcess</ATT>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="IsExecutable">OUndefined</ATT>
+            <ATT name="Name"><![CDATA[Process]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="LaneSet">
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="f1cebae4-88ad-4915-b453-15325da14c62"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="4c5db0b2-8a4a-4dee-a265-30d47d3e56d5"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Session Control" mc="BpmnLane" uid="1674274b-25ce-4f68-a79a-dc5165e52442"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Session Control]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="ChildLaneSet">
+                          <OBJECT>
+                            <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="c272027c-48ef-42d2-9a3f-260ebdf39ea9"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                            <ATTRIBUTES>
+                              <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Session request" mc="BpmnStartEvent" uid="485b7aae-10b2-4946-abab-83a749402ea2"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Accept session" mc="BpmnTask" uid="8caef86f-0a89-4416-8d77-6d337bb1b6cb"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Accepted?" mc="BpmnExclusiveGateway" uid="ba5c97d2-8cf0-4874-b151-2a868ffca883"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Start session" mc="BpmnTask" uid="85b44b39-7e9a-4ece-8ab2-9474d13f4b40"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="End session" mc="BpmnEndEvent" uid="4952de20-c354-437b-9e73-c378a0936367"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Started?" mc="BpmnExclusiveGateway" uid="978796b2-0f68-4610-9161-1aeae93cc51d"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Notify" mc="BpmnSendTask" uid="ebc2b393-0c90-407a-a3af-688adb0f0808"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Success?" mc="BpmnExclusiveGateway" uid="191929c8-f3a8-473c-aa24-f91a32b45d69"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="CreditCheckEvent" mc="BpmnIntermediateCatchEvent" uid="1d465fcd-cdea-4951-9804-f3c13761c3af"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Credit Check" mc="BpmnCallActivity" uid="6674e450-dcd9-4b35-a126-08b34650b083"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="adaacf85-5fef-4afa-9168-a1ac367e1a6c"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Mediation" mc="BpmnLane" uid="403031eb-6c9f-4b0a-bb1d-9433583b6731"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Mediation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="b5eb3150-ba2b-46d8-967d-6646cae491d0"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Online Chargin System" mc="BpmnLane" uid="a6d05ea7-3921-4b4e-8530-1d7a54d1dfc9"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Online Chargin System]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="9404c958-ca6e-4ce8-8167-a1a09cea5ed5"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Session Control" mc="BpmnLane" uid="95f17ac6-4473-4330-9a11-fe83d2c06b5a"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Session Control]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Start Event" mc="BpmnStartEvent" uid="f3471a84-9b61-45ec-b524-79950722e58c"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="CreditCheck Failed" mc="BpmnIntermediateThrowEvent" uid="93634124-8712-4166-b299-c7480f7af884"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check Credit Success" mc="BpmnIntermediateThrowEvent" uid="2babe673-eeac-4df2-936a-db600b76ef94"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Query network initial credit" mc="BpmnSendTask" uid="0c4742c7-5181-4ff6-8f8e-a7578cefb2ac"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Has enough network credit?" mc="BpmnReceiveTask" uid="db2d951c-9096-4513-b14a-0b210c1ed781"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Query session initial credit" mc="BpmnSendTask" uid="a76503c1-f915-41ea-b75d-6d70a433cf1e"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Has enough session initial credit?" mc="BpmnReceiveTask" uid="8dd9f1d3-0bbb-4035-91c1-cb0815116155"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Query Subscriber Initial Credit" mc="BpmnSendTask" uid="9d3ad614-31c1-4e96-bc18-e7bef3b75948"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Has enough subscriber initial credit?" mc="BpmnReceiveTask" uid="0057f1a1-0baf-42d3-9ec9-6f2af3c717e5"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="016b3067-1409-4f09-8d59-5bcbbda8db00"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Online Chargin Service OCS" mc="BpmnLane" uid="7186008a-e437-413f-ad87-780a26e598ad"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Online Chargin Service OCS]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Check Initial Credit" mc="BpmnReceiveTask" uid="9b33b3f4-69d0-4450-9139-f8d4c935b22e"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Answer credit Information" mc="BpmnSendTask" uid="a1db4774-42a8-4c01-8e4b-b3b7f04babf1"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="FlowElement">
+              <OBJECT>
+                <ID name="Session request" mc="BpmnStartEvent" uid="485b7aae-10b2-4946-abab-83a749402ea2"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Session request]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Accept session" mc="BpmnTask" uid="8caef86f-0a89-4416-8d77-6d337bb1b6cb"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Accept session]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Accepted?" mc="BpmnExclusiveGateway" uid="ba5c97d2-8cf0-4874-b151-2a868ffca883"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Accepted?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow" mc="BpmnSequenceFlow" uid="ec034252-d6d5-40ba-8cac-15a69ced912f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Session request" mc="BpmnStartEvent" uid="485b7aae-10b2-4946-abab-83a749402ea2"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Accept session" mc="BpmnTask" uid="8caef86f-0a89-4416-8d77-6d337bb1b6cb"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow1" mc="BpmnSequenceFlow" uid="fb17179e-e738-412d-b4c6-2c5885743d87"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Accept session" mc="BpmnTask" uid="8caef86f-0a89-4416-8d77-6d337bb1b6cb"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Accepted?" mc="BpmnExclusiveGateway" uid="ba5c97d2-8cf0-4874-b151-2a868ffca883"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Start session" mc="BpmnTask" uid="85b44b39-7e9a-4ece-8ab2-9474d13f4b40"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Start session]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow2" mc="BpmnSequenceFlow" uid="7143bd7c-98ec-497e-bb31-dc01801dd86f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">true</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[Yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Accepted?" mc="BpmnExclusiveGateway" uid="ba5c97d2-8cf0-4874-b151-2a868ffca883"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Start session" mc="BpmnTask" uid="85b44b39-7e9a-4ece-8ab2-9474d13f4b40"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="End session" mc="BpmnEndEvent" uid="4952de20-c354-437b-9e73-c378a0936367"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[End session]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow3" mc="BpmnSequenceFlow" uid="1ed9fff7-93a9-4033-b737-6404c53d1014"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Accepted?" mc="BpmnExclusiveGateway" uid="ba5c97d2-8cf0-4874-b151-2a868ffca883"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Notify" mc="BpmnSendTask" uid="ebc2b393-0c90-407a-a3af-688adb0f0808"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Started?" mc="BpmnExclusiveGateway" uid="978796b2-0f68-4610-9161-1aeae93cc51d"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Started?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow4" mc="BpmnSequenceFlow" uid="7c4ab27a-bf33-41a3-ba37-e974a8dd7dc8"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Start session" mc="BpmnTask" uid="85b44b39-7e9a-4ece-8ab2-9474d13f4b40"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Started?" mc="BpmnExclusiveGateway" uid="978796b2-0f68-4610-9161-1aeae93cc51d"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Notify" mc="BpmnSendTask" uid="ebc2b393-0c90-407a-a3af-688adb0f0808"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Notify]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow5" mc="BpmnSequenceFlow" uid="0b6e5446-10f8-4810-986f-629cf6578a54"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Notify" mc="BpmnSendTask" uid="ebc2b393-0c90-407a-a3af-688adb0f0808"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End session" mc="BpmnEndEvent" uid="4952de20-c354-437b-9e73-c378a0936367"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow6" mc="BpmnSequenceFlow" uid="115f986f-1f28-45a9-ae52-e2b3314d3e6a"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow6]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Started?" mc="BpmnExclusiveGateway" uid="978796b2-0f68-4610-9161-1aeae93cc51d"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Notify" mc="BpmnSendTask" uid="ebc2b393-0c90-407a-a3af-688adb0f0808"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow7" mc="BpmnSequenceFlow" uid="832a1781-766e-4fd1-9e23-713becb2032e"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow7]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Started?" mc="BpmnExclusiveGateway" uid="978796b2-0f68-4610-9161-1aeae93cc51d"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Credit Check" mc="BpmnCallActivity" uid="6674e450-dcd9-4b35-a126-08b34650b083"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Success?" mc="BpmnExclusiveGateway" uid="191929c8-f3a8-473c-aa24-f91a32b45d69"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Success?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow9" mc="BpmnSequenceFlow" uid="5e227c3f-e3e9-4cf9-a156-d74eadf0963f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow9]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Success?" mc="BpmnExclusiveGateway" uid="191929c8-f3a8-473c-aa24-f91a32b45d69"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Notify" mc="BpmnSendTask" uid="ebc2b393-0c90-407a-a3af-688adb0f0808"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Start Event" mc="BpmnStartEvent" uid="f3471a84-9b61-45ec-b524-79950722e58c"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Start Event]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="CreditCheck Failed" mc="BpmnIntermediateThrowEvent" uid="93634124-8712-4166-b299-c7480f7af884"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[CreditCheck Failed]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check Credit Success" mc="BpmnIntermediateThrowEvent" uid="2babe673-eeac-4df2-936a-db600b76ef94"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Check Credit Success]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow19" mc="BpmnSequenceFlow" uid="80822afe-a188-42ca-89dd-116578034c4b"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Start Event" mc="BpmnStartEvent" uid="f3471a84-9b61-45ec-b524-79950722e58c"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Query network initial credit" mc="BpmnSendTask" uid="0c4742c7-5181-4ff6-8f8e-a7578cefb2ac"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="CreditCheckEvent" mc="BpmnIntermediateCatchEvent" uid="1d465fcd-cdea-4951-9804-f3c13761c3af"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[CreditCheckEvent]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow8" mc="BpmnSequenceFlow" uid="fd7b8a1c-170f-406e-a669-a6ef5afa0b48"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow8]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Credit Check" mc="BpmnCallActivity" uid="6674e450-dcd9-4b35-a126-08b34650b083"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="CreditCheckEvent" mc="BpmnIntermediateCatchEvent" uid="1d465fcd-cdea-4951-9804-f3c13761c3af"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow20" mc="BpmnSequenceFlow" uid="d650b1c4-bbcf-40c5-b5ed-92f5b74803f5"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow20]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="CreditCheckEvent" mc="BpmnIntermediateCatchEvent" uid="1d465fcd-cdea-4951-9804-f3c13761c3af"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Success?" mc="BpmnExclusiveGateway" uid="191929c8-f3a8-473c-aa24-f91a32b45d69"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Query network initial credit" mc="BpmnSendTask" uid="0c4742c7-5181-4ff6-8f8e-a7578cefb2ac"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Query network initial credit]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check Initial Credit" mc="BpmnReceiveTask" uid="9b33b3f4-69d0-4450-9139-f8d4c935b22e"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check Initial Credit]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Answer credit Information" mc="BpmnSendTask" uid="a1db4774-42a8-4c01-8e4b-b3b7f04babf1"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Answer credit Information]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow21" mc="BpmnSequenceFlow" uid="a0a397da-f6d8-479b-8222-e24b0bfcd07f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow21]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check Initial Credit" mc="BpmnReceiveTask" uid="9b33b3f4-69d0-4450-9139-f8d4c935b22e"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Answer credit Information" mc="BpmnSendTask" uid="a1db4774-42a8-4c01-8e4b-b3b7f04babf1"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Has enough network credit?" mc="BpmnReceiveTask" uid="db2d951c-9096-4513-b14a-0b210c1ed781"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Has enough network credit?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DefaultFlow">
+                    <REFOBJ>
+                      <ID name="Sequence Flow11" mc="BpmnSequenceFlow" uid="2a9b0f77-7b1b-42fb-9512-2f49b8abcd68"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow10" mc="BpmnSequenceFlow" uid="3e1c70ad-e163-4c59-9ada-452edc02760b"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Has enough network credit?" mc="BpmnReceiveTask" uid="db2d951c-9096-4513-b14a-0b210c1ed781"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="CreditCheck Failed" mc="BpmnIntermediateThrowEvent" uid="93634124-8712-4166-b299-c7480f7af884"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow11" mc="BpmnSequenceFlow" uid="2a9b0f77-7b1b-42fb-9512-2f49b8abcd68"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[Yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Has enough network credit?" mc="BpmnReceiveTask" uid="db2d951c-9096-4513-b14a-0b210c1ed781"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Query session initial credit" mc="BpmnSendTask" uid="a76503c1-f915-41ea-b75d-6d70a433cf1e"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Query session initial credit" mc="BpmnSendTask" uid="a76503c1-f915-41ea-b75d-6d70a433cf1e"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Query session initial credit]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Has enough session initial credit?" mc="BpmnReceiveTask" uid="8dd9f1d3-0bbb-4035-91c1-cb0815116155"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Has enough session initial credit?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow12" mc="BpmnSequenceFlow" uid="2d49b87a-50c1-43b5-ac0b-f19a84214651"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow12]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Has enough session initial credit?" mc="BpmnReceiveTask" uid="8dd9f1d3-0bbb-4035-91c1-cb0815116155"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="CreditCheck Failed" mc="BpmnIntermediateThrowEvent" uid="93634124-8712-4166-b299-c7480f7af884"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Query Subscriber Initial Credit" mc="BpmnSendTask" uid="9d3ad614-31c1-4e96-bc18-e7bef3b75948"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Query Subscriber Initial Credit]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow13" mc="BpmnSequenceFlow" uid="b606ab68-ca31-434f-afa3-149edb55894b"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow13]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Has enough session initial credit?" mc="BpmnReceiveTask" uid="8dd9f1d3-0bbb-4035-91c1-cb0815116155"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Query Subscriber Initial Credit" mc="BpmnSendTask" uid="9d3ad614-31c1-4e96-bc18-e7bef3b75948"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Has enough subscriber initial credit?" mc="BpmnReceiveTask" uid="0057f1a1-0baf-42d3-9ec9-6f2af3c717e5"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Has enough subscriber initial credit?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DefaultFlow">
+                    <REFOBJ>
+                      <ID name="Sequence Flow15" mc="BpmnSequenceFlow" uid="71b54df6-aeb9-4a2c-a11a-fb680c51bec6"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow14" mc="BpmnSequenceFlow" uid="02589e4f-7f86-4d85-8f38-f4b4b8ec1f79"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow14]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Has enough subscriber initial credit?" mc="BpmnReceiveTask" uid="0057f1a1-0baf-42d3-9ec9-6f2af3c717e5"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="CreditCheck Failed" mc="BpmnIntermediateThrowEvent" uid="93634124-8712-4166-b299-c7480f7af884"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow15" mc="BpmnSequenceFlow" uid="71b54df6-aeb9-4a2c-a11a-fb680c51bec6"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[Yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow15]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Has enough subscriber initial credit?" mc="BpmnReceiveTask" uid="0057f1a1-0baf-42d3-9ec9-6f2af3c717e5"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check Credit Success" mc="BpmnIntermediateThrowEvent" uid="2babe673-eeac-4df2-936a-db600b76ef94"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Credit Check" mc="BpmnCallActivity" uid="6674e450-dcd9-4b35-a126-08b34650b083"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Credit Check]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="CalledProcess">
+                    <REFOBJ>
+                      <ID name="Credit Check" mc="BpmnProcess" uid="c04162f0-b519-42a0-84bc-a3930a9a073b"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Product">
+              <COMPID name="Major Process" mc="BpmnProcessCollaborationDiagram" uid="1b5c4303-c578-47bb-a834-5cdfb7296582"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Collaboration" mc="BpmnCollaboration" uid="07aafb3e-5fa8-410e-b6e3-a4ec0ed37eec"/>
+          <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+          <ATTRIBUTES>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="Name"><![CDATA[Collaboration]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="MessageFlow">
+              <OBJECT>
+                <ID name="Credit control request" mc="BpmnMessageFlow" uid="b6310650-167a-4809-9ec1-f38ea02f0fc7"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Credit control request]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Query network initial credit" mc="BpmnSendTask" uid="0c4742c7-5181-4ff6-8f8e-a7578cefb2ac"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check Initial Credit" mc="BpmnReceiveTask" uid="9b33b3f4-69d0-4450-9139-f8d4c935b22e"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Credit control answer" mc="BpmnMessageFlow" uid="c315f8bb-0830-4547-bec4-998d806e8c6f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Credit control answer]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Answer credit Information" mc="BpmnSendTask" uid="a1db4774-42a8-4c01-8e4b-b3b7f04babf1"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Has enough network credit?" mc="BpmnReceiveTask" uid="db2d951c-9096-4513-b14a-0b210c1ed781"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Credit control request" mc="BpmnMessageFlow" uid="5a4c4aba-b678-4e2a-904c-c9288c0b9e96"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Credit control request]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Query session initial credit" mc="BpmnSendTask" uid="a76503c1-f915-41ea-b75d-6d70a433cf1e"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check Initial Credit" mc="BpmnReceiveTask" uid="9b33b3f4-69d0-4450-9139-f8d4c935b22e"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Credit control answer" mc="BpmnMessageFlow" uid="7932813f-e6ca-495f-8dc4-71f204724f5f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Credit control answer]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Answer credit Information" mc="BpmnSendTask" uid="a1db4774-42a8-4c01-8e4b-b3b7f04babf1"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Has enough session initial credit?" mc="BpmnReceiveTask" uid="8dd9f1d3-0bbb-4035-91c1-cb0815116155"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Credit control request" mc="BpmnMessageFlow" uid="4fa3d1e5-1fee-4e22-b78a-8e7d92173c6c"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Credit control request]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Query Subscriber Initial Credit" mc="BpmnSendTask" uid="9d3ad614-31c1-4e96-bc18-e7bef3b75948"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check Initial Credit" mc="BpmnReceiveTask" uid="9b33b3f4-69d0-4450-9139-f8d4c935b22e"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Credit control answer" mc="BpmnMessageFlow" uid="c36bebb2-2e9d-46cd-be6d-5bb30a7d4fde"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Credit control answer]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Answer credit Information" mc="BpmnSendTask" uid="a1db4774-42a8-4c01-8e4b-b3b7f04babf1"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Has enough subscriber initial credit?" mc="BpmnReceiveTask" uid="0057f1a1-0baf-42d3-9ec9-6f2af3c717e5"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Credit Check" mc="BpmnProcess" uid="c04162f0-b519-42a0-84bc-a3930a9a073b"/>
+          <PID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+          <ATTRIBUTES>
+            <ATT name="ProcessType">NoneProcess</ATT>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="IsExecutable">OUndefined</ATT>
+            <ATT name="Name"><![CDATA[Credit Check]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Product">
+              <COMPID name="CreditCheck" mc="BpmnProcessCollaborationDiagram" uid="0398b236-83e5-4959-a058-97a1c06645b1"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

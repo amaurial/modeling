@@ -1,0 +1,1405 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="BPMN" version="3">
+  <DEPS>
+    <ID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+    <COMPID name="Process Bpmn Process diagram" mc="BpmnProcessCollaborationDiagram" uid="5290a15a-f890-435a-946d-be354d4462da"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+    <PID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[BPMN]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="RootElement">
+        <OBJECT>
+          <ID name="Process" mc="BpmnProcess" uid="7e70630f-550c-4819-984b-312f248beee3"/>
+          <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+          <ATTRIBUTES>
+            <ATT name="ProcessType">NoneProcess</ATT>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="IsExecutable">OUndefined</ATT>
+            <ATT name="Name"><![CDATA[Process]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="LaneSet">
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="f119227d-dc88-42d8-99bf-e9160e48a043"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Rhino" mc="BpmnLane" uid="253e167d-694f-4906-b71d-b68f67ae0321"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Rhino]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="ChildLaneSet">
+                          <OBJECT>
+                            <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="be120695-e89c-41dd-a727-e0125179f123"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                            <ATTRIBUTES>
+                              <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES>
+                              <COMP relation="Lane">
+                                <OBJECT>
+                                  <ID name="proxy-hybrid service" mc="BpmnLane" uid="a569aee6-b6c6-4029-9055-79da9ed9bf61"/>
+                                  <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Name"><![CDATA[proxy-hybrid service]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES>
+                                    <LINK relation="FlowElementRef">
+                                      <REFOBJ>
+                                        <ID name="proxy the message to the desteny URL" mc="BpmnTask" uid="f9a71735-b443-4d17-90c6-8e13bd4cbe63"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                    </LINK>
+                                  </DEPENDENCIES>
+                                </OBJECT>
+                                <OBJECT>
+                                  <ID name="sipservlet RA" mc="BpmnLane" uid="e5ada46c-b8f5-4958-a475-90e044f43a0d"/>
+                                  <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Name"><![CDATA[sipservlet RA]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES>
+                                    <LINK relation="FlowElementRef">
+                                      <REFOBJ>
+                                        <ID name="receive sip message" mc="BpmnReceiveTask" uid="4112c5b4-00b0-46aa-b6f7-5d1804087d33"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Identify and Parse the message" mc="BpmnTask" uid="73d23391-1256-440c-9a86-eaff4c84b264"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="create an activity object" mc="BpmnTask" uid="223055cf-4d3d-43fe-99d5-a363de6ae73f"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Fire an event" mc="BpmnSendTask" uid="70c47cbb-9c9b-493e-801a-c9dbbe22bb09"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="sipEvent" mc="BpmnIntermediateThrowEvent" uid="7089d577-dcb6-4a47-a883-ff517cca83f7"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="ActivityObject" mc="BpmnDataObject" uid="62854e71-cb45-403b-8840-95e1fb9575dc"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Send" mc="BpmnSendTask" uid="7e228eff-07ac-4e5c-aff5-4b1f73efc593"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Activity object exists?" mc="BpmnTask" uid="94c3d3b5-8310-4cff-8904-f0f729bf36e6"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="put message on object activity" mc="BpmnTask" uid="6a78e03c-2345-4786-9a6e-b82c19e417ce"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                    </LINK>
+                                  </DEPENDENCIES>
+                                </OBJECT>
+                                <OBJECT>
+                                  <ID name="rhnoCore" mc="BpmnLane" uid="81ca2dc1-a75d-40ac-8098-9e779930339d"/>
+                                  <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Name"><![CDATA[rhnoCore]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES>
+                                    <LINK relation="FlowElementRef">
+                                      <REFOBJ>
+                                        <ID name="Catch sipEvent" mc="BpmnIntermediateCatchEvent" uid="861099d7-93d1-4de1-acef-9c8df41e1abb"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="See the Services interested on the message. Services had before anounced interest by ActivityContext attach" mc="BpmnTask" uid="213ffb13-f316-4920-afc6-a9818959fe12"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Deliver the message. Call the registered event handler of the Sbb passing the ActivityObject." mc="BpmnTask" uid="570ec657-dbd8-4db0-b9c2-6fdc92528915"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Create an instance of the service none exist. Create Sbb root." mc="BpmnTask" uid="2a6c49ff-b674-4f51-9d1b-b6a39795a111"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Any service interested?" mc="BpmnTask" uid="52e6a442-510c-4e9b-a70d-2e06d7a21bd2"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Any instance of the service already dealing with that activity? Analisys if the message is a initial message." mc="BpmnTask" uid="afcdcb5d-f1a7-49d9-a141-9bf163e60b74"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Attach activity" mc="BpmnTask" uid="c449ecf3-719b-4095-b15b-e99c7a926441"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="ActivityObject" mc="BpmnDataObject" uid="6acffa5e-3be8-497a-93ec-50ca76536823"/>
+                                        <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                                      </REFOBJ>
+                                    </LINK>
+                                  </DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                            </DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="10102c8f-087a-44d4-a498-a1350f9977dd"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="SIP Client" mc="BpmnLane" uid="1967a026-4921-4a73-b60e-94d14a7744ea"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[SIP Client]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="" mc="BpmnStartEvent" uid="2902646d-c5c8-49bf-9631-129dff4b8019"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send sip message" mc="BpmnSendTask" uid="6ce78119-be74-4090-b54e-89b0cb1bc4ed"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="receive sip message" mc="BpmnReceiveTask" uid="7ef07089-26d1-47ee-8bcf-c7009440a07c"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="do something" mc="BpmnTask" uid="e38f8422-50ed-4035-b657-22c7a0a88ea4"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="End conversation?" mc="BpmnTask" uid="f6eeba62-07fc-45ef-b0df-90bfc4675d71"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send end message" mc="BpmnSendTask" uid="a6f85e41-6875-42d2-99e2-ed028e6802a8"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send sip message" mc="BpmnSendTask" uid="a42a10da-e1ef-4dd1-a112-75f03dcd4026"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="6f364456-222e-4408-bbf6-60ae2dd735e7"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="SIP Server" mc="BpmnLane" uid="355ba015-c777-4dc5-8457-851f46d075b6"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[SIP Server]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Receive" mc="BpmnReceiveTask" uid="9d2da497-2c9b-43b3-9ae9-ad26192f8f22"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="End Message?" mc="BpmnTask" uid="79bc087a-8d3e-4f9d-9679-a0124e60a9a9"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="End Event" mc="BpmnEndEvent" uid="f67312f1-21ce-4599-af09-234993740b4c"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Send Ack" mc="BpmnSendTask" uid="7a1c2567-50e5-445c-8c73-fb16a959cce5"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send sip message" mc="BpmnSendTask" uid="bbb3012f-a0b9-47af-b1fa-81ebd108cafb"/>
+                            <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="FlowElement">
+              <OBJECT>
+                <ID name="" mc="BpmnStartEvent" uid="2902646d-c5c8-49bf-9631-129dff4b8019"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send sip message" mc="BpmnSendTask" uid="6ce78119-be74-4090-b54e-89b0cb1bc4ed"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send sip message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="receive sip message" mc="BpmnReceiveTask" uid="4112c5b4-00b0-46aa-b6f7-5d1804087d33"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[receive sip message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Identify and Parse the message" mc="BpmnTask" uid="73d23391-1256-440c-9a86-eaff4c84b264"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Identify and Parse the message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow" mc="BpmnSequenceFlow" uid="2a0ff1da-0dc2-457c-970e-b09bae696ed2"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="receive sip message" mc="BpmnReceiveTask" uid="4112c5b4-00b0-46aa-b6f7-5d1804087d33"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Identify and Parse the message" mc="BpmnTask" uid="73d23391-1256-440c-9a86-eaff4c84b264"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="create an activity object" mc="BpmnTask" uid="223055cf-4d3d-43fe-99d5-a363de6ae73f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[create an activity object]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow1" mc="BpmnSequenceFlow" uid="57c449f7-f892-42dc-a86d-7ccc0aab90b9"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Identify and Parse the message" mc="BpmnTask" uid="73d23391-1256-440c-9a86-eaff4c84b264"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Activity object exists?" mc="BpmnTask" uid="94c3d3b5-8310-4cff-8904-f0f729bf36e6"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Fire an event" mc="BpmnSendTask" uid="70c47cbb-9c9b-493e-801a-c9dbbe22bb09"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Fire an event]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow2" mc="BpmnSequenceFlow" uid="068e7a21-cc51-45b2-917d-f7d66103df75"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="create an activity object" mc="BpmnTask" uid="223055cf-4d3d-43fe-99d5-a363de6ae73f"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="put message on object activity" mc="BpmnTask" uid="6a78e03c-2345-4786-9a6e-b82c19e417ce"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="sipEvent" mc="BpmnIntermediateThrowEvent" uid="7089d577-dcb6-4a47-a883-ff517cca83f7"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[sipEvent]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow3" mc="BpmnSequenceFlow" uid="637d3c7e-f112-4c28-bf26-59e370ad720b"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Fire an event" mc="BpmnSendTask" uid="70c47cbb-9c9b-493e-801a-c9dbbe22bb09"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="sipEvent" mc="BpmnIntermediateThrowEvent" uid="7089d577-dcb6-4a47-a883-ff517cca83f7"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Catch sipEvent" mc="BpmnIntermediateCatchEvent" uid="861099d7-93d1-4de1-acef-9c8df41e1abb"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Catch sipEvent]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="See the Services interested on the message. Services had before anounced interest by ActivityContext attach" mc="BpmnTask" uid="213ffb13-f316-4920-afc6-a9818959fe12"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[See the Services interested on the message. Services had before anounced interest by ActivityContext attach]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow4" mc="BpmnSequenceFlow" uid="6c3355b5-a320-4f10-b288-9e81e9de5fe5"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Catch sipEvent" mc="BpmnIntermediateCatchEvent" uid="861099d7-93d1-4de1-acef-9c8df41e1abb"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="See the Services interested on the message. Services had before anounced interest by ActivityContext attach" mc="BpmnTask" uid="213ffb13-f316-4920-afc6-a9818959fe12"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Deliver the message. Call the registered event handler of the Sbb passing the ActivityObject." mc="BpmnTask" uid="570ec657-dbd8-4db0-b9c2-6fdc92528915"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Deliver the message. Call the registered event handler of the Sbb passing the ActivityObject.]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="proxy the message to the desteny URL" mc="BpmnTask" uid="f9a71735-b443-4d17-90c6-8e13bd4cbe63"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[proxy the message to the desteny URL]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Create an instance of the service none exist. Create Sbb root." mc="BpmnTask" uid="2a6c49ff-b674-4f51-9d1b-b6a39795a111"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Create an instance of the service none exist. Create Sbb root.]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Any service interested?" mc="BpmnTask" uid="52e6a442-510c-4e9b-a70d-2e06d7a21bd2"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Any service interested?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow5" mc="BpmnSequenceFlow" uid="281385fc-4bb7-4790-95ce-2f1531c33f22"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="See the Services interested on the message. Services had before anounced interest by ActivityContext attach" mc="BpmnTask" uid="213ffb13-f316-4920-afc6-a9818959fe12"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Any service interested?" mc="BpmnTask" uid="52e6a442-510c-4e9b-a70d-2e06d7a21bd2"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Any instance of the service already dealing with that activity? Analisys if the message is a initial message." mc="BpmnTask" uid="afcdcb5d-f1a7-49d9-a141-9bf163e60b74"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Any instance of the service already dealing with that activity? Analisys if the message is a initial message.]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow6" mc="BpmnSequenceFlow" uid="4781b375-3176-4b8f-ac03-6e40f8b48b0e"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow6]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Any service interested?" mc="BpmnTask" uid="52e6a442-510c-4e9b-a70d-2e06d7a21bd2"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Any instance of the service already dealing with that activity? Analisys if the message is a initial message." mc="BpmnTask" uid="afcdcb5d-f1a7-49d9-a141-9bf163e60b74"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow7" mc="BpmnSequenceFlow" uid="38c33fb8-0b4b-4a04-ac79-9c4c4a75c06e"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow7]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Any instance of the service already dealing with that activity? Analisys if the message is a initial message." mc="BpmnTask" uid="afcdcb5d-f1a7-49d9-a141-9bf163e60b74"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Create an instance of the service none exist. Create Sbb root." mc="BpmnTask" uid="2a6c49ff-b674-4f51-9d1b-b6a39795a111"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Attach activity" mc="BpmnTask" uid="c449ecf3-719b-4095-b15b-e99c7a926441"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Attach activity]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow8" mc="BpmnSequenceFlow" uid="a5408508-bbb6-4500-9aca-a4347e23589f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow8]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Any instance of the service already dealing with that activity? Analisys if the message is a initial message." mc="BpmnTask" uid="afcdcb5d-f1a7-49d9-a141-9bf163e60b74"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Deliver the message. Call the registered event handler of the Sbb passing the ActivityObject." mc="BpmnTask" uid="570ec657-dbd8-4db0-b9c2-6fdc92528915"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow9" mc="BpmnSequenceFlow" uid="d94c97b9-df6a-4721-b923-9af76f81d3d5"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow9]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Create an instance of the service none exist. Create Sbb root." mc="BpmnTask" uid="2a6c49ff-b674-4f51-9d1b-b6a39795a111"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Attach activity" mc="BpmnTask" uid="c449ecf3-719b-4095-b15b-e99c7a926441"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow10" mc="BpmnSequenceFlow" uid="dc5e98ed-2543-4634-bf62-14bac48bc4c2"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Attach activity" mc="BpmnTask" uid="c449ecf3-719b-4095-b15b-e99c7a926441"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Deliver the message. Call the registered event handler of the Sbb passing the ActivityObject." mc="BpmnTask" uid="570ec657-dbd8-4db0-b9c2-6fdc92528915"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow11" mc="BpmnSequenceFlow" uid="050aee39-b94b-429e-9b81-4b2a461ee7fc"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Deliver the message. Call the registered event handler of the Sbb passing the ActivityObject." mc="BpmnTask" uid="570ec657-dbd8-4db0-b9c2-6fdc92528915"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="proxy the message to the desteny URL" mc="BpmnTask" uid="f9a71735-b443-4d17-90c6-8e13bd4cbe63"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ActivityObject" mc="BpmnDataObject" uid="62854e71-cb45-403b-8840-95e1fb9575dc"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[ActivityObject]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ActivityObject" mc="BpmnDataObject" uid="6acffa5e-3be8-497a-93ec-50ca76536823"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[ActivityObject]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Send" mc="BpmnSendTask" uid="7e228eff-07ac-4e5c-aff5-4b1f73efc593"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Send]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow12" mc="BpmnSequenceFlow" uid="b3a17cf6-d9c2-4bce-941a-f8d195ef2421"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow12]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="proxy the message to the desteny URL" mc="BpmnTask" uid="f9a71735-b443-4d17-90c6-8e13bd4cbe63"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Send" mc="BpmnSendTask" uid="7e228eff-07ac-4e5c-aff5-4b1f73efc593"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow13" mc="BpmnSequenceFlow" uid="ee1fb3c1-050c-445b-bc0f-d660d5304113"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow13]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="" mc="BpmnStartEvent" uid="2902646d-c5c8-49bf-9631-129dff4b8019"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send sip message" mc="BpmnSendTask" uid="6ce78119-be74-4090-b54e-89b0cb1bc4ed"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Receive" mc="BpmnReceiveTask" uid="9d2da497-2c9b-43b3-9ae9-ad26192f8f22"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Receive]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="End Message?" mc="BpmnTask" uid="79bc087a-8d3e-4f9d-9679-a0124e60a9a9"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[End Message?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="End Event" mc="BpmnEndEvent" uid="f67312f1-21ce-4599-af09-234993740b4c"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[End Event]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow14" mc="BpmnSequenceFlow" uid="b691a001-7809-4aa7-b7b4-901b982a1fef"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow14]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Receive" mc="BpmnReceiveTask" uid="9d2da497-2c9b-43b3-9ae9-ad26192f8f22"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End Message?" mc="BpmnTask" uid="79bc087a-8d3e-4f9d-9679-a0124e60a9a9"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Send Ack" mc="BpmnSendTask" uid="7a1c2567-50e5-445c-8c73-fb16a959cce5"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Send Ack]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow15" mc="BpmnSequenceFlow" uid="68288bf5-980c-4047-957a-158c50c49a5f"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow15]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Send Ack" mc="BpmnSendTask" uid="7a1c2567-50e5-445c-8c73-fb16a959cce5"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End Event" mc="BpmnEndEvent" uid="f67312f1-21ce-4599-af09-234993740b4c"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow16" mc="BpmnSequenceFlow" uid="f8325f49-5c1c-49cf-9c61-11a03e3418d2"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow16]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="End Message?" mc="BpmnTask" uid="79bc087a-8d3e-4f9d-9679-a0124e60a9a9"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Send Ack" mc="BpmnSendTask" uid="7a1c2567-50e5-445c-8c73-fb16a959cce5"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send sip message" mc="BpmnSendTask" uid="bbb3012f-a0b9-47af-b1fa-81ebd108cafb"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send sip message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow17" mc="BpmnSequenceFlow" uid="1e9bae0e-13bc-4bcc-978e-3ec92241e880"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow17]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Send Ack" mc="BpmnSendTask" uid="7a1c2567-50e5-445c-8c73-fb16a959cce5"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send sip message" mc="BpmnSendTask" uid="bbb3012f-a0b9-47af-b1fa-81ebd108cafb"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="receive sip message" mc="BpmnReceiveTask" uid="7ef07089-26d1-47ee-8bcf-c7009440a07c"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[receive sip message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="do something" mc="BpmnTask" uid="e38f8422-50ed-4035-b657-22c7a0a88ea4"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[do something]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="End conversation?" mc="BpmnTask" uid="f6eeba62-07fc-45ef-b0df-90bfc4675d71"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[End conversation?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow18" mc="BpmnSequenceFlow" uid="ca0530f6-3feb-43ff-944b-f9878420855a"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow18]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="receive sip message" mc="BpmnReceiveTask" uid="7ef07089-26d1-47ee-8bcf-c7009440a07c"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="do something" mc="BpmnTask" uid="e38f8422-50ed-4035-b657-22c7a0a88ea4"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow19" mc="BpmnSequenceFlow" uid="8217f234-32fb-4fa9-81b8-68b222c2dfba"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="do something" mc="BpmnTask" uid="e38f8422-50ed-4035-b657-22c7a0a88ea4"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End conversation?" mc="BpmnTask" uid="f6eeba62-07fc-45ef-b0df-90bfc4675d71"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send end message" mc="BpmnSendTask" uid="a6f85e41-6875-42d2-99e2-ed028e6802a8"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send end message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send sip message" mc="BpmnSendTask" uid="a42a10da-e1ef-4dd1-a112-75f03dcd4026"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send sip message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow20" mc="BpmnSequenceFlow" uid="7c7e8d16-a20a-4a60-a937-36476163bf26"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow20]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="End conversation?" mc="BpmnTask" uid="f6eeba62-07fc-45ef-b0df-90bfc4675d71"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send end message" mc="BpmnSendTask" uid="a6f85e41-6875-42d2-99e2-ed028e6802a8"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow21" mc="BpmnSequenceFlow" uid="4b4d2213-a5ee-43b6-ae13-25f88ffecee9"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow21]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="End conversation?" mc="BpmnTask" uid="f6eeba62-07fc-45ef-b0df-90bfc4675d71"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send sip message" mc="BpmnSendTask" uid="a42a10da-e1ef-4dd1-a112-75f03dcd4026"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Activity object exists?" mc="BpmnTask" uid="94c3d3b5-8310-4cff-8904-f0f729bf36e6"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Activity object exists?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow22" mc="BpmnSequenceFlow" uid="7dadf103-7585-4a29-b9f7-3fe9312e0bbf"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow22]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Activity object exists?" mc="BpmnTask" uid="94c3d3b5-8310-4cff-8904-f0f729bf36e6"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="create an activity object" mc="BpmnTask" uid="223055cf-4d3d-43fe-99d5-a363de6ae73f"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="put message on object activity" mc="BpmnTask" uid="6a78e03c-2345-4786-9a6e-b82c19e417ce"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[put message on object activity]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow23" mc="BpmnSequenceFlow" uid="db3b66ce-e921-404c-9dbd-7713d6ba6476"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow23]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="put message on object activity" mc="BpmnTask" uid="6a78e03c-2345-4786-9a6e-b82c19e417ce"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Fire an event" mc="BpmnSendTask" uid="70c47cbb-9c9b-493e-801a-c9dbbe22bb09"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Product">
+              <COMPID name="Process Bpmn Process diagram" mc="BpmnProcessCollaborationDiagram" uid="5290a15a-f890-435a-946d-be354d4462da"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Collaboration" mc="BpmnCollaboration" uid="f9e8f3bc-7552-48a1-83fa-55a19fb17c19"/>
+          <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+          <ATTRIBUTES>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="Name"><![CDATA[Collaboration]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="MessageFlow">
+              <OBJECT>
+                <ID name="Message Flow" mc="BpmnMessageFlow" uid="1592b6bd-e372-47f2-bad1-7171123dc8db"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send sip message" mc="BpmnSendTask" uid="6ce78119-be74-4090-b54e-89b0cb1bc4ed"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="receive sip message" mc="BpmnReceiveTask" uid="4112c5b4-00b0-46aa-b6f7-5d1804087d33"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Message to server" mc="BpmnMessageFlow" uid="a70d5330-0ad0-47dd-a18a-6b91a0f368ec"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Message to server]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Send" mc="BpmnSendTask" uid="7e228eff-07ac-4e5c-aff5-4b1f73efc593"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Receive" mc="BpmnReceiveTask" uid="9d2da497-2c9b-43b3-9ae9-ad26192f8f22"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Message to client" mc="BpmnMessageFlow" uid="6d3ea7c7-960f-4d9d-84fd-31f2d45848fc"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Message to client]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send sip message" mc="BpmnSendTask" uid="bbb3012f-a0b9-47af-b1fa-81ebd108cafb"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="receive sip message" mc="BpmnReceiveTask" uid="4112c5b4-00b0-46aa-b6f7-5d1804087d33"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="end message" mc="BpmnMessageFlow" uid="cd0bdd62-f720-45fd-ad7d-2affcf332fed"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[end message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send end message" mc="BpmnSendTask" uid="a6f85e41-6875-42d2-99e2-ed028e6802a8"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="receive sip message" mc="BpmnReceiveTask" uid="4112c5b4-00b0-46aa-b6f7-5d1804087d33"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Message to server" mc="BpmnMessageFlow" uid="c47f8ca3-08a8-424b-983e-2c9bf1b421c1"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Message to server]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send sip message" mc="BpmnSendTask" uid="a42a10da-e1ef-4dd1-a112-75f03dcd4026"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="receive sip message" mc="BpmnReceiveTask" uid="4112c5b4-00b0-46aa-b6f7-5d1804087d33"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Message to client" mc="BpmnMessageFlow" uid="076ad5e5-5732-449a-97b8-609e193e9615"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Message to client]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Send" mc="BpmnSendTask" uid="7e228eff-07ac-4e5c-aff5-4b1f73efc593"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="receive sip message" mc="BpmnReceiveTask" uid="7ef07089-26d1-47ee-8bcf-c7009440a07c"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ack end message" mc="BpmnMessageFlow" uid="c3cbe9a0-8294-4558-8112-494ccd464f39"/>
+                <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[ack end message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Send Ack" mc="BpmnSendTask" uid="7a1c2567-50e5-445c-8c73-fb16a959cce5"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="receive sip message" mc="BpmnReceiveTask" uid="4112c5b4-00b0-46aa-b6f7-5d1804087d33"/>
+                      <PID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

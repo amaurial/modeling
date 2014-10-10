@@ -1,0 +1,1138 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Major diameter transmission workflow" version="3">
+  <DEPS>
+    <ID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+    <COMPID name="Transmit File" mc="BpmnProcessCollaborationDiagram" uid="a57fde4a-86c9-40cd-8bcc-139f31d1494f"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Major diameter transmission workflow]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="RootElement">
+        <OBJECT>
+          <ID name="Process" mc="BpmnProcess" uid="0c038f2d-5607-4fe5-8b9f-d003c53a69e3"/>
+          <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+          <ATTRIBUTES>
+            <ATT name="ProcessType">NoneProcess</ATT>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="IsExecutable">OUndefined</ATT>
+            <ATT name="Name"><![CDATA[Process]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="LaneSet">
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="80216c92-b75f-4072-9a26-ca8931874dba"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Sentinel" mc="BpmnLane" uid="65973b35-91da-4f50-b884-7aaae895eb17"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Sentinel]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Turn On" mc="BpmnStartEvent" uid="117cb09c-13f6-491a-9b5d-741ac612591d"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Read configuration" mc="BpmnTask" uid="ce945b92-87e3-47f9-be0f-a2054d345d9c"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check files to transmit" mc="BpmnTask" uid="ec90c938-c18a-4a52-833c-f6940ef9a88d"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Read CDRs" mc="BpmnTask" uid="d056a6a8-9602-4348-b5dc-85a5df64cb94"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="CDR OK?" mc="BpmnExclusiveGateway" uid="8803b7f3-26a1-44fb-8130-72865c195295"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Map CDR to AVP" mc="BpmnTask" uid="aa60b8db-a28b-46e3-b857-02508b82bb60"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Handle bad CDR" mc="BpmnSubProcess" uid="e6565988-6b94-4673-95e8-082e1bf5996f"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="connection opened?" mc="BpmnExclusiveGateway" uid="3ea219b7-10df-4d04-a2c0-8f72d036ba4d"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="CDR transmited?" mc="BpmnExclusiveGateway" uid="8711db1c-d0dc-4c7f-b4b7-018ed74ecaa2"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Handle transmission failure" mc="BpmnSubProcess" uid="454e73bb-cd89-4bcc-8d3b-672f5e4136e3"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Open Diameter Connection" mc="BpmnSubProcess" uid="34400f46-f4b5-4bc0-a4fc-44dc3c917711"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Transmit CDR" mc="BpmnTransaction" uid="750fb81e-a0a1-434a-a01e-aa019a9bb47a"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="More CDRs to send?" mc="BpmnExclusiveGateway" uid="07f309e5-3251-4015-b742-69675913a499"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Mark file as transmitted" mc="BpmnSubProcess" uid="dc424df0-b73b-450c-a5e7-9a308ed91eb3"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="01b54723-4741-4e38-b68c-a1f1e2c1306d"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Operator CDF" mc="BpmnLane" uid="541e162b-ac6c-4ab7-8ff7-dc3853bd5eae"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Operator CDF]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Receive CDR" mc="BpmnReceiveTask" uid="3a95c341-38ac-439d-9060-bcae4c8f5eb1"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Confirm CDR received" mc="BpmnSendTask" uid="c804ed6d-a581-4f8d-a34d-e8787aa52f28"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Process CDR" mc="BpmnTask" uid="024e03ff-74d6-4af9-b158-2e0ff6175309"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="End Event" mc="BpmnEndEvent" uid="a1870372-d7ab-4367-907f-09a8cda8d89d"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Receive diameter connection" mc="BpmnReceiveTask" uid="472f3519-e7f6-4089-903a-15cdd05f3e0e"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Authenticate" mc="BpmnTask" uid="e9fbcb0b-f05b-4285-bc14-0665fe0e420b"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Confirm connection" mc="BpmnSendTask" uid="bb320c51-b454-44df-ab3a-de7de7924736"/>
+                            <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="FlowElement">
+              <OBJECT>
+                <ID name="Turn On" mc="BpmnStartEvent" uid="117cb09c-13f6-491a-9b5d-741ac612591d"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Turn On]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Read configuration" mc="BpmnTask" uid="ce945b92-87e3-47f9-be0f-a2054d345d9c"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Read configuration]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check files to transmit" mc="BpmnTask" uid="ec90c938-c18a-4a52-833c-f6940ef9a88d"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">true</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check files to transmit]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Read CDRs" mc="BpmnTask" uid="d056a6a8-9602-4348-b5dc-85a5df64cb94"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Read CDRs]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="CDR OK?" mc="BpmnExclusiveGateway" uid="8803b7f3-26a1-44fb-8130-72865c195295"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[CDR OK?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Map CDR to AVP" mc="BpmnTask" uid="aa60b8db-a28b-46e3-b857-02508b82bb60"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Map CDR to AVP]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow" mc="BpmnSequenceFlow" uid="ce9a0c7a-6588-4b0f-b8aa-c8bbbf889964"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Turn On" mc="BpmnStartEvent" uid="117cb09c-13f6-491a-9b5d-741ac612591d"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Read configuration" mc="BpmnTask" uid="ce945b92-87e3-47f9-be0f-a2054d345d9c"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow1" mc="BpmnSequenceFlow" uid="fdb936ce-da47-4763-8e91-2afca0f9a07f"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Read configuration" mc="BpmnTask" uid="ce945b92-87e3-47f9-be0f-a2054d345d9c"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check files to transmit" mc="BpmnTask" uid="ec90c938-c18a-4a52-833c-f6940ef9a88d"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow2" mc="BpmnSequenceFlow" uid="1f69aeb5-0932-4a27-98bc-ca9aee9350b2"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check files to transmit" mc="BpmnTask" uid="ec90c938-c18a-4a52-833c-f6940ef9a88d"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Read CDRs" mc="BpmnTask" uid="d056a6a8-9602-4348-b5dc-85a5df64cb94"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow3" mc="BpmnSequenceFlow" uid="e6df065f-4d4e-4406-acca-901ed5d6eed6"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Read CDRs" mc="BpmnTask" uid="d056a6a8-9602-4348-b5dc-85a5df64cb94"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="CDR OK?" mc="BpmnExclusiveGateway" uid="8803b7f3-26a1-44fb-8130-72865c195295"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow4" mc="BpmnSequenceFlow" uid="c60e3079-b332-4006-8daa-7e102ee9fff8"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="CDR OK?" mc="BpmnExclusiveGateway" uid="8803b7f3-26a1-44fb-8130-72865c195295"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="connection opened?" mc="BpmnExclusiveGateway" uid="3ea219b7-10df-4d04-a2c0-8f72d036ba4d"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Handle bad CDR" mc="BpmnSubProcess" uid="e6565988-6b94-4673-95e8-082e1bf5996f"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Handle bad CDR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="53302a4d-bc8b-4b25-ae30-81988595b612"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow5" mc="BpmnSequenceFlow" uid="3eb07554-bcbd-49bd-80c5-1448880855c3"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="CDR OK?" mc="BpmnExclusiveGateway" uid="8803b7f3-26a1-44fb-8130-72865c195295"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Handle bad CDR" mc="BpmnSubProcess" uid="e6565988-6b94-4673-95e8-082e1bf5996f"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow6" mc="BpmnSequenceFlow" uid="1f373b94-1365-43e1-bd77-67179caf772c"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow6]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Handle bad CDR" mc="BpmnSubProcess" uid="e6565988-6b94-4673-95e8-082e1bf5996f"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="More CDRs to send?" mc="BpmnExclusiveGateway" uid="07f309e5-3251-4015-b742-69675913a499"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="connection opened?" mc="BpmnExclusiveGateway" uid="3ea219b7-10df-4d04-a2c0-8f72d036ba4d"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[connection opened?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow8" mc="BpmnSequenceFlow" uid="819afb6b-5880-455c-aa7b-a1fec0d3190d"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow8]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="connection opened?" mc="BpmnExclusiveGateway" uid="3ea219b7-10df-4d04-a2c0-8f72d036ba4d"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Map CDR to AVP" mc="BpmnTask" uid="aa60b8db-a28b-46e3-b857-02508b82bb60"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow9" mc="BpmnSequenceFlow" uid="d59d341f-b2c1-49c7-84a3-9e2cf21bbaf0"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow9]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Map CDR to AVP" mc="BpmnTask" uid="aa60b8db-a28b-46e3-b857-02508b82bb60"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Transmit CDR" mc="BpmnTransaction" uid="750fb81e-a0a1-434a-a01e-aa019a9bb47a"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="CDR transmited?" mc="BpmnExclusiveGateway" uid="8711db1c-d0dc-4c7f-b4b7-018ed74ecaa2"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[CDR transmited?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow10" mc="BpmnSequenceFlow" uid="d9544037-a026-4a7e-85da-5177a6c3429e"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Transmit CDR" mc="BpmnTransaction" uid="750fb81e-a0a1-434a-a01e-aa019a9bb47a"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="CDR transmited?" mc="BpmnExclusiveGateway" uid="8711db1c-d0dc-4c7f-b4b7-018ed74ecaa2"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow11" mc="BpmnSequenceFlow" uid="d9d973a3-b60a-4149-8359-9c73cc531741"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="CDR transmited?" mc="BpmnExclusiveGateway" uid="8711db1c-d0dc-4c7f-b4b7-018ed74ecaa2"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="More CDRs to send?" mc="BpmnExclusiveGateway" uid="07f309e5-3251-4015-b742-69675913a499"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Handle transmission failure" mc="BpmnSubProcess" uid="454e73bb-cd89-4bcc-8d3b-672f5e4136e3"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Handle transmission failure]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="d4864ec4-8e92-47c4-8736-b1ec16c4c079"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow12" mc="BpmnSequenceFlow" uid="eff3882f-974f-4d9b-954f-13492715d490"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow12]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="CDR transmited?" mc="BpmnExclusiveGateway" uid="8711db1c-d0dc-4c7f-b4b7-018ed74ecaa2"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Handle transmission failure" mc="BpmnSubProcess" uid="454e73bb-cd89-4bcc-8d3b-672f5e4136e3"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow13" mc="BpmnSequenceFlow" uid="da0ad927-f325-4235-9fd5-7ae5f0de9427"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow13]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Handle transmission failure" mc="BpmnSubProcess" uid="454e73bb-cd89-4bcc-8d3b-672f5e4136e3"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="More CDRs to send?" mc="BpmnExclusiveGateway" uid="07f309e5-3251-4015-b742-69675913a499"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Open Diameter Connection" mc="BpmnSubProcess" uid="34400f46-f4b5-4bc0-a4fc-44dc3c917711"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Open Diameter Connection]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="d2af8c9c-3503-40eb-824e-d04552746a5c"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow7" mc="BpmnSequenceFlow" uid="cfa8433a-2d6f-4f46-806d-f6be4ef24fe5"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow7]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="connection opened?" mc="BpmnExclusiveGateway" uid="3ea219b7-10df-4d04-a2c0-8f72d036ba4d"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Open Diameter Connection" mc="BpmnSubProcess" uid="34400f46-f4b5-4bc0-a4fc-44dc3c917711"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow14" mc="BpmnSequenceFlow" uid="64e98584-c943-4edc-b82e-bc7aa28816ea"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow14]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Open Diameter Connection" mc="BpmnSubProcess" uid="34400f46-f4b5-4bc0-a4fc-44dc3c917711"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Map CDR to AVP" mc="BpmnTask" uid="aa60b8db-a28b-46e3-b857-02508b82bb60"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Transmit CDR" mc="BpmnTransaction" uid="750fb81e-a0a1-434a-a01e-aa019a9bb47a"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Protocol"></ATT>
+                  <ATT name="Method">compensateTransaction</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Transmit CDR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="64d2ab94-beef-4bb4-b295-ffcbd72a3856"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="d4864ec4-8e92-47c4-8736-b1ec16c4c079"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="53302a4d-bc8b-4b25-ae30-81988595b612"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="d2af8c9c-3503-40eb-824e-d04552746a5c"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="64d2ab94-beef-4bb4-b295-ffcbd72a3856"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Receive CDR" mc="BpmnReceiveTask" uid="3a95c341-38ac-439d-9060-bcae4c8f5eb1"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Receive CDR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Confirm CDR received" mc="BpmnSendTask" uid="c804ed6d-a581-4f8d-a34d-e8787aa52f28"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Confirm CDR received]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Process CDR" mc="BpmnTask" uid="024e03ff-74d6-4af9-b158-2e0ff6175309"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Process CDR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="End Event" mc="BpmnEndEvent" uid="a1870372-d7ab-4367-907f-09a8cda8d89d"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[End Event]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Receive diameter connection" mc="BpmnReceiveTask" uid="472f3519-e7f6-4089-903a-15cdd05f3e0e"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Receive diameter connection]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Authenticate" mc="BpmnTask" uid="e9fbcb0b-f05b-4285-bc14-0665fe0e420b"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Authenticate]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Confirm connection" mc="BpmnSendTask" uid="bb320c51-b454-44df-ab3a-de7de7924736"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Confirm connection]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow15" mc="BpmnSequenceFlow" uid="9ba1d084-6a6a-483c-b878-b06da35fc7ca"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow15]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Receive CDR" mc="BpmnReceiveTask" uid="3a95c341-38ac-439d-9060-bcae4c8f5eb1"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Confirm CDR received" mc="BpmnSendTask" uid="c804ed6d-a581-4f8d-a34d-e8787aa52f28"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow16" mc="BpmnSequenceFlow" uid="72383b02-b68e-41e9-a0eb-cd11d5585553"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow16]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Confirm CDR received" mc="BpmnSendTask" uid="c804ed6d-a581-4f8d-a34d-e8787aa52f28"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Process CDR" mc="BpmnTask" uid="024e03ff-74d6-4af9-b158-2e0ff6175309"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow17" mc="BpmnSequenceFlow" uid="57712428-ffba-4e65-af18-015ca14df367"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow17]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Process CDR" mc="BpmnTask" uid="024e03ff-74d6-4af9-b158-2e0ff6175309"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End Event" mc="BpmnEndEvent" uid="a1870372-d7ab-4367-907f-09a8cda8d89d"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow18" mc="BpmnSequenceFlow" uid="3ce8575c-7f30-47a4-86cd-7b1a157e1768"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow18]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Receive diameter connection" mc="BpmnReceiveTask" uid="472f3519-e7f6-4089-903a-15cdd05f3e0e"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Authenticate" mc="BpmnTask" uid="e9fbcb0b-f05b-4285-bc14-0665fe0e420b"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow19" mc="BpmnSequenceFlow" uid="1e61b4de-dee3-47d0-bd8a-c29a05733d92"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Authenticate" mc="BpmnTask" uid="e9fbcb0b-f05b-4285-bc14-0665fe0e420b"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Confirm connection" mc="BpmnSendTask" uid="bb320c51-b454-44df-ab3a-de7de7924736"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="More CDRs to send?" mc="BpmnExclusiveGateway" uid="07f309e5-3251-4015-b742-69675913a499"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[More CDRs to send?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow20" mc="BpmnSequenceFlow" uid="d7b1db6a-a821-4ebf-89ee-185770f5a000"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow20]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="More CDRs to send?" mc="BpmnExclusiveGateway" uid="07f309e5-3251-4015-b742-69675913a499"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Read CDRs" mc="BpmnTask" uid="d056a6a8-9602-4348-b5dc-85a5df64cb94"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mark file as transmitted" mc="BpmnSubProcess" uid="dc424df0-b73b-450c-a5e7-9a308ed91eb3"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Mark file as transmitted]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow21" mc="BpmnSequenceFlow" uid="209831db-d9af-46e9-8bf7-b3f8d277e9ee"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow21]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="More CDRs to send?" mc="BpmnExclusiveGateway" uid="07f309e5-3251-4015-b742-69675913a499"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Mark file as transmitted" mc="BpmnSubProcess" uid="dc424df0-b73b-450c-a5e7-9a308ed91eb3"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow22" mc="BpmnSequenceFlow" uid="5d1452b4-4638-4d3d-a768-d5f7dedd8655"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow22]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mark file as transmitted" mc="BpmnSubProcess" uid="dc424df0-b73b-450c-a5e7-9a308ed91eb3"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check files to transmit" mc="BpmnTask" uid="ec90c938-c18a-4a52-833c-f6940ef9a88d"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Product">
+              <COMPID name="Transmit File" mc="BpmnProcessCollaborationDiagram" uid="a57fde4a-86c9-40cd-8bcc-139f31d1494f"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Collaboration" mc="BpmnCollaboration" uid="3c5bc3a5-24dd-4a13-afdb-24489111b5bc"/>
+          <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+          <ATTRIBUTES>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="Name"><![CDATA[Collaboration]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="MessageFlow">
+              <OBJECT>
+                <ID name="open connection" mc="BpmnMessageFlow" uid="cfa08d41-1f91-4321-86c3-83c97c8ca022"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[open connection]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Open Diameter Connection" mc="BpmnSubProcess" uid="34400f46-f4b5-4bc0-a4fc-44dc3c917711"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Receive diameter connection" mc="BpmnReceiveTask" uid="472f3519-e7f6-4089-903a-15cdd05f3e0e"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send CDR" mc="BpmnMessageFlow" uid="98863a62-5dce-4eb9-9deb-26cae9221fe3"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[send CDR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Transmit CDR" mc="BpmnTransaction" uid="750fb81e-a0a1-434a-a01e-aa019a9bb47a"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Receive CDR" mc="BpmnReceiveTask" uid="3a95c341-38ac-439d-9060-bcae4c8f5eb1"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="confirm connection" mc="BpmnMessageFlow" uid="1d26082a-4a96-4827-a567-4c71efd61208"/>
+                <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[confirm connection]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Confirm connection" mc="BpmnSendTask" uid="bb320c51-b454-44df-ab3a-de7de7924736"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Open Diameter Connection" mc="BpmnSubProcess" uid="34400f46-f4b5-4bc0-a4fc-44dc3c917711"/>
+                      <PID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

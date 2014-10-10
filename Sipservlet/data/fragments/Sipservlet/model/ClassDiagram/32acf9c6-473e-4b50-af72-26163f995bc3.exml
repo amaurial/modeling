@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="overview diagram" version="3">
+  <DEPS>
+    <ID name="overview diagram" mc="ClassDiagram" uid="32acf9c6-473e-4b50-af72-26163f995bc3"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="overview diagram" mc="ClassDiagram" uid="32acf9c6-473e-4b50-af72-26163f995bc3"/>
+    <PID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">391</ATT>
+      <ATT name="UiData"><![CDATA[eJztU9tO4zAQ/RXL73VLU4oqhSJoUIXIUtQC0j6hSTwpBieubPeSv1+nSXdpV42ChOCFJ9vjOWduZ/yLTSrJCrURKjunJ6xDycXQn0SvGFsiuDNRYvMFnlOl5yxVHKVQjAuYa0gZcmGVZsaCFW8MJaaYWVO+453TOJ1t30H5piSFV6Wf/wbt0KF/r9UCtc1JBqmLJSFXSxuABff3BHKJVRLZUkraHvrtHeA/6MzmEuleCd26Ekzhb1isNLIS2yC/EZgYOPJdsOuNnWLSMMqdo6iQBDc2iG5cjttrceGYwFLagyLbZTl1hWuUYJG7PA569qswkVVhcZlLMKaaBPG6ECeDuN/qnXnY6kWnnRYkZ91Wt3/S95LB4DSKvfpuOzZ7m6l1FkKE8iDwzGqRzelQuVauBK5J1Q2/vfWqLUZJvMlGKl0oI6wbwxHqBlSjFyG5xoIhFKZoYXUcRYQiezPN3a/mgYa1SyeEHPW+9Lza7dntCy/xhsmCwS3MHuHX7MvHUN8iNsGPqCAYs/Dy9/X0+epydDueTh7vgs8RRoO1ez+qf6J5J4HejwS+UgIPk/vPnv3Rrz+3vIUA]]></ATT>
+      <ATT name="PdeProperties"></ATT>
+      <ATT name="Name"><![CDATA[overview diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Sentinel" version="3">
+  <DEPS>
+    <ID name="Sentinel" mc="Project" uid="6244e616-6ced-4fd2-aae2-27982cf98f39"/>
+    <COMPID name="Sentinel" mc="DiagramSet" uid="6390a317-8d2c-41d0-b481-3f0d2bac7166"/>
+    <COMPID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Sentinel" mc="Project" uid="6244e616-6ced-4fd2-aae2-27982cf98f39"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[Sentinel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DiagramRoot">
+        <COMPID name="Sentinel" mc="DiagramSet" uid="6390a317-8d2c-41d0-b481-3f0d2bac7166"/>
+      </COMP>
+      <COMP relation="Model">
+        <COMPID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

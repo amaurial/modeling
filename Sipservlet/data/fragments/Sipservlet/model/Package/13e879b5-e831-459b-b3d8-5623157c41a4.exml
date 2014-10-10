@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="b2bhandoff" version="3">
+  <DEPS>
+    <ID name="b2bhandoff" mc="Package" uid="13e879b5-e831-459b-b3d8-5623157c41a4"/>
+    <COMPID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+    <COMPID name="Interaction" mc="Interaction" uid="fb75f6b4-db3e-4012-b496-1f4091f9dda3"/>
+    <COMPID name="Interaction1" mc="Interaction" uid="86888739-10d6-4a4c-a742-db5eee7ecfb8"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="b2bhandoff" mc="Package" uid="13e879b5-e831-459b-b3d8-5623157c41a4"/>
+    <PID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[b2bhandoff]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Interaction" mc="Interaction" uid="fb75f6b4-db3e-4012-b496-1f4091f9dda3"/>
+        <COMPID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+        <COMPID name="Interaction1" mc="Interaction" uid="86888739-10d6-4a4c-a742-db5eee7ecfb8"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

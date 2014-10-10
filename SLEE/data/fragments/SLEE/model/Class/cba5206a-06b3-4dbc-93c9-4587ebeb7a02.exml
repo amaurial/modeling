@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SyncronousCallInterface" version="3">
+  <DEPS>
+    <ID name="SyncronousCallInterface" mc="Class" uid="cba5206a-06b3-4dbc-93c9-4587ebeb7a02"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SyncronousCallInterface" mc="Class" uid="cba5206a-06b3-4dbc-93c9-4587ebeb7a02"/>
+    <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SyncronousCallInterface]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

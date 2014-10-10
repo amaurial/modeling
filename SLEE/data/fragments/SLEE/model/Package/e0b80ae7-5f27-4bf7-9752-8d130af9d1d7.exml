@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="sbb" version="3">
+  <DEPS>
+    <ID name="sbb" mc="Package" uid="e0b80ae7-5f27-4bf7-9752-8d130af9d1d7"/>
+    <COMPID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+    <COMPID name="SbbComponentIdentifier" mc="Class" uid="db739591-2baf-4fac-8c88-935566e881ec"/>
+    <COMPID name="sbb Class diagram" mc="ClassDiagram" uid="249da7e7-1814-47af-bf62-7caa0ed5b686"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="sbb" mc="Package" uid="e0b80ae7-5f27-4bf7-9752-8d130af9d1d7"/>
+    <PID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[sbb]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+        <COMPID name="SbbComponentIdentifier" mc="Class" uid="db739591-2baf-4fac-8c88-935566e881ec"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="sbb Class diagram" mc="ClassDiagram" uid="249da7e7-1814-47af-bf62-7caa0ed5b686"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="profile" version="3">
+  <DEPS>
+    <ID name="profile" mc="Package" uid="0b6ab536-160f-414a-88e9-64661dff527e"/>
+    <COMPID name="Profile" mc="Class" uid="372a6048-0032-4db4-bb2e-5e4a94f36a74"/>
+    <COMPID name="ProfileSpecification" mc="Class" uid="e2ce26a6-7733-40f7-8b65-034fef2ddeb9"/>
+    <COMPID name="ProfileTable" mc="Class" uid="e9138d4a-ce8d-415f-b208-295b9cf97642"/>
+    <COMPID name="profile Class diagram" mc="ClassDiagram" uid="b2368b20-3aa3-49dd-86af-aabbe8f74288"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="profile" mc="Package" uid="0b6ab536-160f-414a-88e9-64661dff527e"/>
+    <PID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[profile]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Profile" mc="Class" uid="372a6048-0032-4db4-bb2e-5e4a94f36a74"/>
+        <COMPID name="ProfileTable" mc="Class" uid="e9138d4a-ce8d-415f-b208-295b9cf97642"/>
+        <COMPID name="ProfileSpecification" mc="Class" uid="e2ce26a6-7733-40f7-8b65-034fef2ddeb9"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="profile Class diagram" mc="ClassDiagram" uid="b2368b20-3aa3-49dd-86af-aabbe8f74288"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

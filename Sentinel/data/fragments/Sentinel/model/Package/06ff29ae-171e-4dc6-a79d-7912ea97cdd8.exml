@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="sentinel" version="3">
+  <DEPS>
+    <ID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+    <COMPID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+    <COMPID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+    <COMPID name="overview diagram" mc="ClassDiagram" uid="6464d3cd-79a5-48a7-8c10-07d0e4b8fa43"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+    <PID name="Sentinel" mc="Project" uid="6244e616-6ced-4fd2-aae2-27982cf98f39"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[sentinel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="ClassDiagram" uid="6464d3cd-79a5-48a7-8c10-07d0e4b8fa43"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

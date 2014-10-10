@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Timer" version="3">
+  <DEPS>
+    <ID name="Timer" mc="Component" uid="bd24b77f-cd3f-47a6-aaf1-7bd982dfdb13"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Timer" mc="Component" uid="bd24b77f-cd3f-47a6-aaf1-7bd982dfdb13"/>
+    <PID name="Facilities" mc="Component" uid="60c0a0a3-c4e5-4761-8dd4-1cb936d355fd"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Timer]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

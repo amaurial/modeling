@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SLEEEndPoint" version="3">
+  <DEPS>
+    <ID name="SLEEEndPoint" mc="Class" uid="dff8e8db-ff45-44a8-bfaa-3899eb471225"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SLEEEndPoint" mc="Class" uid="dff8e8db-ff45-44a8-bfaa-3899eb471225"/>
+    <PID name="Resources" mc="Component" uid="d5c4d30c-1f39-49a1-8658-8a2ffdd06675"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SLEEEndPoint]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

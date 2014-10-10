@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="sipservlet" version="3">
+  <DEPS>
+    <ID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <COMPID name="Activity" mc="Activity" uid="b4edbb3a-b8b5-4f59-9066-10b778258c96"/>
+    <COMPID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+    <COMPID name="BPMN1" mc="BpmnBehavior" uid="e24aaaf8-8d1f-429a-b4c2-669779968d0f"/>
+    <COMPID name="Create Sipservlet RA" mc="Activity" uid="201f2a79-8916-493a-8d56-d2cda4d947ac"/>
+    <COMPID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+    <COMPID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+    <COMPID name="b2bhandoff" mc="Package" uid="13e879b5-e831-459b-b3d8-5623157c41a4"/>
+    <COMPID name="http-example" mc="Package" uid="e619562b-df8c-485a-9228-e9392bd52cd5"/>
+    <COMPID name="overview diagram" mc="ClassDiagram" uid="32acf9c6-473e-4b50-af72-26163f995bc3"/>
+    <COMPID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+    <COMPID name="proxy_hybrid" mc="Package" uid="30b31ee7-82d1-43ee-a2b5-118bbd7c570a"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <PID name="Sipservlet" mc="Project" uid="e95412fc-8f9f-442c-a13f-465120a427aa"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[sipservlet]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+        <COMPID name="Create Sipservlet RA" mc="Activity" uid="201f2a79-8916-493a-8d56-d2cda4d947ac"/>
+        <COMPID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+        <COMPID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+        <COMPID name="BPMN" mc="BpmnBehavior" uid="d8941156-836a-4e37-8f13-9bc9a44b73ba"/>
+        <COMPID name="BPMN1" mc="BpmnBehavior" uid="e24aaaf8-8d1f-429a-b4c2-669779968d0f"/>
+        <COMPID name="Activity" mc="Activity" uid="b4edbb3a-b8b5-4f59-9066-10b778258c96"/>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="http-example" mc="Package" uid="e619562b-df8c-485a-9228-e9392bd52cd5"/>
+        <COMPID name="proxy_hybrid" mc="Package" uid="30b31ee7-82d1-43ee-a2b5-118bbd7c570a"/>
+        <COMPID name="b2bhandoff" mc="Package" uid="13e879b5-e831-459b-b3d8-5623157c41a4"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="ClassDiagram" uid="32acf9c6-473e-4b50-af72-26163f995bc3"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

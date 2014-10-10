@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ProfileSpecification" version="3">
+  <DEPS>
+    <ID name="ProfileSpecification" mc="Class" uid="e2ce26a6-7733-40f7-8b65-034fef2ddeb9"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="ProfileSpecification" mc="Class" uid="e2ce26a6-7733-40f7-8b65-034fef2ddeb9"/>
+    <PID name="profile" mc="Package" uid="0b6ab536-160f-414a-88e9-64661dff527e"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ProfileSpecification]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

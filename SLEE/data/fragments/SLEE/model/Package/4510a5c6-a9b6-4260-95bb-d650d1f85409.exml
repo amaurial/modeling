@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="activityContext" version="3">
+  <DEPS>
+    <ID name="activityContext" mc="Package" uid="4510a5c6-a9b6-4260-95bb-d650d1f85409"/>
+    <COMPID name="Activity" mc="Class" uid="447710a2-f4ae-4823-9a5b-1dc46807b70e"/>
+    <COMPID name="Activity Context" mc="Class" uid="382e25b1-8c34-4953-96b7-6048a95efeff"/>
+    <COMPID name="Activity context attribute" mc="Class" uid="7fd0a9b5-572d-4fcb-b34a-4095a3d6a6fc"/>
+    <COMPID name="Activity context interface" mc="Class" uid="2a889799-64b0-49f9-8ae6-5ba791280416"/>
+    <COMPID name="ActivityContext Class diagram" mc="ClassDiagram" uid="bfec72f8-0163-4c9a-94bf-880208afc287"/>
+    <COMPID name="ActivityObject" mc="Class" uid="3a42cbf4-826f-40c4-8eb7-624ac00013e5"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="activityContext" mc="Package" uid="4510a5c6-a9b6-4260-95bb-d650d1f85409"/>
+    <PID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[activityContext]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Activity Context" mc="Class" uid="382e25b1-8c34-4953-96b7-6048a95efeff"/>
+        <COMPID name="Activity context attribute" mc="Class" uid="7fd0a9b5-572d-4fcb-b34a-4095a3d6a6fc"/>
+        <COMPID name="Activity context interface" mc="Class" uid="2a889799-64b0-49f9-8ae6-5ba791280416"/>
+        <COMPID name="ActivityObject" mc="Class" uid="3a42cbf4-826f-40c4-8eb7-624ac00013e5"/>
+        <COMPID name="Activity" mc="Class" uid="447710a2-f4ae-4823-9a5b-1dc46807b70e"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="ActivityContext Class diagram" mc="ClassDiagram" uid="bfec72f8-0163-4c9a-94bf-880208afc287"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

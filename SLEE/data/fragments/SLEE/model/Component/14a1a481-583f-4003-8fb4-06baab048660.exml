@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SbbComponent" version="3">
+  <DEPS>
+    <ID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+    <COMPID name="Child Sbb" mc="Class" uid="210ce033-64e4-42de-88a7-51e938a714e4"/>
+    <COMPID name="Sbb base" mc="Class" uid="c8b07f0f-b1f0-4807-8302-a49ff647b45c"/>
+    <COMPID name="SbbComponent Class diagram" mc="ClassDiagram" uid="9fa6337f-9634-480e-845f-91fffa8727d8"/>
+    <COMPID name="SbbEntity" mc="Class" uid="5bb8a04e-31ca-4231-a7a8-55da44450b91"/>
+    <COMPID name="SyncronousCallInterface" mc="Class" uid="cba5206a-06b3-4dbc-93c9-4587ebeb7a02"/>
+    <EXTID name="Events" mc="Component" uid="484ebb76-e434-4c90-abeb-1cc07b973ef2"/>
+    <EXTID name="Facilities" mc="Component" uid="60c0a0a3-c4e5-4761-8dd4-1cb936d355fd"/>
+    <EXTID name="SbbComponentIdentifier" mc="Class" uid="db739591-2baf-4fac-8c88-935566e881ec"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+    <PID name="sbb" mc="Package" uid="e0b80ae7-5f27-4bf7-9752-8d130af9d1d7"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SbbComponent]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="" mc="AssociationEnd" uid="f8ba94a8-e7a9-4538-ae22-afef05484e26"/>
+          <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Facilities" mc="Component" uid="60c0a0a3-c4e5-4761-8dd4-1cb936d355fd"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="8232f314-604d-4622-87d4-cf4c2d5b51d1"/>
+                <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="" mc="AssociationEnd" uid="f8ba94a8-e7a9-4538-ae22-afef05484e26"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="uses" mc="Association" uid="3ed83f4d-a7fc-4d87-8255-4ea66ffdb170"/>
+                      <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[uses]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="uses" mc="Association" uid="3ed83f4d-a7fc-4d87-8255-4ea66ffdb170"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="AssociationEnd" uid="f38fba15-0fe1-47f0-93c6-6ef17afad303"/>
+          <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Events" mc="Component" uid="484ebb76-e434-4c90-abeb-1cc07b973ef2"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="b8b2eee5-8cd8-4db6-9730-cbd953ed2921"/>
+                <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="" mc="AssociationEnd" uid="f38fba15-0fe1-47f0-93c6-6ef17afad303"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="handles" mc="Association" uid="b93548df-a952-48f9-a1ca-48f608693b6c"/>
+                      <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[handles]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="handles" mc="Association" uid="b93548df-a952-48f9-a1ca-48f608693b6c"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="AssociationEnd" uid="b395f641-b2f0-4d0f-a373-36dd8929f0d7"/>
+          <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="SbbComponentIdentifier" mc="Class" uid="db739591-2baf-4fac-8c88-935566e881ec"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="3a7eeba8-e541-43b9-913f-6132777d7a86"/>
+                <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="" mc="AssociationEnd" uid="b395f641-b2f0-4d0f-a373-36dd8929f0d7"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="has" mc="Association" uid="659169d9-5ba3-4ecd-b146-cf74214feeae"/>
+                      <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[has]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="has" mc="Association" uid="659169d9-5ba3-4ecd-b146-cf74214feeae"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="SyncronousCallInterface" mc="Class" uid="cba5206a-06b3-4dbc-93c9-4587ebeb7a02"/>
+        <COMPID name="Sbb base" mc="Class" uid="c8b07f0f-b1f0-4807-8302-a49ff647b45c"/>
+        <COMPID name="SbbEntity" mc="Class" uid="5bb8a04e-31ca-4231-a7a8-55da44450b91"/>
+        <COMPID name="Child Sbb" mc="Class" uid="210ce033-64e4-42de-88a7-51e938a714e4"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="SbbComponent Class diagram" mc="ClassDiagram" uid="9fa6337f-9634-480e-845f-91fffa8727d8"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

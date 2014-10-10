@@ -1,0 +1,306 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Install Sipservlet RA" version="3">
+  <DEPS>
+    <ID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+    <COMPID name="Deploy Sipservlet RA" mc="ActivityDiagram" uid="e76fc72a-f0d8-421e-adfe-cbf27fb7e0ba"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+    <PID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <ATTRIBUTES>
+      <ATT name="IsSingleExecution">false</ATT>
+      <ATT name="IsReadOnly">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Install Sipservlet RA]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedGroup">
+        <OBJECT>
+          <ID name="Ant" mc="ActivityPartition" uid="f609cbd8-0827-405a-b119-7ed2659c434f"/>
+          <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+          <ATTRIBUTES>
+            <ATT name="IsDimension">false</ATT>
+            <ATT name="IsExternal">false</ATT>
+            <ATT name="Name"><![CDATA[Ant]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="ContainedNode">
+              <OBJECT>
+                <ID name="Initial Node" mc="InitialNode" uid="15014a00-f471-4b21-b228-fb97c7b4041f"/>
+                <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Initial Node]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="aa95fcc2-236c-4ac4-927c-116d5c51e34c"/>
+                      <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Get Ra name definition" mc="OpaqueAction" uid="d53381d7-a68c-4a68-b5b2-71f019a21e8c"/>
+                            <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Get artifact names in BuildProperties" mc="OpaqueAction" uid="ceadf76c-e79d-40f0-badd-5921f31d76dd"/>
+                <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[guava-library; servlet-api-library
+sipservlet-api-library;sipservlet-container
+sipservlet-ratype;sipservlet-extension
+sipservlet-sessionsutil 
+du.sipservlet-ra]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Get artifact names in BuildProperties]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="44a1fffb-14d8-4447-ab32-c08186b72cb8"/>
+                      <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Define the profile tables" mc="OpaqueAction" uid="576b2e63-2040-456e-878b-f93e6ff9ec33"/>
+                            <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="Note" mc="Note" uid="ce51b894-d434-4395-b78e-19ec42fc9eb6"/>
+                      <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[for name details see
+$sip-servlet-home/buil.properties]]></ATT>
+                        <ATT name="Name"><![CDATA[Note]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Define the profile tables" mc="OpaqueAction" uid="576b2e63-2040-456e-878b-f93e6ff9ec33"/>
+                <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[config
+aaplication-names
+routes
+interfaces
+darconfig]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Define the profile tables]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="3c320741-8718-424b-a89f-f89f7b7e5da3"/>
+                      <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Install artifacts" mc="OpaqueAction" uid="16ff1436-d301-4052-be63-6e8f96d3d7ac"/>
+                            <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="Note" mc="Note" uid="06ca4e19-cb30-43d9-b0f6-11f7fa02f407"/>
+                      <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[ SIP Servlet Config Profile
+SIP Servlet Application Name Ref Profile
+SIP Servlet Network Route Profile
+SIP Servlet Network Interface Profile
+SIP Servlet DAR Config Profile
+]]></ATT>
+                        <ATT name="Name"><![CDATA[Note]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Install artifacts" mc="OpaqueAction" uid="16ff1436-d301-4052-be63-6e8f96d3d7ac"/>
+                <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Install artifacts]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="5f45724b-b2a9-4c11-a90b-962782f89bd3"/>
+                      <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Create profile tables" mc="OpaqueAction" uid="db8b4fa0-803a-4867-8139-09d6d2753a26"/>
+                            <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Create profile tables" mc="OpaqueAction" uid="db8b4fa0-803a-4867-8139-09d6d2753a26"/>
+                <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Create profile tables]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="00d92342-ae5b-495e-abce-e1b82e7620a9"/>
+                      <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Activity Final Node" mc="ActivityFinalNode" uid="cd43a359-3407-450c-9b62-879dd566c0a7"/>
+                            <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Get Ra name definition" mc="OpaqueAction" uid="d53381d7-a68c-4a68-b5b2-71f019a21e8c"/>
+                <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[SIP Servlet RA]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Get Ra name definition]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="511fe992-d0b3-459c-be8f-6d79cf1013dc"/>
+                      <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Get artifact names in BuildProperties" mc="OpaqueAction" uid="ceadf76c-e79d-40f0-badd-5921f31d76dd"/>
+                            <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Activity Final Node" mc="ActivityFinalNode" uid="cd43a359-3407-450c-9b62-879dd566c0a7"/>
+                <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Collaboration" uid="78e2258e-577d-4100-ad27-ce9995cd918b"/>
+          <PID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Deploy Sipservlet RA" mc="ActivityDiagram" uid="e76fc72a-f0d8-421e-adfe-cbf27fb7e0ba"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

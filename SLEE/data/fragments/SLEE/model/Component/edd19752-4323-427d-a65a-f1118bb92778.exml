@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Transaction" version="3">
+  <DEPS>
+    <ID name="Transaction" mc="Component" uid="edd19752-4323-427d-a65a-f1118bb92778"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Transaction" mc="Component" uid="edd19752-4323-427d-a65a-f1118bb92778"/>
+    <PID name="Transaction manager" mc="Component" uid="c93bbfa6-9056-4709-b40d-a208deb258c9"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Transaction]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

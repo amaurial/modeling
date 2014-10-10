@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SLEE" version="3">
+  <DEPS>
+    <ID name="SLEE" mc="Project" uid="1e2d3864-5ea0-4e53-bb6d-fc04b2d7bf95"/>
+    <COMPID name="SLEE" mc="DiagramSet" uid="d2c2c595-944e-4a3d-a128-3de2519280be"/>
+    <COMPID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SLEE" mc="Project" uid="1e2d3864-5ea0-4e53-bb6d-fc04b2d7bf95"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[SLEE]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DiagramRoot">
+        <COMPID name="SLEE" mc="DiagramSet" uid="d2c2c595-944e-4a3d-a128-3de2519280be"/>
+      </COMP>
+      <COMP relation="Model">
+        <COMPID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

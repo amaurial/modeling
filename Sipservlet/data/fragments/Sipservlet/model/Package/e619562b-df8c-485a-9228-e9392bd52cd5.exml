@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="http-example" version="3">
+  <DEPS>
+    <ID name="http-example" mc="Package" uid="e619562b-df8c-485a-9228-e9392bd52cd5"/>
+    <COMPID name="Interaction" mc="Interaction" uid="17b9a111-579b-4c89-a604-193b520b0e57"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="http-example" mc="Package" uid="e619562b-df8c-485a-9228-e9392bd52cd5"/>
+    <PID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[http-example]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Interaction" mc="Interaction" uid="17b9a111-579b-4c89-a604-193b520b0e57"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

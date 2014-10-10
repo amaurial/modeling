@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Deploy Sipservlet RA" version="3">
+  <DEPS>
+    <ID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+    <COMPID name="Activity Activity diagram" mc="ActivityDiagram" uid="13d8d963-0b5e-4cdd-bbb4-8566dc261694"/>
+    <EXTID name="Create Sipservlet RA" mc="Activity" uid="201f2a79-8916-493a-8d56-d2cda4d947ac"/>
+    <EXTID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+    <PID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <ATTRIBUTES>
+      <ATT name="IsSingleExecution">false</ATT>
+      <ATT name="IsReadOnly">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Deploy Sipservlet RA]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedGroup">
+        <OBJECT>
+          <ID name="Ant" mc="ActivityPartition" uid="a3fd6d30-a938-4a29-8b81-6e7ac5fa1306"/>
+          <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+          <ATTRIBUTES>
+            <ATT name="IsDimension">false</ATT>
+            <ATT name="IsExternal">false</ATT>
+            <ATT name="Name"><![CDATA[Ant]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="ContainedNode">
+              <OBJECT>
+                <ID name="Initial Node" mc="InitialNode" uid="87f7351f-20c3-4251-9247-fe00f5a776c1"/>
+                <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Initial Node]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="bdc6e332-5dd4-44b7-a527-e3e524256bf6"/>
+                      <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Install Sipservlet RA" mc="CallBehaviorAction" uid="2a9a8ce7-eaee-40a6-9ff3-bdd003f526c0"/>
+                            <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Install Sipservlet RA" mc="CallBehaviorAction" uid="2a9a8ce7-eaee-40a6-9ff3-bdd003f526c0"/>
+                <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                <ATTRIBUTES>
+                  <ATT name="IsSynchronous">true</ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Install Sipservlet RA]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Called">
+                    <ID name="Install Sipservlet RA" mc="Activity" uid="6f1b912f-71ff-46ea-a932-979cf0d2091d"/>
+                  </LINK>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="7154a792-6888-4bf6-a8f0-1f46ba96dd9a"/>
+                      <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Create Sipservlet RA" mc="CallBehaviorAction" uid="bdf79144-a438-40db-b1a9-1995cbf4f847"/>
+                            <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Create Sipservlet RA" mc="CallBehaviorAction" uid="bdf79144-a438-40db-b1a9-1995cbf4f847"/>
+                <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                <ATTRIBUTES>
+                  <ATT name="IsSynchronous">true</ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Create Sipservlet RA]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Called">
+                    <ID name="Create Sipservlet RA" mc="Activity" uid="201f2a79-8916-493a-8d56-d2cda4d947ac"/>
+                  </LINK>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="ControlFlow" uid="4e00d6e6-9b9b-447c-b11b-855e2f033f04"/>
+                      <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Activity Final Node" mc="ActivityFinalNode" uid="8d21dd5c-e8dc-4a02-ae8b-29003f53abe3"/>
+                            <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Activity Final Node" mc="ActivityFinalNode" uid="8d21dd5c-e8dc-4a02-ae8b-29003f53abe3"/>
+                <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Collaboration" uid="0131745f-936e-4635-af91-0b45b299a641"/>
+          <PID name="Deploy Sipservlet RA" mc="Activity" uid="30c96a99-fed9-49cb-83e4-1aa1f1583336"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Activity Activity diagram" mc="ActivityDiagram" uid="13d8d963-0b5e-4cdd-bbb4-8566dc261694"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

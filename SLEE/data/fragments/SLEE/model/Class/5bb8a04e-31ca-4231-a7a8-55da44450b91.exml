@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SbbEntity" version="3">
+  <DEPS>
+    <ID name="SbbEntity" mc="Class" uid="5bb8a04e-31ca-4231-a7a8-55da44450b91"/>
+    <EXTID name="Child Sbb" mc="Class" uid="210ce033-64e4-42de-88a7-51e938a714e4"/>
+    <EXTID name="Sbb base" mc="Class" uid="c8b07f0f-b1f0-4807-8302-a49ff647b45c"/>
+    <FOREIGNID name="" mc="AssociationEnd" uid="f3d751b3-2ab9-4961-89bc-35aef555c6e2"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SbbEntity" mc="Class" uid="5bb8a04e-31ca-4231-a7a8-55da44450b91"/>
+    <PID name="SbbComponent" mc="Component" uid="14a1a481-583f-4003-8fb4-06baab048660"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SbbEntity]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedEnd">
+        <FOREIGNID name="" mc="AssociationEnd" uid="f3d751b3-2ab9-4961-89bc-35aef555c6e2"/>
+        <REFOBJ>
+          <ID name="" mc="AssociationEnd" uid="db810a7c-2a4a-404c-9e1d-c897447cbe4c"/>
+          <PID name="Child Sbb" mc="Class" uid="210ce033-64e4-42de-88a7-51e938a714e4"/>
+        </REFOBJ>
+      </COMP>
+      <COMP relation="Parent">
+        <OBJECT>
+          <ID name="Generalization" mc="Generalization" uid="9c4bbffb-89ce-475e-8860-3b684146dc55"/>
+          <PID name="SbbEntity" mc="Class" uid="5bb8a04e-31ca-4231-a7a8-55da44450b91"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"><![CDATA[Generalization]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="Sbb base" mc="Class" uid="c8b07f0f-b1f0-4807-8302-a49ff647b45c"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

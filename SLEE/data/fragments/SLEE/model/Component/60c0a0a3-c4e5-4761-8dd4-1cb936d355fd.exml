@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Facilities" version="3">
+  <DEPS>
+    <ID name="Facilities" mc="Component" uid="60c0a0a3-c4e5-4761-8dd4-1cb936d355fd"/>
+    <COMPID name="Activity naming" mc="Component" uid="994c8102-18aa-44cc-a333-b138cd7043f0"/>
+    <COMPID name="Alarm" mc="Component" uid="eca8794f-d443-49ee-add6-7ddc523e67f0"/>
+    <COMPID name="Event lookup" mc="Component" uid="0da54741-1b2a-49c7-93d3-ecaaf3a54a47"/>
+    <COMPID name="Profile" mc="Component" uid="efe57e82-dc1c-4a55-af5d-cb516b75eda9"/>
+    <COMPID name="Service lookup" mc="Component" uid="043d97e5-74f1-449b-ba1e-4019db1222a4"/>
+    <COMPID name="Timer" mc="Component" uid="bd24b77f-cd3f-47a6-aaf1-7bd982dfdb13"/>
+    <COMPID name="Trace" mc="Component" uid="03a67c23-ce08-4940-b258-52f393a6e990"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Facilities" mc="Component" uid="60c0a0a3-c4e5-4761-8dd4-1cb936d355fd"/>
+    <PID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Facilities]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Timer" mc="Component" uid="bd24b77f-cd3f-47a6-aaf1-7bd982dfdb13"/>
+        <COMPID name="Trace" mc="Component" uid="03a67c23-ce08-4940-b258-52f393a6e990"/>
+        <COMPID name="Alarm" mc="Component" uid="eca8794f-d443-49ee-add6-7ddc523e67f0"/>
+        <COMPID name="Profile" mc="Component" uid="efe57e82-dc1c-4a55-af5d-cb516b75eda9"/>
+        <COMPID name="Event lookup" mc="Component" uid="0da54741-1b2a-49c7-93d3-ecaaf3a54a47"/>
+        <COMPID name="Service lookup" mc="Component" uid="043d97e5-74f1-449b-ba1e-4019db1222a4"/>
+        <COMPID name="Activity naming" mc="Component" uid="994c8102-18aa-44cc-a333-b138cd7043f0"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

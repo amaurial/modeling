@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="slee" version="3">
+  <DEPS>
+    <ID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <COMPID name="ActivityContext" mc="Component" uid="5fec490c-8869-4348-af6d-8f092e9a7e06"/>
+    <COMPID name="Event routing" mc="Component" uid="728100cc-90e8-49d2-be59-91ba4cc972ce"/>
+    <COMPID name="Events" mc="Component" uid="484ebb76-e434-4c90-abeb-1cc07b973ef2"/>
+    <COMPID name="Facilities" mc="Component" uid="60c0a0a3-c4e5-4761-8dd4-1cb936d355fd"/>
+    <COMPID name="Interface Manager" mc="Component" uid="2a73d257-d695-41ac-8697-9b14451473b8"/>
+    <COMPID name="Profile Manager" mc="Component" uid="241b0dba-ee62-4f49-a068-8bcc4aaba8aa"/>
+    <COMPID name="Resources" mc="Component" uid="d5c4d30c-1f39-49a1-8658-8a2ffdd06675"/>
+    <COMPID name="Service" mc="Package" uid="47177809-1028-46f1-9ad9-012dfed9b383"/>
+    <COMPID name="Transaction manager" mc="Component" uid="c93bbfa6-9056-4709-b40d-a208deb258c9"/>
+    <COMPID name="activityContext" mc="Package" uid="4510a5c6-a9b6-4260-95bb-d650d1f85409"/>
+    <COMPID name="overview diagram" mc="ClassDiagram" uid="a71f0397-7c8f-4077-b292-6521d3240c1c"/>
+    <COMPID name="profile" mc="Package" uid="0b6ab536-160f-414a-88e9-64661dff527e"/>
+    <COMPID name="sbb" mc="Package" uid="e0b80ae7-5f27-4bf7-9752-8d130af9d1d7"/>
+    <COMPID name="sbbGraph" mc="Package" uid="19907697-b5ce-4e8a-bfc6-dd7b2617eb81"/>
+    <COMPID name="slee Class diagram" mc="ClassDiagram" uid="ec96099a-8c13-4f97-975c-70d10916db4d"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <PID name="SLEE" mc="Project" uid="1e2d3864-5ea0-4e53-bb6d-fc04b2d7bf95"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[slee]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Profile Manager" mc="Component" uid="241b0dba-ee62-4f49-a068-8bcc4aaba8aa"/>
+        <COMPID name="Facilities" mc="Component" uid="60c0a0a3-c4e5-4761-8dd4-1cb936d355fd"/>
+        <COMPID name="Resources" mc="Component" uid="d5c4d30c-1f39-49a1-8658-8a2ffdd06675"/>
+        <COMPID name="Event routing" mc="Component" uid="728100cc-90e8-49d2-be59-91ba4cc972ce"/>
+        <COMPID name="Interface Manager" mc="Component" uid="2a73d257-d695-41ac-8697-9b14451473b8"/>
+        <COMPID name="Transaction manager" mc="Component" uid="c93bbfa6-9056-4709-b40d-a208deb258c9"/>
+        <COMPID name="Events" mc="Component" uid="484ebb76-e434-4c90-abeb-1cc07b973ef2"/>
+        <COMPID name="ActivityContext" mc="Component" uid="5fec490c-8869-4348-af6d-8f092e9a7e06"/>
+        <COMPID name="sbbGraph" mc="Package" uid="19907697-b5ce-4e8a-bfc6-dd7b2617eb81"/>
+        <COMPID name="activityContext" mc="Package" uid="4510a5c6-a9b6-4260-95bb-d650d1f85409"/>
+        <COMPID name="Service" mc="Package" uid="47177809-1028-46f1-9ad9-012dfed9b383"/>
+        <COMPID name="sbb" mc="Package" uid="e0b80ae7-5f27-4bf7-9752-8d130af9d1d7"/>
+        <COMPID name="profile" mc="Package" uid="0b6ab536-160f-414a-88e9-64661dff527e"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="ClassDiagram" uid="a71f0397-7c8f-4077-b292-6521d3240c1c"/>
+        <COMPID name="slee Class diagram" mc="ClassDiagram" uid="ec96099a-8c13-4f97-975c-70d10916db4d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

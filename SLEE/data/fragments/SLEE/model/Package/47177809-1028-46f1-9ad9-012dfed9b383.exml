@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Service" version="3">
+  <DEPS>
+    <ID name="Service" mc="Package" uid="47177809-1028-46f1-9ad9-012dfed9b383"/>
+    <COMPID name="Service" mc="Class" uid="ffda4bdd-06dc-4d56-811a-b86c02b2f6fa"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Service" mc="Package" uid="47177809-1028-46f1-9ad9-012dfed9b383"/>
+    <PID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Service]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Service" mc="Class" uid="ffda4bdd-06dc-4d56-811a-b86c02b2f6fa"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

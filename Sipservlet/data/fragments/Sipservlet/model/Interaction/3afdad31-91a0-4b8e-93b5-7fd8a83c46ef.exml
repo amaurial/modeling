@@ -1,0 +1,997 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FailureCseq" version="3">
+  <DEPS>
+    <ID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+    <COMPID name="Interaction1 Sequence diagram" mc="SequenceDiagram" uid="1e1a57a4-4dc9-418a-bc2d-8f04b5c86ddb"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+    <PID name="b2bhandoff" mc="Package" uid="13e879b5-e831-459b-b3d8-5623157c41a4"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[FailureCseq]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Fragment">
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="90fafda4-8b76-4e47-bd19-f29da0f20649"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">62</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="INVITE (Cseq 500)" mc="Message" uid="a5c11b19-49e4-44a9-9e32-5d6dfdb5f7c2"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[INVITE (Cseq 500)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="5a1fc234-efa4-4f10-973e-66a05d19f810"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="5a1fc234-efa4-4f10-973e-66a05d19f810"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">62</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="51ad58ab-0c14-4592-86ff-b286ca2106fc"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="4d1c60f2-dcb1-40b0-b22e-ca5333723e20"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">82</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="51ad58ab-0c14-4592-86ff-b286ca2106fc"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">62</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="4d1c60f2-dcb1-40b0-b22e-ca5333723e20"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="b3834255-3623-4c4d-9b84-28be08d6aa40"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">95</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="TRYING (Cseq 500)" mc="Message" uid="6955ec40-d3a2-4e3d-bacc-a7c3a8b50758"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[TRYING (Cseq 500)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="14c15c44-b8bd-4260-a85b-cf2cb5112601"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="14c15c44-b8bd-4260-a85b-cf2cb5112601"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">95</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="497a8c08-34f1-4b76-8208-3dbf0f8c99b4"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="0377b3dc-d78f-4b2e-b2ff-484d51f48988"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">115</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="497a8c08-34f1-4b76-8208-3dbf0f8c99b4"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">95</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="0377b3dc-d78f-4b2e-b2ff-484d51f48988"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="6d030687-6972-49e6-891d-c0a464544a5e"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">115</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="INVITE (Cseq 1)" mc="Message" uid="4cb1cb66-ff68-40cf-80ce-421a65ec9643"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[INVITE (Cseq 1)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="485a6bad-dad5-4b94-97c2-4d9f7e20c468"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="485a6bad-dad5-4b94-97c2-4d9f7e20c468"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">115</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="5b00f584-3d91-4b1c-97ad-f763368a97a0"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="621e8edb-b054-4439-8ede-e2335323569c"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">135</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="5b00f584-3d91-4b1c-97ad-f763368a97a0"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">115</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="621e8edb-b054-4439-8ede-e2335323569c"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="032573ed-3980-4547-b1cd-f0ea47fe4dc1"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">154</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="RINGING (Cseq 1)" mc="Message" uid="4620fdaa-414f-4c9c-a5af-4f575c424a26"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[RINGING (Cseq 1)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="d07dfc41-b261-4df1-abf4-1a803fbecd9c"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="d07dfc41-b261-4df1-abf4-1a803fbecd9c"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">154</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="bf108563-83d2-4768-abd2-21d201c483ab"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="9bd88fa7-7326-4db2-966c-7d0c8aa7bb5f"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">174</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="bf108563-83d2-4768-abd2-21d201c483ab"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">154</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="9bd88fa7-7326-4db2-966c-7d0c8aa7bb5f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="93cd2fd2-fdf3-47b7-8e5b-5c9202040ed0"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">189</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="OK (Cseq 1)" mc="Message" uid="107edd81-b3d3-4979-8122-6189a3b52118"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[OK (Cseq 1)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="a11cc26f-bc39-4c5c-8f05-085a04c248ca"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="a11cc26f-bc39-4c5c-8f05-085a04c248ca"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">189</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="614bd4da-1c13-47f1-b7c0-b59465ceee48"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="6c95df00-04f2-443b-8ed6-853f1e662a5f"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">209</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="614bd4da-1c13-47f1-b7c0-b59465ceee48"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">189</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="6c95df00-04f2-443b-8ed6-853f1e662a5f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="b1beb689-e4e2-4018-a18d-182b9c02a569"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">216</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="RINGING (Cseq 500)" mc="Message" uid="0a5f5c4f-399d-4608-b559-bfb4f937f1cf"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[RINGING (Cseq 500)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="f2b606ef-c90e-4e66-9a31-75d991d4b2c6"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="f2b606ef-c90e-4e66-9a31-75d991d4b2c6"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">216</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="05ed6f4c-f9ff-44b7-a258-ca58a244c890"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="995e1ed3-4291-4431-a378-e16f2373426b"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">236</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="05ed6f4c-f9ff-44b7-a258-ca58a244c890"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">216</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="995e1ed3-4291-4431-a378-e16f2373426b"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="9e614934-cf50-4531-836c-5bd6569bbc2a"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">263</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="OK (Cseq 500)" mc="Message" uid="c20629e2-1c3f-4fe4-805b-5d03cb9086fb"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[OK (Cseq 500)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="6ed5b61d-74d0-4fef-affb-b292179457b7"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="6ed5b61d-74d0-4fef-affb-b292179457b7"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">264</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="1e7bb791-96d7-40f2-8752-853de6ed4242"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="644d957a-86d8-401f-9551-72fdf1612a58"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">284</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="1e7bb791-96d7-40f2-8752-853de6ed4242"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">264</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="644d957a-86d8-401f-9551-72fdf1612a58"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="5634b651-a05c-4bd4-89ac-ba0378d8f247"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">304</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="ACK (Cseq 500)" mc="Message" uid="cf7ebe97-5f82-42d6-82f8-abe61268668f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[ACK (Cseq 500)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="57023b53-30b0-4b3a-97f7-40779fea0eca"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="57023b53-30b0-4b3a-97f7-40779fea0eca"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">304</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="6e0816c0-0bca-4db3-b731-7893825f4f72"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="a93a99d3-e6b3-4ff9-be51-c552d3cf0754"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">324</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="6e0816c0-0bca-4db3-b731-7893825f4f72"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">304</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="a93a99d3-e6b3-4ff9-be51-c552d3cf0754"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="4ac2ccf7-b5b2-4c11-8635-92323e110b20"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">336</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="ACK (Cseq 500)" mc="Message" uid="cca40d31-6f72-4469-947d-f592cd9a1bd8"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[ACK (Cseq 500)]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="58a25856-8f8b-41e0-815c-7e558857d7c5"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="Note" mc="Note" uid="031c9e71-d768-4844-a5b0-bd2b4711b9e5"/>
+                      <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[The servlet is not using the call sequence for this leg. It is just proxing the messae]]></ATT>
+                        <ATT name="Name"><![CDATA[Note]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="58a25856-8f8b-41e0-815c-7e558857d7c5"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">336</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="aaffc35b-7144-41fc-bf39-64d67ea35f36"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="93363bdd-39dd-4ae0-aee6-be7fd1a1793c"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">356</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="aaffc35b-7144-41fc-bf39-64d67ea35f36"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">336</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="93363bdd-39dd-4ae0-aee6-be7fd1a1793c"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+                <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedLine">
+        <OBJECT>
+          <ID name="SIP UE" mc="Lifeline" uid="a5b2c6b6-43e0-4814-af12-43b6c2b9d472"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[SIP UE]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="B2B" mc="Lifeline" uid="43f5feb0-66f4-4bc2-b385-cb05b5084c0f"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[B2B]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="SIP UA" mc="Lifeline" uid="934b230c-de79-4b2b-b271-de60ba485dc1"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[SIP UA]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Collaboration" uid="61cea13b-6463-47e3-b47b-ea1f3568fbd1"/>
+          <PID name="FailureCseq" mc="Interaction" uid="3afdad31-91a0-4b8e-93b5-7fd8a83c46ef"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Interaction1 Sequence diagram" mc="SequenceDiagram" uid="1e1a57a4-4dc9-418a-bc2d-8f04b5c86ddb"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

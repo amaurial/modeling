@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="proxy-process" version="3">
+  <DEPS>
+    <ID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+    <COMPID name="Communication Interaction Communication diagram" mc="CommunicationDiagram" uid="aa7247f0-c9b6-447e-bf32-0dc6ca473196"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+    <PID name="sipservlet" mc="Package" uid="02db08e5-3a9c-40b5-8101-18f9ceaca982"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[proxy-process]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Owned">
+        <OBJECT>
+          <ID name="sipClient:port5080" mc="CommunicationNode" uid="5baa8652-708c-41a9-9093-ca3b0988aabc"/>
+          <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[sipClient:port5080]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Started">
+              <OBJECT>
+                <ID name="SIP" mc="CommunicationChannel" uid="2b5ac5bf-4b8b-42a2-ad3f-5f0dad90a24c"/>
+                <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[SIP]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="End">
+                    <REFOBJ>
+                      <ID name="sipservletRA:port5060" mc="CommunicationNode" uid="041121d4-c68c-4e2f-8763-ddb48647b54d"/>
+                      <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="sipServer:port5090" mc="CommunicationNode" uid="acfaa051-f839-4893-aef1-503cc1e19b3e"/>
+          <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[sipServer:port5090]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="sipservletRA:port5060" mc="CommunicationNode" uid="041121d4-c68c-4e2f-8763-ddb48647b54d"/>
+          <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[sipservletRA:port5060]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Started">
+              <OBJECT>
+                <ID name="SIP" mc="CommunicationChannel" uid="0c76e745-bd59-4049-a8d5-15cfab067203"/>
+                <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[SIP]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="End">
+                    <REFOBJ>
+                      <ID name="sipServer:port5090" mc="CommunicationNode" uid="acfaa051-f839-4893-aef1-503cc1e19b3e"/>
+                      <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="slee events" mc="CommunicationChannel" uid="9cec3e8a-ed6c-4ee4-b47b-c42ae8a8d39e"/>
+                <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[slee events]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="End">
+                    <REFOBJ>
+                      <ID name="proxy-hybrid" mc="CommunicationNode" uid="4976d0a1-6148-4e3f-adf7-402f115526db"/>
+                      <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="httpRA" mc="CommunicationNode" uid="f30b9f82-6a0e-40ef-96a3-57e00f8cde48"/>
+          <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[httpRA]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Started">
+              <OBJECT>
+                <ID name="HTTP events" mc="CommunicationChannel" uid="10c78e35-8f2d-4d7c-9c7e-1a35405e1f53"/>
+                <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[HTTP events]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="End">
+                    <REFOBJ>
+                      <ID name="proxy-hybrid" mc="CommunicationNode" uid="4976d0a1-6148-4e3f-adf7-402f115526db"/>
+                      <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="HTTP" mc="CommunicationChannel" uid="dff56b93-7aba-45cd-b1f4-a57e78ec5742"/>
+                <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[HTTP]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="End">
+                    <REFOBJ>
+                      <ID name="http server" mc="CommunicationNode" uid="a9862b6d-014b-4603-8cbb-2ffb362e8a8a"/>
+                      <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="proxy-hybrid" mc="CommunicationNode" uid="4976d0a1-6148-4e3f-adf7-402f115526db"/>
+          <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[proxy-hybrid]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Started">
+              <OBJECT>
+                <ID name="slee call" mc="CommunicationChannel" uid="c1a8f52e-3ec9-475e-8004-cf67f18da0ac"/>
+                <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[slee call]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="End">
+                    <REFOBJ>
+                      <ID name="sipservletRA:port5060" mc="CommunicationNode" uid="041121d4-c68c-4e2f-8763-ddb48647b54d"/>
+                      <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="slee call" mc="CommunicationChannel" uid="861e3263-efa7-4d64-872d-83260c602e57"/>
+                <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[slee call]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="End">
+                    <REFOBJ>
+                      <ID name="httpRA" mc="CommunicationNode" uid="f30b9f82-6a0e-40ef-96a3-57e00f8cde48"/>
+                      <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="http server" mc="CommunicationNode" uid="a9862b6d-014b-4603-8cbb-2ffb362e8a8a"/>
+          <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[http server]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Collaboration" uid="a75e761a-92ce-413e-a128-84dd33341b52"/>
+          <PID name="proxy-process" mc="CommunicationInteraction" uid="9eca2b62-8d97-4af4-aed8-7689e24cabe9"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Communication Interaction Communication diagram" mc="CommunicationDiagram" uid="aa7247f0-c9b6-447e-bf32-0dc6ca473196"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

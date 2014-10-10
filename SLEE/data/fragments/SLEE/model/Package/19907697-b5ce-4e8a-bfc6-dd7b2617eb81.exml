@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="sbbGraph" version="3">
+  <DEPS>
+    <ID name="sbbGraph" mc="Package" uid="19907697-b5ce-4e8a-bfc6-dd7b2617eb81"/>
+    <COMPID name="SbbGraph" mc="Class" uid="22767e06-1cd8-4636-aa5e-107690655753"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="sbbGraph" mc="Package" uid="19907697-b5ce-4e8a-bfc6-dd7b2617eb81"/>
+    <PID name="slee" mc="Package" uid="e89efb7c-f507-40fc-8140-c9f65826cb3e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[sbbGraph]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="SbbGraph" mc="Class" uid="22767e06-1cd8-4636-aa5e-107690655753"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

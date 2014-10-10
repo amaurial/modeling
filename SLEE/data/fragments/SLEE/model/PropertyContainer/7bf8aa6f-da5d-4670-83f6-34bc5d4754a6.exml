@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SLEE" version="3">
+  <DEPS>
+    <ID name="SLEE" mc="PropertyContainer" uid="7bf8aa6f-da5d-4670-83f6-34bc5d4754a6"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SLEE" mc="PropertyContainer" uid="7bf8aa6f-da5d-4670-83f6-34bc5d4754a6"/>
+    <PID name="SLEE" mc="AnalystProject" uid="ccc67d95-f0a9-4aed-b5e2-deb1a798bd3b"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[SLEE]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

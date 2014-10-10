@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="OfflineCDRProcess" version="3">
+  <DEPS>
+    <ID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+    <COMPID name="Configure  alarms" mc="UseCase" uid="d4384b76-202a-4ce9-8682-992fb29400c2"/>
+    <COMPID name="Configure File name nomeclature" mc="UseCase" uid="4809073b-04e5-496c-9494-fbcb0361d032"/>
+    <COMPID name="Configure backup" mc="UseCase" uid="0bf3a34d-b91e-4e53-bb22-90955985f0c9"/>
+    <COMPID name="Configure file generation" mc="UseCase" uid="ca39edbb-e5a2-4135-8122-5dafd6f0e7fd"/>
+    <COMPID name="Configure file rotation" mc="UseCase" uid="7ddca2e9-7743-4ab7-b613-f9b8198a4cdf"/>
+    <COMPID name="Configure file transmission" mc="UseCase" uid="5ce1b1c5-e960-46fd-a258-97850a3c6d92"/>
+    <COMPID name="Configure minimum and maximum file size" mc="UseCase" uid="92cd4bb9-bdf5-4184-9b16-3834e5691431"/>
+    <COMPID name="Configure minimum and maximum number of CDRs" mc="UseCase" uid="db8ca7c1-3297-4bac-8b21-409d97a1b8b0"/>
+    <COMPID name="Configure storage alarms" mc="UseCase" uid="2185fbcc-711f-480b-b2f2-b8bbefe6427e"/>
+    <COMPID name="Configure transmission alarms" mc="UseCase" uid="5f2648a4-34e7-412e-8dcc-bc8cffbcecae"/>
+    <COMPID name="Configure transmission interval" mc="UseCase" uid="b826b8b2-5dae-4f9f-b976-12da0c0d678e"/>
+    <COMPID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <COMPID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+    <COMPID name="OfflineCDRProcessFileTransmission Use Case diagram" mc="UseCaseDiagram" uid="e9982b58-5855-483d-b2a9-5d059e180081"/>
+    <COMPID name="Operator staff" mc="Actor" uid="f81ae064-ad26-41c2-ad96-3006ad13c73d"/>
+    <COMPID name="Set file transmission protocol" mc="UseCase" uid="830b3533-bb4c-4672-9728-58ac546d3e92"/>
+    <COMPID name="Set operation Modus: Active or passive" mc="UseCase" uid="75dca1d9-fb43-4385-8a54-93d83002d066"/>
+    <COMPID name="Set storage parameters" mc="UseCase" uid="1fb731cc-e06f-42bc-855b-f4920328f03f"/>
+    <COMPID name="Set the desteny host" mc="UseCase" uid="0d762372-ff26-4e18-9e37-4ba467957071"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+    <PID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[OfflineCDRProcess]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Operator staff" mc="Actor" uid="f81ae064-ad26-41c2-ad96-3006ad13c73d"/>
+        <COMPID name="Configure File name nomeclature" mc="UseCase" uid="4809073b-04e5-496c-9494-fbcb0361d032"/>
+        <COMPID name="Configure  alarms" mc="UseCase" uid="d4384b76-202a-4ce9-8682-992fb29400c2"/>
+        <COMPID name="Configure file generation" mc="UseCase" uid="ca39edbb-e5a2-4135-8122-5dafd6f0e7fd"/>
+        <COMPID name="Configure minimum and maximum number of CDRs" mc="UseCase" uid="db8ca7c1-3297-4bac-8b21-409d97a1b8b0"/>
+        <COMPID name="Configure transmission interval" mc="UseCase" uid="b826b8b2-5dae-4f9f-b976-12da0c0d678e"/>
+        <COMPID name="Configure minimum and maximum file size" mc="UseCase" uid="92cd4bb9-bdf5-4184-9b16-3834e5691431"/>
+        <COMPID name="Configure file transmission" mc="UseCase" uid="5ce1b1c5-e960-46fd-a258-97850a3c6d92"/>
+        <COMPID name="Configure storage alarms" mc="UseCase" uid="2185fbcc-711f-480b-b2f2-b8bbefe6427e"/>
+        <COMPID name="Configure transmission alarms" mc="UseCase" uid="5f2648a4-34e7-412e-8dcc-bc8cffbcecae"/>
+        <COMPID name="Set storage parameters" mc="UseCase" uid="1fb731cc-e06f-42bc-855b-f4920328f03f"/>
+        <COMPID name="Set the desteny host" mc="UseCase" uid="0d762372-ff26-4e18-9e37-4ba467957071"/>
+        <COMPID name="Set file transmission protocol" mc="UseCase" uid="830b3533-bb4c-4672-9728-58ac546d3e92"/>
+        <COMPID name="Configure file rotation" mc="UseCase" uid="7ddca2e9-7743-4ab7-b613-f9b8198a4cdf"/>
+        <COMPID name="Configure backup" mc="UseCase" uid="0bf3a34d-b91e-4e53-bb22-90955985f0c9"/>
+        <COMPID name="Set operation Modus: Active or passive" mc="UseCase" uid="75dca1d9-fb43-4385-8a54-93d83002d066"/>
+        <COMPID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="OfflineCDRProcessFileTransmission Use Case diagram" mc="UseCaseDiagram" uid="e9982b58-5855-483d-b2a9-5d059e180081"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

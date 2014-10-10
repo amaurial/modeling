@@ -1,0 +1,1402 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="File Transmission" version="3">
+  <DEPS>
+    <ID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+    <COMPID name="Process Bpmn Process diagram" mc="BpmnProcessCollaborationDiagram" uid="bb209110-a1dc-4fcc-a063-e9f029f09c16"/>
+    <COMPID name="Process1 Bpmn Process diagram" mc="BpmnProcessCollaborationDiagram" uid="b550d4c1-b338-4700-9d43-461b36a7d92e"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+    <PID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">true</ATT>
+      <ATT name="Name"><![CDATA[File Transmission]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="RootElement">
+        <OBJECT>
+          <ID name="Process" mc="BpmnProcess" uid="6e8e8592-fb2b-4006-a12b-e9a4f1a1ce89"/>
+          <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+          <ATTRIBUTES>
+            <ATT name="ProcessType">NoneProcess</ATT>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="IsExecutable">OUndefined</ATT>
+            <ATT name="Name"><![CDATA[Process]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="LaneSet">
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="1761ef71-0b81-49ee-bc41-2ba9193e1598"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Sentinel" mc="BpmnLane" uid="f6b76284-8e67-4c89-9ddd-c64ed9eb6103"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Sentinel]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Call session started" mc="BpmnStartEvent" uid="49850047-a197-4ad8-85d0-dc41ae82fe2a"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Create record with details of the session" mc="BpmnTask" uid="c108fede-e0d8-41ec-80a9-373319e644d3"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Monitor the session" mc="BpmnTask" uid="ede32b67-2f4d-4b2a-b877-d2d2b730dad0"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Session ended?" mc="BpmnTask" uid="2294bb9d-08e1-43cd-9e78-c027adcf3da6"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Should write interim CDR?" mc="BpmnTask" uid="a2408304-3be1-4188-a6cd-e26bc0264588"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Persist the CDR" mc="BpmnSubProcess" uid="354c4d19-30d7-4893-aaea-d021c3385284"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Persist the CDR" mc="BpmnSubProcess" uid="b575331b-27be-41b4-9a8a-944b3e73d4e4"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Record the remaining information about the session" mc="BpmnTask" uid="5d741401-33ab-4a34-b7f8-e92e3df3bbbd"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check if the CDRs are ready to be transmited" mc="BpmnSubProcess" uid="8136241e-5dfc-43cb-9fdc-e70bb51e18b9"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Can transmit?" mc="BpmnTask" uid="60943d9f-5bef-426c-a984-3fdacb76f5f5"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Parallel Gateway" mc="BpmnParallelGateway" uid="d671992e-ba80-4503-89cb-5b8549cffc74"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Transmit the CDRs" mc="BpmnSubProcess" uid="ea4b3c54-0d2b-439d-a117-156e25d7ef2e"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="End Event" mc="BpmnEndEvent" uid="5ba339c8-b181-49eb-b7d9-45c0e86506df"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Mark file as transmited" mc="BpmnTask" uid="dcc98e6b-f9dc-447b-af18-b637fa584923"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Backup File" mc="BpmnTask" uid="f05752b4-18bb-4318-b1f2-22455e915358"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="DB or File" mc="BpmnDataStore" uid="2bca5ed3-7d89-4bd9-b82e-b66f11ed7f63"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Put CDRs in a file" mc="BpmnSubProcess" uid="eff20c04-3a05-401a-8db9-4059f90c3bfd"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Active Mode?" mc="BpmnExclusiveGateway" uid="b56292ec-8dd5-47ba-86e3-81f1cbb19961"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="4f76ee34-cf46-4b66-a2af-c8f45707ea07"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Operator CDR colection point" mc="BpmnLane" uid="1d56c084-9b88-45e0-88ed-2d8c1ec0ef1c"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Operator CDR colection point]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Receive File with CDRs" mc="BpmnTask" uid="678727ab-c464-485a-b0f8-bd8a150fdcaf"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check file consistency" mc="BpmnTask" uid="24afdcb8-ef77-48be-a65e-1069c600ef30"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Consistent?" mc="BpmnTask" uid="04db16ff-c0fb-4b4e-ab8a-fdfc2941441f"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Request retransmission" mc="BpmnTask" uid="e1975b11-0b4b-4853-b3b5-69f8f3f7d5fa"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Send receive confirmation" mc="BpmnTask" uid="0d353795-137a-4df3-9c40-5047974f27c9"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Consistent file received" mc="BpmnEndEvent" uid="2787e922-689a-43c9-b368-b545cbb551d5"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="FlowElement">
+              <OBJECT>
+                <ID name="Call session started" mc="BpmnStartEvent" uid="49850047-a197-4ad8-85d0-dc41ae82fe2a"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Call session started]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Create record with details of the session" mc="BpmnTask" uid="c108fede-e0d8-41ec-80a9-373319e644d3"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Create record with details of the session]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow" mc="BpmnSequenceFlow" uid="8425a99c-8d1e-49ba-97dc-690bd3b78ec3"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Call session started" mc="BpmnStartEvent" uid="49850047-a197-4ad8-85d0-dc41ae82fe2a"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Create record with details of the session" mc="BpmnTask" uid="c108fede-e0d8-41ec-80a9-373319e644d3"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Monitor the session" mc="BpmnTask" uid="ede32b67-2f4d-4b2a-b877-d2d2b730dad0"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Monitor the session]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow1" mc="BpmnSequenceFlow" uid="7c4091fe-ee60-4fe0-99a1-9c64663e918a"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Create record with details of the session" mc="BpmnTask" uid="c108fede-e0d8-41ec-80a9-373319e644d3"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Monitor the session" mc="BpmnTask" uid="ede32b67-2f4d-4b2a-b877-d2d2b730dad0"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Session ended?" mc="BpmnTask" uid="2294bb9d-08e1-43cd-9e78-c027adcf3da6"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Session ended?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Should write interim CDR?" mc="BpmnTask" uid="a2408304-3be1-4188-a6cd-e26bc0264588"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Should write interim CDR?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow2" mc="BpmnSequenceFlow" uid="cc168a2b-6187-4d9c-bc5e-ee2c8a172c23"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Monitor the session" mc="BpmnTask" uid="ede32b67-2f4d-4b2a-b877-d2d2b730dad0"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Session ended?" mc="BpmnTask" uid="2294bb9d-08e1-43cd-9e78-c027adcf3da6"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow3" mc="BpmnSequenceFlow" uid="1785fff3-8cd7-4cb3-9204-4eeeb41649f4"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Session ended?" mc="BpmnTask" uid="2294bb9d-08e1-43cd-9e78-c027adcf3da6"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Should write interim CDR?" mc="BpmnTask" uid="a2408304-3be1-4188-a6cd-e26bc0264588"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Persist the CDR" mc="BpmnSubProcess" uid="354c4d19-30d7-4893-aaea-d021c3385284"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Persist the CDR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DataInputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="dd59e76e-cb80-42a2-a4e7-7958cae1bd13"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="TargetRef">
+                          <REFOBJ>
+                            <ID name="DB or File" mc="BpmnDataStore" uid="2bca5ed3-7d89-4bd9-b82e-b66f11ed7f63"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="e44c3428-4c3e-4236-92e8-1d2ec9b3d866"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow4" mc="BpmnSequenceFlow" uid="d3e7e1db-def5-47df-83e1-402a67af59ce"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[Yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Should write interim CDR?" mc="BpmnTask" uid="a2408304-3be1-4188-a6cd-e26bc0264588"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Persist the CDR" mc="BpmnSubProcess" uid="354c4d19-30d7-4893-aaea-d021c3385284"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow5" mc="BpmnSequenceFlow" uid="e5a4fea9-4b1c-4959-9501-7567bed82ec9"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Persist the CDR" mc="BpmnSubProcess" uid="354c4d19-30d7-4893-aaea-d021c3385284"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Monitor the session" mc="BpmnTask" uid="ede32b67-2f4d-4b2a-b877-d2d2b730dad0"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow6" mc="BpmnSequenceFlow" uid="9962725c-ff20-4699-a5a4-f2914a21e736"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow6]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Should write interim CDR?" mc="BpmnTask" uid="a2408304-3be1-4188-a6cd-e26bc0264588"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Monitor the session" mc="BpmnTask" uid="ede32b67-2f4d-4b2a-b877-d2d2b730dad0"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Persist the CDR" mc="BpmnSubProcess" uid="b575331b-27be-41b4-9a8a-944b3e73d4e4"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Persist the CDR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DataInputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="f51477f0-3a0d-41b4-b250-d8fbe88c0e58"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="TargetRef">
+                          <REFOBJ>
+                            <ID name="DB or File" mc="BpmnDataStore" uid="2bca5ed3-7d89-4bd9-b82e-b66f11ed7f63"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="38738ca3-0287-4869-8efe-987fe7628213"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow7" mc="BpmnSequenceFlow" uid="91a07c54-b49e-42c2-b2a4-3e72d1fe5e8e"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[Yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow7]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Session ended?" mc="BpmnTask" uid="2294bb9d-08e1-43cd-9e78-c027adcf3da6"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Record the remaining information about the session" mc="BpmnTask" uid="5d741401-33ab-4a34-b7f8-e92e3df3bbbd"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Record the remaining information about the session" mc="BpmnTask" uid="5d741401-33ab-4a34-b7f8-e92e3df3bbbd"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Record the remaining information about the session]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow8" mc="BpmnSequenceFlow" uid="80e2b318-ef21-41e1-91dd-36de9dc8a57b"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow8]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Record the remaining information about the session" mc="BpmnTask" uid="5d741401-33ab-4a34-b7f8-e92e3df3bbbd"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Persist the CDR" mc="BpmnSubProcess" uid="b575331b-27be-41b4-9a8a-944b3e73d4e4"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check if the CDRs are ready to be transmited" mc="BpmnSubProcess" uid="8136241e-5dfc-43cb-9fdc-e70bb51e18b9"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check if the CDRs are ready to be transmited]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="LoopCharacteristics">
+                    <OBJECT>
+                      <ID name="" mc="BpmnStandardLoopCharacteristics" uid="53115cf1-913c-49d2-9851-4cc8baa50570"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                      <ATTRIBUTES>
+                        <ATT name="TestBefore">false</ATT>
+                        <ATT name="LoopCondition"></ATT>
+                        <ATT name="LoopMaximum"></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Can transmit?" mc="BpmnTask" uid="60943d9f-5bef-426c-a984-3fdacb76f5f5"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Can transmit?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow11" mc="BpmnSequenceFlow" uid="e5de0a77-f0d5-4490-b685-0e9f373a0810"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Can transmit?" mc="BpmnTask" uid="60943d9f-5bef-426c-a984-3fdacb76f5f5"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check if the CDRs are ready to be transmited" mc="BpmnSubProcess" uid="8136241e-5dfc-43cb-9fdc-e70bb51e18b9"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Receive File with CDRs" mc="BpmnTask" uid="678727ab-c464-485a-b0f8-bd8a150fdcaf"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Receive File with CDRs]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check file consistency" mc="BpmnTask" uid="24afdcb8-ef77-48be-a65e-1069c600ef30"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check file consistency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Parallel Gateway" mc="BpmnParallelGateway" uid="d671992e-ba80-4503-89cb-5b8549cffc74"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Parallel Gateway]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow12" mc="BpmnSequenceFlow" uid="9ab20f1d-64fe-4740-9ff8-ee4a18edfbd1"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow12]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Call session started" mc="BpmnStartEvent" uid="49850047-a197-4ad8-85d0-dc41ae82fe2a"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Parallel Gateway" mc="BpmnParallelGateway" uid="d671992e-ba80-4503-89cb-5b8549cffc74"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow10" mc="BpmnSequenceFlow" uid="5f1ab6d4-7f81-436d-ac22-2dbb8eb24067"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Parallel Gateway" mc="BpmnParallelGateway" uid="d671992e-ba80-4503-89cb-5b8549cffc74"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check if the CDRs are ready to be transmited" mc="BpmnSubProcess" uid="8136241e-5dfc-43cb-9fdc-e70bb51e18b9"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow13" mc="BpmnSequenceFlow" uid="97cb914a-b632-48c3-8e2f-e26811a35ef7"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow13]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check if the CDRs are ready to be transmited" mc="BpmnSubProcess" uid="8136241e-5dfc-43cb-9fdc-e70bb51e18b9"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Can transmit?" mc="BpmnTask" uid="60943d9f-5bef-426c-a984-3fdacb76f5f5"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Transmit the CDRs" mc="BpmnSubProcess" uid="ea4b3c54-0d2b-439d-a117-156e25d7ef2e"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Transmit the CDRs]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="3ddc75ad-eb7f-4af2-88cd-311638819466"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="DataOutputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="cbc22d46-b608-4ab2-9581-10fc65a987a5"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="SourceRef">
+                          <REFOBJ>
+                            <ID name="DB or File" mc="BpmnDataStore" uid="2bca5ed3-7d89-4bd9-b82e-b66f11ed7f63"/>
+                            <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow9" mc="BpmnSequenceFlow" uid="f51c52bb-5624-4d36-b8ca-803b7a05df6c"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow9]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Can transmit?" mc="BpmnTask" uid="60943d9f-5bef-426c-a984-3fdacb76f5f5"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Put CDRs in a file" mc="BpmnSubProcess" uid="eff20c04-3a05-401a-8db9-4059f90c3bfd"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow14" mc="BpmnSequenceFlow" uid="21903a67-6822-4f77-933b-929080ecc4fe"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow14]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Receive File with CDRs" mc="BpmnTask" uid="678727ab-c464-485a-b0f8-bd8a150fdcaf"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check file consistency" mc="BpmnTask" uid="24afdcb8-ef77-48be-a65e-1069c600ef30"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Consistent?" mc="BpmnTask" uid="04db16ff-c0fb-4b4e-ab8a-fdfc2941441f"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Consistent?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="f5c24ee4-5771-4b6c-b956-40396657af7c"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow15" mc="BpmnSequenceFlow" uid="4424e909-93e0-4214-9c94-f6a402b31037"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow15]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check file consistency" mc="BpmnTask" uid="24afdcb8-ef77-48be-a65e-1069c600ef30"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Consistent?" mc="BpmnTask" uid="04db16ff-c0fb-4b4e-ab8a-fdfc2941441f"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Request retransmission" mc="BpmnTask" uid="e1975b11-0b4b-4853-b3b5-69f8f3f7d5fa"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Request retransmission]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow16" mc="BpmnSequenceFlow" uid="f0f09335-2309-4e71-8a28-567701040b88"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow16]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Consistent?" mc="BpmnTask" uid="04db16ff-c0fb-4b4e-ab8a-fdfc2941441f"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Request retransmission" mc="BpmnTask" uid="e1975b11-0b4b-4853-b3b5-69f8f3f7d5fa"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="End Event" mc="BpmnEndEvent" uid="5ba339c8-b181-49eb-b7d9-45c0e86506df"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[End Event]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow17" mc="BpmnSequenceFlow" uid="a85a9f6b-c76a-423a-a9b3-9cbdea5a498c"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow17]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Persist the CDR" mc="BpmnSubProcess" uid="b575331b-27be-41b4-9a8a-944b3e73d4e4"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End Event" mc="BpmnEndEvent" uid="5ba339c8-b181-49eb-b7d9-45c0e86506df"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mark file as transmited" mc="BpmnTask" uid="dcc98e6b-f9dc-447b-af18-b637fa584923"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Mark file as transmited]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Backup File" mc="BpmnTask" uid="f05752b4-18bb-4318-b1f2-22455e915358"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Backup File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Send receive confirmation" mc="BpmnTask" uid="0d353795-137a-4df3-9c40-5047974f27c9"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Send receive confirmation]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow18" mc="BpmnSequenceFlow" uid="79260383-d0d3-45e8-a65b-4be6a293d154"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[Yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow18]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Consistent?" mc="BpmnTask" uid="04db16ff-c0fb-4b4e-ab8a-fdfc2941441f"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Send receive confirmation" mc="BpmnTask" uid="0d353795-137a-4df3-9c40-5047974f27c9"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow19" mc="BpmnSequenceFlow" uid="bc7bd687-3d07-47ad-9a62-eb4346f38a40"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mark file as transmited" mc="BpmnTask" uid="dcc98e6b-f9dc-447b-af18-b637fa584923"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Backup File" mc="BpmnTask" uid="f05752b4-18bb-4318-b1f2-22455e915358"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow20" mc="BpmnSequenceFlow" uid="29968175-228b-43d4-a4a6-6d1c317414ac"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow20]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Backup File" mc="BpmnTask" uid="f05752b4-18bb-4318-b1f2-22455e915358"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End Event" mc="BpmnEndEvent" uid="5ba339c8-b181-49eb-b7d9-45c0e86506df"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Consistent file received" mc="BpmnEndEvent" uid="2787e922-689a-43c9-b368-b545cbb551d5"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Consistent file received]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="f5c24ee4-5771-4b6c-b956-40396657af7c"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow21" mc="BpmnSequenceFlow" uid="f08778e1-0bbb-4dee-a509-499623ae0abf"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow21]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Send receive confirmation" mc="BpmnTask" uid="0d353795-137a-4df3-9c40-5047974f27c9"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Consistent file received" mc="BpmnEndEvent" uid="2787e922-689a-43c9-b368-b545cbb551d5"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="DB or File" mc="BpmnDataStore" uid="2bca5ed3-7d89-4bd9-b82e-b66f11ed7f63"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Capacity">0</ATT>
+                  <ATT name="IsUnlimited">false</ATT>
+                  <ATT name="Name"><![CDATA[DB or File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow22" mc="BpmnSequenceFlow" uid="317d495f-38ca-4d0f-937c-66b48167b9bc"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow22]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Put CDRs in a file" mc="BpmnSubProcess" uid="eff20c04-3a05-401a-8db9-4059f90c3bfd"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Active Mode?" mc="BpmnExclusiveGateway" uid="b56292ec-8dd5-47ba-86e3-81f1cbb19961"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Put CDRs in a file" mc="BpmnSubProcess" uid="eff20c04-3a05-401a-8db9-4059f90c3bfd"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Put CDRs in a file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="7b9c0e89-a646-4aeb-b097-c9e43d990790"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Active Mode?" mc="BpmnExclusiveGateway" uid="b56292ec-8dd5-47ba-86e3-81f1cbb19961"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Active Mode?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow23" mc="BpmnSequenceFlow" uid="d0a7f776-3e88-4b90-8062-6c1a597c21e4"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[Yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow23]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Active Mode?" mc="BpmnExclusiveGateway" uid="b56292ec-8dd5-47ba-86e3-81f1cbb19961"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Transmit the CDRs" mc="BpmnSubProcess" uid="ea4b3c54-0d2b-439d-a117-156e25d7ef2e"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow24" mc="BpmnSequenceFlow" uid="c20c32c2-6626-40a3-9798-dc6318a57013"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow24]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Active Mode?" mc="BpmnExclusiveGateway" uid="b56292ec-8dd5-47ba-86e3-81f1cbb19961"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Backup File" mc="BpmnTask" uid="f05752b4-18bb-4318-b1f2-22455e915358"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="7b9c0e89-a646-4aeb-b097-c9e43d990790"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="e44c3428-4c3e-4236-92e8-1d2ec9b3d866"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="38738ca3-0287-4869-8efe-987fe7628213"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="3ddc75ad-eb7f-4af2-88cd-311638819466"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Product">
+              <COMPID name="Process Bpmn Process diagram" mc="BpmnProcessCollaborationDiagram" uid="bb209110-a1dc-4fcc-a063-e9f029f09c16"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Collaboration" mc="BpmnCollaboration" uid="09fe4423-2246-4b4b-8bbe-48c1f8b032f4"/>
+          <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+          <ATTRIBUTES>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="Name"><![CDATA[Collaboration]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="MessageFlow">
+              <OBJECT>
+                <ID name="Message Flow" mc="BpmnMessageFlow" uid="2ffb7216-f500-42be-96ec-91d3b91db01a"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Receive File with CDRs" mc="BpmnTask" uid="678727ab-c464-485a-b0f8-bd8a150fdcaf"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="CDR file" mc="BpmnMessageFlow" uid="be9b5a8f-0196-4e29-b311-e692d12cd082"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[CDR file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Transmit the CDRs" mc="BpmnSubProcess" uid="ea4b3c54-0d2b-439d-a117-156e25d7ef2e"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Receive File with CDRs" mc="BpmnTask" uid="678727ab-c464-485a-b0f8-bd8a150fdcaf"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Retransmission" mc="BpmnMessageFlow" uid="40272033-5215-45f5-ae81-9e13964d8f9a"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Retransmission]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Request retransmission" mc="BpmnTask" uid="e1975b11-0b4b-4853-b3b5-69f8f3f7d5fa"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Transmit the CDRs" mc="BpmnSubProcess" uid="ea4b3c54-0d2b-439d-a117-156e25d7ef2e"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="File received" mc="BpmnMessageFlow" uid="039bc22b-c96f-49b9-8612-cbb03be23132"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[File received]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Send receive confirmation" mc="BpmnTask" uid="0d353795-137a-4df3-9c40-5047974f27c9"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Mark file as transmited" mc="BpmnTask" uid="dcc98e6b-f9dc-447b-af18-b637fa584923"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Process1" mc="BpmnProcess" uid="03c5101b-15cd-40bd-9b64-bbd54086a652"/>
+          <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+          <ATTRIBUTES>
+            <ATT name="ProcessType">NoneProcess</ATT>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="IsExecutable">OUndefined</ATT>
+            <ATT name="Name"><![CDATA[Process1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="LaneSet">
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="1c0ed22a-bf27-4d1b-bc71-1fa5e7563e56"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Sentinel" mc="BpmnLane" uid="2f63f2b4-9ec8-4df3-ab7a-9e776e20d6c6"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Sentinel]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="65290b3c-324e-424c-b9ac-49dd757434e5"/>
+                <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Pool" mc="BpmnLane" uid="6c2aa70d-2627-4857-90c5-21c3371b0783"/>
+                      <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Pool]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Product">
+              <COMPID name="Process1 Bpmn Process diagram" mc="BpmnProcessCollaborationDiagram" uid="b550d4c1-b338-4700-9d43-461b36a7d92e"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
