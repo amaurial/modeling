@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Processes" version="3">
+  <DEPS>
+    <ID name="Processes" mc="Package" uid="5d8ce551-bec0-47c1-9739-6ae255f822c5"/>
+    <FOREIGNID name="BusinessOrganizationDomain" mc="Stereotype" uid="b42187ca-ab75-11df-9861-0014224f9977"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Processes" mc="Package" uid="5d8ce551-bec0-47c1-9739-6ae255f822c5"/>
+    <PID name="Business Architecture" mc="Package" uid="2b5087f8-a389-4f9f-bdb7-1971efa90852"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Processes]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="BusinessOrganizationDomain" mc="Stereotype" uid="b42187ca-ab75-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Note" uid="898639fa-98f5-4442-a27c-5652cfb1a0ee"/>
+          <PID name="Processes" mc="Package" uid="5d8ce551-bec0-47c1-9739-6ae255f822c5"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[The process domain is the place where business processes are defined and modeled. Business Events or products can be defined there.
+
+Diagrams:
+Use "Event diagrams" to provide an overview of the different business processes, and do a detailed business process model under each process through process flow diagrams.]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

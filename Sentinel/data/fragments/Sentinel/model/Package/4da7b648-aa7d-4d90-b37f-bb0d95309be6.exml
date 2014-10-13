@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Sentinel service version" version="3">
+  <DEPS>
+    <ID name="Sentinel service version" mc="Package" uid="4da7b648-aa7d-4d90-b37f-bb0d95309be6"/>
+    <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="d82f4f73-2077-4f84-8497-64e19bf6a8e0"/>
+    <COMPID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Sentinel service version" mc="Package" uid="4da7b648-aa7d-4d90-b37f-bb0d95309be6"/>
+    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Sentinel service version]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="d82f4f73-2077-4f84-8497-64e19bf6a8e0"/>
+        <COMPID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,276 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="UseCases" version="3">
+  <DEPS>
+    <ID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+    <COMPID name="UseCases" mc="ActivityDiagram" uid="90e4aaf1-698c-4ceb-8f3d-1ce53118c753"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+    <PID name="Sentinel service version" mc="Package" uid="4da7b648-aa7d-4d90-b37f-bb0d95309be6"/>
+    <ATTRIBUTES>
+      <ATT name="IsSingleExecution">false</ATT>
+      <ATT name="IsReadOnly">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[UseCases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedNode">
+        <OBJECT>
+          <ID name="CDR Rf Service" mc="StructuredActivityNode" uid="e122cbf3-c264-4120-aa04-d6980d241886"/>
+          <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+          <ATTRIBUTES>
+            <ATT name="MustIsolate">false</ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[CDR Rf Service]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Body">
+              <OBJECT>
+                <ID name="1-Read Diameter connection configuration" mc="OpaqueAction" uid="2c0a088f-0d7a-4a08-bb4e-84e00ef6737a"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[-Read diameter connection information of the OCS.
+-Read diameter redundant connection information of the OCS.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[1-Read Diameter connection configuration]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="2-Connect to the redundant OCS" mc="OpaqueAction" uid="400db070-ce87-4a8b-9e41-693ed7f73546"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[In case of no communication with the major OCS, connect to the second one.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[2-Connect to the redundant OCS]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="3-Raise alarm for lost communication" mc="OpaqueAction" uid="4b69a512-cc1c-4b9f-8ef5-9137a14cf237"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Generate an alarm in case of lost communication with the diameter.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[3-Raise alarm for lost communication]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="8-Read the mapping config of CDR fields to AVPs" mc="OpaqueAction" uid="e14e0192-9857-4cdd-96e6-f926c1161ba9"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Get the configuration set of the mapping from CDR fields to AVPs.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[8-Read the mapping config of CDR fields to AVPs]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="9-Put CDR fields on the AVPs" mc="OpaqueAction" uid="d378e985-bac6-41e4-a3dc-c98439fefe9a"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Using the configuration, put the CDR field to an AVP.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[9-Put CDR fields on the AVPs]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="11-Transmit CDR" mc="OpaqueAction" uid="63151341-1ffb-486e-a931-adb539b4e183"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Transmit the CDR using the Diameter protocol using ACR messages. The CDRs should be transmitted using the transaction feature of diameter.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[11-Transmit CDR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="12-Log CDR sent" mc="OpaqueAction" uid="7e733199-c46d-4c59-8478-4844f4a82780"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[For each CDR sent create an log entry with details of the trasmission.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[12-Log CDR sent]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="13-Raise CDR alarm" mc="OpaqueAction" uid="d6a115dc-e15b-4e10-a830-045c8a552dcc"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Raise alarm for inconsistent CDR.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[13-Raise CDR alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="5-Restart CDR transmission" mc="OpaqueAction" uid="668760f2-4474-4999-ba2b-2b704d380315"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[In case of a file is not totally transmitted. Use the log information and transmit the remaining CDRs.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[5-Restart CDR transmission]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="6-Monitor failed transmissions" mc="OpaqueAction" uid="a5a60648-05c5-4462-a1b1-f80e645d9222"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[keep checking for failed transmissions and trigger the restart CDR transmission.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[6-Monitor failed transmissions]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="14-Handle re-authentication" mc="OpaqueAction" uid="75602a51-8e58-41c8-90bf-b34323440cb0"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Re-authenticate on OCS in case it is requested.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[14-Handle re-authentication]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="7-Connect and authenticate on operator charging system" mc="OpaqueAction" uid="ecfc353c-8320-41ad-8866-6dd6632fd8be"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Connects and authenticate itself on the OCS.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[7-Connect and authenticate on operator charging system]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="15-Configure AVP Mapping" mc="OpaqueAction" uid="e37be9cd-6fa7-44b2-af44-a1c24661046c"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Configure Mapping from CDR fields to AVP]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[15-Configure AVP Mapping]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="16-Visualize transmission details" mc="OpaqueAction" uid="e8d429b4-8950-44ef-a442-bb5a5164f609"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Report of the amount of CDRs transmitted.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[16-Visualize transmission details]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Diameter Rf RA" mc="StructuredActivityNode" uid="ffe2fd71-7ccb-4243-b3e3-472f74b2e31a"/>
+          <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+          <ATTRIBUTES>
+            <ATT name="MustIsolate">false</ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Diameter Rf RA]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Body">
+              <OBJECT>
+                <ID name="1-Open Diameter connection" mc="OpaqueAction" uid="5f64f3cf-e02a-45cf-a2c2-9653e434028e"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Open a diameter communication with the OCS.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[1-Open Diameter connection]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="2-Send Diameter messages" mc="OpaqueAction" uid="1f0fdc29-f155-47b4-a0fc-22f2fc19336b"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Send messages using the diameter protocol.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[2-Send Diameter messages]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="3-Retry to connect" mc="OpaqueAction" uid="23834b6d-c0c4-461a-a80e-4ce098303d41"/>
+                <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[In case of lose of communication. Try to restart the communication.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[3-Retry to connect]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Collaboration" uid="fc54b55a-d578-4673-82a1-27c1855d5338"/>
+          <PID name="UseCases" mc="Activity" uid="253730c7-b003-47c9-a158-5dd488a91b0b"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="UseCases" mc="ActivityDiagram" uid="90e4aaf1-698c-4ceb-8f3d-1ce53118c753"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

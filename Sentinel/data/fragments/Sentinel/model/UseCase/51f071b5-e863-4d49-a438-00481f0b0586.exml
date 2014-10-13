@@ -11,7 +11,7 @@
   </DEPS>
   <OBJECT>
     <ID name="Map CDR to AVPs" mc="UseCase" uid="51f071b5-e863-4d49-a438-00481f0b0586"/>
-    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <PID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>

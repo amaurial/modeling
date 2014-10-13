@@ -11,7 +11,7 @@
   </DEPS>
   <OBJECT>
     <ID name="Set Charging Data Function (CDF) configuration" mc="UseCase" uid="fffd63cf-f2fb-4c0f-ae09-4e2dfe760a69"/>
-    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <PID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>

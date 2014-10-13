@@ -37,10 +37,10 @@
                 <DEPENDENCIES>
                   <COMP relation="Lane">
                     <OBJECT>
-                      <ID name="Sentinel" mc="BpmnLane" uid="f6b76284-8e67-4c89-9ddd-c64ed9eb6103"/>
+                      <ID name="SLEE" mc="BpmnLane" uid="f6b76284-8e67-4c89-9ddd-c64ed9eb6103"/>
                       <PID name="File Transmission" mc="BpmnBehavior" uid="3c47cd11-0d02-4366-9f57-b960a4c26928"/>
                       <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[Sentinel]]></ATT>
+                        <ATT name="Name"><![CDATA[SLEE]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES>

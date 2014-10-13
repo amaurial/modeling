@@ -13,7 +13,7 @@
   </DEPS>
   <OBJECT>
     <ID name="Operator staff" mc="Actor" uid="d8322be8-8b8c-46d6-97fb-2a4a458c9245"/>
-    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <PID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>

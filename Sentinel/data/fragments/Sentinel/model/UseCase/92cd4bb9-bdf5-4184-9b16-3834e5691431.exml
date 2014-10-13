@@ -11,7 +11,7 @@
   </DEPS>
   <OBJECT>
     <ID name="Configure minimum and maximum file size" mc="UseCase" uid="92cd4bb9-bdf5-4184-9b16-3834e5691431"/>
-    <PID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+    <PID name="Operator use cases file transmission" mc="Package" uid="76e3611c-95e4-432e-8b4b-dc6a8f717dfb"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>

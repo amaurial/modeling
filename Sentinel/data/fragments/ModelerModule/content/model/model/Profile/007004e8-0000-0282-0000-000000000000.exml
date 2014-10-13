@@ -29,11 +29,13 @@
     <COMPID name="design pattern" mc="Stereotype" uid="007006dc-0000-0139-0000-000000000000"/>
     <COMPID name="destroy" mc="Stereotype" uid="00700680-0000-0206-0000-000000000000"/>
     <COMPID name="destroyed" mc="Stereotype" uid="00700680-0000-01f3-0000-000000000000"/>
+    <COMPID name="directory" mc="Stereotype" uid="6432b987-256f-4121-9428-a89d364c2cef"/>
     <COMPID name="disjoin" mc="Stereotype" uid="00700680-0000-01f5-0000-000000000000"/>
     <COMPID name="exception" mc="Stereotype" uid="00700680-0000-01d1-0000-000000000000"/>
     <COMPID name="executable" mc="Stereotype" uid="00700680-0000-01c3-0000-000000000000"/>
     <COMPID name="extend" mc="Stereotype" uid="00000000-0000-9c48-0000-000000000000"/>
     <COMPID name="facade" mc="Stereotype" uid="00700680-0000-01d5-0000-000000000000"/>
+    <COMPID name="file" mc="Stereotype" uid="0226fd5c-caf5-4cb4-b25c-06e493b37b2d"/>
     <COMPID name="flow" mc="Stereotype" uid="01ec1228-0000-0964-0000-000000000000"/>
     <COMPID name="frameWork" mc="Stereotype" uid="00700680-0000-01db-0000-000000000000"/>
     <COMPID name="friend" mc="Stereotype" uid="00700680-0000-01ca-0000-000000000000"/>
@@ -49,6 +51,7 @@
     <COMPID name="instantiate" mc="Stereotype" uid="00700680-0000-01e5-0000-000000000000"/>
     <COMPID name="invariant" mc="Stereotype" uid="00000000-0000-9c44-0000-000000000000"/>
     <COMPID name="library" mc="Stereotype" uid="00700680-0000-01c5-0000-000000000000"/>
+    <COMPID name="mail" mc="Stereotype" uid="74d7cf69-58eb-48e4-b71a-e5bb0f7570f7"/>
     <COMPID name="metaclass" mc="Stereotype" uid="00700680-0000-01bd-0000-000000000000"/>
     <COMPID name="metamodel" mc="Stereotype" uid="00700680-0000-01e7-0000-000000000000"/>
     <COMPID name="new" mc="Stereotype" uid="00700680-0000-01f9-0000-000000000000"/>
@@ -62,6 +65,7 @@
     <COMPID name="related_diagram" mc="Stereotype" uid="2961d57b-5120-11de-bbaf-00218648fa3d"/>
     <COMPID name="scenario" mc="Stereotype" uid="01ec1ac4-0000-2eff-0000-000000000000"/>
     <COMPID name="secondary" mc="Stereotype" uid="01ec1ac4-0000-2f04-0000-000000000000"/>
+    <COMPID name="see_also" mc="Stereotype" uid="0ac7e50f-50c6-4eb6-9107-3d9df92a2b75"/>
     <COMPID name="state" mc="Stereotype" uid="002005c0-0001-0011-0000-000000000000"/>
     <COMPID name="stub" mc="Stereotype" uid="00700680-0000-01d7-0000-000000000000"/>
     <COMPID name="subset" mc="Stereotype" uid="00540a84-0000-0005-0000-000000000000"/>
@@ -73,6 +77,7 @@
     <COMPID name="trace" mc="Stereotype" uid="01280500-0000-0b37-0000-000000000000"/>
     <COMPID name="transient" mc="Stereotype" uid="00700680-0000-01fe-0000-000000000000"/>
     <COMPID name="type" mc="Stereotype" uid="00700680-0000-01ba-0000-000000000000"/>
+    <COMPID name="url" mc="Stereotype" uid="c7ba7024-eff5-4039-a4d4-c9ddcd0a3aed"/>
     <COMPID name="usecase" mc="Stereotype" uid="002005c0-0001-0009-0000-000000000000"/>
     <COMPID name="utility" mc="Stereotype" uid="00700680-0000-01bf-0000-000000000000"/>
     <COMPID name="xor" mc="Stereotype" uid="00700680-0000-0200-0000-000000000000"/>
@@ -156,6 +161,11 @@
         <COMPID name="usecase" mc="Stereotype" uid="002005c0-0001-0009-0000-000000000000"/>
         <COMPID name="related_diagram" mc="Stereotype" uid="2961d57b-5120-11de-bbaf-00218648fa3d"/>
         <COMPID name="AutoDiagram" mc="Stereotype" uid="8fb43b1c-7819-11e1-a4f1-002564c97630"/>
+        <COMPID name="directory" mc="Stereotype" uid="6432b987-256f-4121-9428-a89d364c2cef"/>
+        <COMPID name="file" mc="Stereotype" uid="0226fd5c-caf5-4cb4-b25c-06e493b37b2d"/>
+        <COMPID name="url" mc="Stereotype" uid="c7ba7024-eff5-4039-a4d4-c9ddcd0a3aed"/>
+        <COMPID name="mail" mc="Stereotype" uid="74d7cf69-58eb-48e4-b71a-e5bb0f7570f7"/>
+        <COMPID name="see_also" mc="Stereotype" uid="0ac7e50f-50c6-4eb6-9107-3d9df92a2b75"/>
       </COMP>
       <COMP relation="OwnedReference">
         <COMPID name="" mc="MetaclassReference" uid="00bc3924-0000-189d-0000-000000000000"/>

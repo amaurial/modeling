@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Application Layer" version="3">
+  <DEPS>
+    <ID name="Application Layer" mc="Package" uid="6618db0e-b2f0-49b0-86fa-be8983e3a047"/>
+    <COMPID name="Application Architecture" mc="Package" uid="e05c234b-60db-4eaa-8eb7-58dd7184f42f"/>
+    <COMPID name="Data Architecture" mc="Package" uid="64b8681d-e8d9-40d6-adbb-075231c09c1b"/>
+    <FOREIGNID name="ApplicationLayer" mc="Stereotype" uid="f715e5aa-ab6c-11df-9861-0014224f9977"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Application Layer" mc="Package" uid="6618db0e-b2f0-49b0-86fa-be8983e3a047"/>
+    <PID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Application Layer]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Data Architecture" mc="Package" uid="64b8681d-e8d9-40d6-adbb-075231c09c1b"/>
+        <COMPID name="Application Architecture" mc="Package" uid="e05c234b-60db-4eaa-8eb7-58dd7184f42f"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="ApplicationLayer" mc="Stereotype" uid="f715e5aa-ab6c-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Note" uid="6b72eb11-4921-4b01-b40d-8b1021d9f2b4"/>
+          <PID name="Application Layer" mc="Package" uid="6618db0e-b2f0-49b0-86fa-be8983e3a047"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[The application layer is related to the application models. The data architecture is in particular modeled under the "data architecture" domain, where persistent data are defined. They can be derived from the business entities defined under the Business Layer/Business entities domain.
+The application components and their architecture are defined under the "Application Architecture" domain.]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

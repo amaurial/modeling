@@ -11,7 +11,7 @@
   </DEPS>
   <OBJECT>
     <ID name="Configure Max amount of concurent activities (files)" mc="UseCase" uid="0e47c495-2d21-45de-99c2-1840e33206d3"/>
-    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <PID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>

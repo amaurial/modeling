@@ -2,20 +2,11 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DiameterTransmission" version="3">
   <DEPS>
     <ID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
-    <COMPID name="Basic work flow architecture" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-    <COMPID name="Check failed CDRs" mc="UseCase" uid="867852a1-c19e-4750-8627-c191a1c76205"/>
-    <COMPID name="Configure Alarms" mc="UseCase" uid="9f285866-fd2d-4d7c-b295-0ab08752ac5f"/>
-    <COMPID name="Configure Max amount of concurent activities (files)" mc="UseCase" uid="0e47c495-2d21-45de-99c2-1840e33206d3"/>
-    <COMPID name="Developer" mc="Actor" uid="34d4d269-2a01-44fd-b0c2-d71fb27e823a"/>
-    <COMPID name="DiameterTransmission Use Case diagram" mc="UseCaseDiagram" uid="b4a039e8-0cb7-4905-9470-ad4e30f66e64"/>
     <COMPID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
-    <COMPID name="Map CDR to AVPs" mc="UseCase" uid="51f071b5-e863-4d49-a438-00481f0b0586"/>
-    <COMPID name="Operator staff" mc="Actor" uid="d8322be8-8b8c-46d6-97fb-2a4a458c9245"/>
-    <COMPID name="Retransmit CDR?" mc="UseCase" uid="0a501f98-36d7-4eaa-8ad5-6fab690d22bf"/>
-    <COMPID name="Retransmit file" mc="UseCase" uid="eca44f8f-0db7-42ff-9dc7-465a1380f34f"/>
-    <COMPID name="Set Charging Data Function (CDF) configuration" mc="UseCase" uid="fffd63cf-f2fb-4c0f-ae09-4e2dfe760a69"/>
-    <COMPID name="Visualize statistics" mc="UseCase" uid="80d55cd4-8ff0-4347-84fb-3f30f379cd94"/>
-    <COMPID name="Visualize transmitted file names and transmission details" mc="UseCase" uid="8f366d98-838c-444a-9f8d-94fd450b0318"/>
+    <COMPID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
+    <COMPID name="Operator use cases file transmission" mc="Package" uid="76e3611c-95e4-432e-8b4b-dc6a8f717dfb"/>
+    <COMPID name="SLEE Solution" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <COMPID name="Sentinel service version" mc="Package" uid="4da7b648-aa7d-4d90-b37f-bb0d95309be6"/>
   </DEPS>
   <OBJECT>
     <ID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
@@ -32,23 +23,12 @@
     <DEPENDENCIES>
       <COMP relation="OwnedBehavior">
         <COMPID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
-        <COMPID name="Basic work flow architecture" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
       </COMP>
       <COMP relation="OwnedElement">
-        <COMPID name="Developer" mc="Actor" uid="34d4d269-2a01-44fd-b0c2-d71fb27e823a"/>
-        <COMPID name="Operator staff" mc="Actor" uid="d8322be8-8b8c-46d6-97fb-2a4a458c9245"/>
-        <COMPID name="Map CDR to AVPs" mc="UseCase" uid="51f071b5-e863-4d49-a438-00481f0b0586"/>
-        <COMPID name="Configure Alarms" mc="UseCase" uid="9f285866-fd2d-4d7c-b295-0ab08752ac5f"/>
-        <COMPID name="Check failed CDRs" mc="UseCase" uid="867852a1-c19e-4750-8627-c191a1c76205"/>
-        <COMPID name="Retransmit file" mc="UseCase" uid="eca44f8f-0db7-42ff-9dc7-465a1380f34f"/>
-        <COMPID name="Retransmit CDR?" mc="UseCase" uid="0a501f98-36d7-4eaa-8ad5-6fab690d22bf"/>
-        <COMPID name="Set Charging Data Function (CDF) configuration" mc="UseCase" uid="fffd63cf-f2fb-4c0f-ae09-4e2dfe760a69"/>
-        <COMPID name="Visualize statistics" mc="UseCase" uid="80d55cd4-8ff0-4347-84fb-3f30f379cd94"/>
-        <COMPID name="Visualize transmitted file names and transmission details" mc="UseCase" uid="8f366d98-838c-444a-9f8d-94fd450b0318"/>
-        <COMPID name="Configure Max amount of concurent activities (files)" mc="UseCase" uid="0e47c495-2d21-45de-99c2-1840e33206d3"/>
-      </COMP>
-      <COMP relation="Product">
-        <COMPID name="DiameterTransmission Use Case diagram" mc="UseCaseDiagram" uid="b4a039e8-0cb7-4905-9470-ad4e30f66e64"/>
+        <COMPID name="Sentinel service version" mc="Package" uid="4da7b648-aa7d-4d90-b37f-bb0d95309be6"/>
+        <COMPID name="SLEE Solution" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+        <COMPID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
+        <COMPID name="Operator use cases file transmission" mc="Package" uid="76e3611c-95e4-432e-8b4b-dc6a8f717dfb"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

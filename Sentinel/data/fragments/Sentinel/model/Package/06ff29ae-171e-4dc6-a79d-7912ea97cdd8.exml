@@ -2,9 +2,13 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="sentinel" version="3">
   <DEPS>
     <ID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+    <COMPID name="Application Layer" mc="Package" uid="6618db0e-b2f0-49b0-86fa-be8983e3a047"/>
     <COMPID name="BPMN" mc="BpmnBehavior" uid="8ec95c1c-9025-405a-b505-90c236041ffa"/>
+    <COMPID name="Business Layer" mc="Package" uid="849d027c-3458-4c2c-bd38-26f5960c21bd"/>
     <COMPID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+    <COMPID name="Technology Architecture" mc="Package" uid="9c0b0807-3384-4d69-9391-1f48dd401f35"/>
     <COMPID name="overview diagram" mc="ClassDiagram" uid="6464d3cd-79a5-48a7-8c10-07d0e4b8fa43"/>
+    <FOREIGNID name="TogafRoot" mc="Stereotype" uid="374ea675-764e-11e0-8277-bc305ba4815c"/>
   </DEPS>
   <OBJECT>
     <ID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
@@ -24,7 +28,13 @@
       </COMP>
       <COMP relation="OwnedElement">
         <COMPID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+        <COMPID name="Business Layer" mc="Package" uid="849d027c-3458-4c2c-bd38-26f5960c21bd"/>
+        <COMPID name="Application Layer" mc="Package" uid="6618db0e-b2f0-49b0-86fa-be8983e3a047"/>
+        <COMPID name="Technology Architecture" mc="Package" uid="9c0b0807-3384-4d69-9391-1f48dd401f35"/>
       </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="TogafRoot" mc="Stereotype" uid="374ea675-764e-11e0-8277-bc305ba4815c"/>
+      </LINK>
       <COMP relation="Product">
         <COMPID name="overview diagram" mc="ClassDiagram" uid="6464d3cd-79a5-48a7-8c10-07d0e4b8fa43"/>
       </COMP>

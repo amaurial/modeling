@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="System Use Case" version="3">
+  <DEPS>
+    <ID name="System Use Case" mc="Package" uid="93028165-9cee-4f28-b629-5f1b9573bf74"/>
+    <FOREIGNID name="ApplicationArchitectureDomain" mc="Stereotype" uid="3d6f7e12-ab91-11df-9861-0014224f9977"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="System Use Case" mc="Package" uid="93028165-9cee-4f28-b629-5f1b9573bf74"/>
+    <PID name="Application Architecture" mc="Package" uid="e05c234b-60db-4eaa-8eb7-58dd7184f42f"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[System Use Case]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="ApplicationArchitectureDomain" mc="Stereotype" uid="3d6f7e12-ab91-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Note" uid="e25b41e0-c3ce-4ed3-a361-93b93ad169df"/>
+          <PID name="System Use Case" mc="Package" uid="93028165-9cee-4f28-b629-5f1b9573bf74"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[System Uses Cases are modeled here.  Roles or actos can be related to Use case. Application component that realize the Use Case can also be shown with a "component realization dependency.]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

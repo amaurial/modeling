@@ -11,7 +11,7 @@
   </DEPS>
   <OBJECT>
     <ID name="Set operation Modus: Active or passive" mc="UseCase" uid="75dca1d9-fb43-4385-8a54-93d83002d066"/>
-    <PID name="OfflineCDRProcess" mc="Package" uid="040e48c3-08db-41e8-ab74-16488b9e557c"/>
+    <PID name="Operator use cases file transmission" mc="Package" uid="76e3611c-95e4-432e-8b4b-dc6a8f717dfb"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>

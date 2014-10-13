@@ -6,7 +6,7 @@
   </DEPS>
   <OBJECT>
     <ID name="Developer" mc="Actor" uid="34d4d269-2a01-44fd-b0c2-d71fb27e823a"/>
-    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <PID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>

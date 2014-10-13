@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Business Architecture" version="3">
+  <DEPS>
+    <ID name="Business Architecture" mc="Package" uid="2b5087f8-a389-4f9f-bdb7-1971efa90852"/>
+    <COMPID name="Business Function" mc="Package" uid="2b795b31-08fa-4874-a228-50984f006439"/>
+    <COMPID name="Locations" mc="Package" uid="852e66cd-9e39-4f5b-841e-43751b0155d9"/>
+    <COMPID name="Organization" mc="Package" uid="9ca72cf9-8bca-4aaa-9fb7-a7eff99e396e"/>
+    <COMPID name="Processes" mc="Package" uid="5d8ce551-bec0-47c1-9739-6ae255f822c5"/>
+    <FOREIGNID name="BusinessArchitecture" mc="Stereotype" uid="56eadada-ab6d-11df-9861-0014224f9977"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Business Architecture" mc="Package" uid="2b5087f8-a389-4f9f-bdb7-1971efa90852"/>
+    <PID name="Business Layer" mc="Package" uid="849d027c-3458-4c2c-bd38-26f5960c21bd"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Business Architecture]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Organization" mc="Package" uid="9ca72cf9-8bca-4aaa-9fb7-a7eff99e396e"/>
+        <COMPID name="Processes" mc="Package" uid="5d8ce551-bec0-47c1-9739-6ae255f822c5"/>
+        <COMPID name="Business Function" mc="Package" uid="2b795b31-08fa-4874-a228-50984f006439"/>
+        <COMPID name="Locations" mc="Package" uid="852e66cd-9e39-4f5b-841e-43751b0155d9"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="BusinessArchitecture" mc="Stereotype" uid="56eadada-ab6d-11df-9861-0014224f9977"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Note" uid="00f00b53-47c0-47e7-a93b-40d1f9e808ed"/>
+          <PID name="Business Architecture" mc="Package" uid="2b5087f8-a389-4f9f-bdb7-1971efa90852"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[In TOGAF, the Business Architecture defines the business strategy, governance, organization, and key business processes.
+All these elements are modeled under this domain, with predefined subdomains.]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
