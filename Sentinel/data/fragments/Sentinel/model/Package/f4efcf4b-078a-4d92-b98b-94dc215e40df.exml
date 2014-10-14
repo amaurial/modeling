@@ -1,12 +1,15 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SLEE Solution" version="3">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SLEE Solution File Level" version="3">
   <DEPS>
-    <ID name="SLEE Solution" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <ID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <COMPID name="Basic interation flow" mc="Interaction" uid="923342b7-8984-4a5a-bc84-4869381d2032"/>
+    <COMPID name="CDR state" mc="StateMachine" uid="cd927634-c862-470b-80a5-28b8271a7e39"/>
     <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
     <COMPID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+    <COMPID name="file state" mc="StateMachine" uid="a08df445-0fc7-4f25-a5dd-ba2112a6d219"/>
   </DEPS>
   <OBJECT>
-    <ID name="SLEE Solution" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <ID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
     <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
     <ATTRIBUTES>
       <ATT name="IsInstantiable">false</ATT>
@@ -14,13 +17,16 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[SLEE Solution]]></ATT>
+      <ATT name="Name"><![CDATA[SLEE Solution File Level]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedBehavior">
         <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
         <COMPID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+        <COMPID name="Basic interation flow" mc="Interaction" uid="923342b7-8984-4a5a-bc84-4869381d2032"/>
+        <COMPID name="file state" mc="StateMachine" uid="a08df445-0fc7-4f25-a5dd-ba2112a6d219"/>
+        <COMPID name="CDR state" mc="StateMachine" uid="cd927634-c862-470b-80a5-28b8271a7e39"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

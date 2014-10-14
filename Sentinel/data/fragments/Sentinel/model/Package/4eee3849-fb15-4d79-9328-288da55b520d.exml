@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SLEE Solution CDR level" version="3">
+  <DEPS>
+    <ID name="SLEE Solution CDR level" mc="Package" uid="4eee3849-fb15-4d79-9328-288da55b520d"/>
+    <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="66c3def8-1d2e-47c7-bdbd-4e91af1f46b0"/>
+    <COMPID name="UseCases" mc="Activity" uid="7178d56c-14ad-48f6-b3e1-90235b753917"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SLEE Solution CDR level" mc="Package" uid="4eee3849-fb15-4d79-9328-288da55b520d"/>
+    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SLEE Solution CDR level]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="66c3def8-1d2e-47c7-bdbd-4e91af1f46b0"/>
+        <COMPID name="UseCases" mc="Activity" uid="7178d56c-14ad-48f6-b3e1-90235b753917"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

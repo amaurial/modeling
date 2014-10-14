@@ -5,7 +5,8 @@
     <COMPID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
     <COMPID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
     <COMPID name="Operator use cases file transmission" mc="Package" uid="76e3611c-95e4-432e-8b4b-dc6a8f717dfb"/>
-    <COMPID name="SLEE Solution" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <COMPID name="SLEE Solution CDR level" mc="Package" uid="4eee3849-fb15-4d79-9328-288da55b520d"/>
+    <COMPID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
     <COMPID name="Sentinel service version" mc="Package" uid="4da7b648-aa7d-4d90-b37f-bb0d95309be6"/>
   </DEPS>
   <OBJECT>
@@ -26,9 +27,10 @@
       </COMP>
       <COMP relation="OwnedElement">
         <COMPID name="Sentinel service version" mc="Package" uid="4da7b648-aa7d-4d90-b37f-bb0d95309be6"/>
-        <COMPID name="SLEE Solution" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+        <COMPID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
         <COMPID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
         <COMPID name="Operator use cases file transmission" mc="Package" uid="76e3611c-95e4-432e-8b4b-dc6a8f717dfb"/>
+        <COMPID name="SLEE Solution CDR level" mc="Package" uid="4eee3849-fb15-4d79-9328-288da55b520d"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

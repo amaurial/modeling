@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="State Machine State Machine diagram" version="3">
+  <DEPS>
+    <ID name="State Machine State Machine diagram" mc="StateMachineDiagram" uid="8052efc1-0363-49a4-b250-923f049a4ecd"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="State Machine State Machine diagram" mc="StateMachineDiagram" uid="8052efc1-0363-49a4-b250-923f049a4ecd"/>
+    <PID name="CDR state" mc="StateMachine" uid="cd927634-c862-470b-80a5-28b8271a7e39"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">44</ATT>
+      <ATT name="UiData"><![CDATA[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]]></ATT>
+      <ATT name="PdeProperties"></ATT>
+      <ATT name="Name"><![CDATA[State Machine State Machine diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

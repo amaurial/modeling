@@ -3,10 +3,11 @@
   <DEPS>
     <ID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
     <COMPID name="Diameter File transmission" mc="BpmnProcessCollaborationDiagram" uid="4968e70b-5f55-4add-8774-2542ab225c88"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
   </DEPS>
   <OBJECT>
     <ID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-    <PID name="SLEE Solution" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
     <ATTRIBUTES>
       <ATT name="IsReentrant">false</ATT>
       <ATT name="Name"><![CDATA[SLEE workflow diagram]]></ATT>
@@ -49,14 +50,6 @@
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                           <REFOBJ>
-                            <ID name="Check File consistency" mc="BpmnSubProcess" uid="39bf5479-70fa-4d08-8b99-482002be9fad"/>
-                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Start Diameter connection" mc="BpmnSubProcess" uid="842f8e4d-5d65-40ae-835d-2d47c3e4cfbd"/>
-                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                          </REFOBJ>
-                          <REFOBJ>
                             <ID name="Map CDRs to AVP" mc="BpmnSubProcess" uid="67572b5d-fa66-44b3-ae5a-2c32bc1c41ae"/>
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
@@ -65,7 +58,7 @@
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                           <REFOBJ>
-                            <ID name="Generate statistics" mc="BpmnTask" uid="91d88560-398e-4def-afe7-d63852a4a009"/>
+                            <ID name="Update statistics" mc="BpmnTask" uid="91d88560-398e-4def-afe7-d63852a4a009"/>
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                           <REFOBJ>
@@ -85,15 +78,79 @@
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                           <REFOBJ>
-                            <ID name="Log CDR transmission" mc="BpmnTask" uid="10242555-e559-438c-bdf5-c798ca36b97a"/>
+                            <ID name="Update transmission statistics" mc="BpmnTask" uid="10242555-e559-438c-bdf5-c798ca36b97a"/>
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                           <REFOBJ>
-                            <ID name="Close Diameter connection" mc="BpmnTask" uid="10fae7ae-1db0-470e-b5a0-ab855ceae07c"/>
+                            <ID name="Start Event" mc="BpmnStartEvent" uid="71a69da7-3a35-4cd4-a995-89fdbd68ed51"/>
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                           <REFOBJ>
-                            <ID name="File transmitted" mc="BpmnTask" uid="80aa3882-1484-44f0-b966-87825df488c2"/>
+                            <ID name="Mark file as pending" mc="BpmnTask" uid="3e18f39b-7660-45c3-95cb-823bcb51b148"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Store" mc="BpmnDataStore" uid="57e52145-1095-40d8-ae04-a8a940a809ae"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Request Records" mc="BpmnSendTask" uid="1718aae1-86a0-4aa0-acd9-3628e11b371e"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Pending files?" mc="BpmnExclusiveGateway" uid="e6507236-4d3f-4818-91b2-b58ba8b90dfa"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check for pending or processing files" mc="BpmnTask" uid="4555c544-3671-4980-bd76-a6e64a0a35c7"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check Diameter connection" mc="BpmnSubProcess" uid="279b8619-5000-424d-9f5e-9b8d6f34d879"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Available?" mc="BpmnExclusiveGateway" uid="b9ca0827-b49f-4ce0-b53c-2aef10b56f93"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Mark file as processing" mc="BpmnTask" uid="ca752935-0f1b-4c15-aa08-ecb2005016f0"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Get records" mc="BpmnReceiveTask" uid="25b27db7-8222-4723-b6a8-01a1e7641d1b"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Open file statistics" mc="BpmnTask" uid="67ce8221-46fc-4f66-8109-4294e3bc1d42"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Pending Records?" mc="BpmnExclusiveGateway" uid="538a0d98-b5a7-4a43-a643-dcf39e2da2bf"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Insert or update records in storage" mc="BpmnTask" uid="a32d0f80-f27e-43a4-ae1b-dded8f702867"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="File transmitted" mc="BpmnSendTask" uid="97e343e9-d090-461d-b4bb-9d778d9c3ebe"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Mark file as processed" mc="BpmnTask" uid="c042498e-291e-4232-b9d1-823d437cb920"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="End Event" mc="BpmnEndEvent" uid="41ebb7da-a075-40d5-8a3c-7fcbe23aefbe"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check pending records" mc="BpmnSubProcess" uid="6b5330ce-2980-4dcd-879f-4af543e50370"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Pending records?" mc="BpmnExclusiveGateway" uid="005727d1-c404-4812-a9c7-e7976098ba89"/>
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                         </LINK>
@@ -121,19 +178,7 @@
                       <DEPENDENCIES>
                         <LINK relation="FlowElementRef">
                           <REFOBJ>
-                            <ID name="CDR file" mc="BpmnStartEvent" uid="0ca67e89-cecc-4112-8179-053564f1b503"/>
-                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Check new file in the directory" mc="BpmnTask" uid="79b88af7-8e1c-4f9e-b3b6-453c53f513d6"/>
-                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Move file for transmission directory" mc="BpmnTask" uid="92c483a0-db10-4088-89ef-207fd0ef7772"/>
-                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Fire an event to SLEE" mc="BpmnTask" uid="d5a0face-a2d9-4ff4-b7bd-8b49ec6e4a15"/>
+                            <ID name="Copy file for transmission directory" mc="BpmnTask" uid="92c483a0-db10-4088-89ef-207fd0ef7772"/>
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                           <REFOBJ>
@@ -142,6 +187,58 @@
                           </REFOBJ>
                           <REFOBJ>
                             <ID name="End Event" mc="BpmnEndEvent" uid="de5b346f-a6ff-4c78-8eed-37f55e0d4e68"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check new file in the directory" mc="BpmnSubProcess" uid="fd0f2f30-b953-4a33-a6be-0f2875c34921"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Has pending files?" mc="BpmnExclusiveGateway" uid="dc4824e6-9525-4e44-9bc9-1a36b65083aa"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Fire an event to SLEE" mc="BpmnSendTask" uid="083e6340-9657-4475-a343-964d83196946"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check File consistency" mc="BpmnSubProcess" uid="39bf5479-70fa-4d08-8b99-482002be9fad"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="File consistent?" mc="BpmnExclusiveGateway" uid="eb6d590d-66ec-4955-a3ca-b129c5dba0f9"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Raise Alarm" mc="BpmnTask" uid="5476dc1b-2d75-4aa7-96cb-449893e995b3"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Deactivate" mc="BpmnIntermediateCatchEvent" uid="cce1813a-e490-451d-940b-7fa4cfec0ef8"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Shutdown procedure" mc="BpmnTask" uid="6023d4cc-2f28-4ca6-a4c1-aba5a88fe719"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Activity" mc="BpmnDataOutput" uid="86c0978f-0708-4d34-81a3-724d7b968d56"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="requestRecords" mc="BpmnIntermediateCatchEvent" uid="74106f3c-77f9-4df0-95f8-765de4b81579"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="giveRecords" mc="BpmnSendTask" uid="db1386fe-7ada-485a-90c8-76e3f1329515"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Read configuration" mc="BpmnTask" uid="9e800d53-f368-436b-9515-a6be4e1280d2"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Start Event" mc="BpmnStartEvent" uid="96c7fcc9-04de-4456-a8e3-eb31896edb0b"/>
                             <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                           </REFOBJ>
                         </LINK>
@@ -205,69 +302,14 @@
             </COMP>
             <COMP relation="FlowElement">
               <OBJECT>
-                <ID name="CDR file" mc="BpmnStartEvent" uid="0ca67e89-cecc-4112-8179-053564f1b503"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsInterrupting">false</ATT>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="Name"><![CDATA[CDR file]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Check new file in the directory" mc="BpmnTask" uid="79b88af7-8e1c-4f9e-b3b6-453c53f513d6"/>
+                <ID name="Copy file for transmission directory" mc="BpmnTask" uid="92c483a0-db10-4088-89ef-207fd0ef7772"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
                   <ATT name="IsGlobal">false</ATT>
                   <ATT name="IsForCompensation">false</ATT>
                   <ATT name="StartQuantity">1</ATT>
                   <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="Name"><![CDATA[Check new file in the directory]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Move file for transmission directory" mc="BpmnTask" uid="92c483a0-db10-4088-89ef-207fd0ef7772"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="Name"><![CDATA[Move file for transmission directory]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Fire an event to SLEE" mc="BpmnTask" uid="d5a0face-a2d9-4ff4-b7bd-8b49ec6e4a15"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="Name"><![CDATA[Fire an event to SLEE]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="BoundaryEventRef">
-                    <REFOBJ>
-                      <ID name="NewFile" mc="BpmnBoundaryEvent" uid="3633f37a-2ee0-4e58-b0df-cf221fd31883"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="NewFile" mc="BpmnBoundaryEvent" uid="3633f37a-2ee0-4e58-b0df-cf221fd31883"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="CancelActivity">true</ATT>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="Name"><![CDATA[NewFile]]></ATT>
+                  <ATT name="Name"><![CDATA[Copy file for transmission directory]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -306,13 +348,13 @@
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="CDR file" mc="BpmnStartEvent" uid="0ca67e89-cecc-4112-8179-053564f1b503"/>
+                      <ID name="Start Event" mc="BpmnStartEvent" uid="96c7fcc9-04de-4456-a8e3-eb31896edb0b"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Check new file in the directory" mc="BpmnTask" uid="79b88af7-8e1c-4f9e-b3b6-453c53f513d6"/>
+                      <ID name="Read configuration" mc="BpmnTask" uid="9e800d53-f368-436b-9515-a6be4e1280d2"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
@@ -330,88 +372,13 @@
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="Check new file in the directory" mc="BpmnTask" uid="79b88af7-8e1c-4f9e-b3b6-453c53f513d6"/>
+                      <ID name="Check new file in the directory" mc="BpmnSubProcess" uid="fd0f2f30-b953-4a33-a6be-0f2875c34921"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Move file for transmission directory" mc="BpmnTask" uid="92c483a0-db10-4088-89ef-207fd0ef7772"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow2" mc="BpmnSequenceFlow" uid="d4842c9b-b80c-4585-a2f9-dfbef8e4d9b7"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow2]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Move file for transmission directory" mc="BpmnTask" uid="92c483a0-db10-4088-89ef-207fd0ef7772"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Fire an event to SLEE" mc="BpmnTask" uid="d5a0face-a2d9-4ff4-b7bd-8b49ec6e4a15"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Check File consistency" mc="BpmnSubProcess" uid="39bf5479-70fa-4d08-8b99-482002be9fad"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="Name"><![CDATA[Check File consistency]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="BoundaryEventRef">
-                    <REFOBJ>
-                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="0805196b-40e5-4865-964c-c343d6b61adc"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="0805196b-40e5-4865-964c-c343d6b61adc"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="CancelActivity">true</ATT>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Start Diameter connection" mc="BpmnSubProcess" uid="842f8e4d-5d65-40ae-835d-2d47c3e4cfbd"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="Name"><![CDATA[Start Diameter connection]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="BoundaryEventRef">
-                    <REFOBJ>
-                      <ID name="Alarm" mc="BpmnBoundaryEvent" uid="3e7322d7-cea5-46f2-8eed-916841d4809e"/>
+                      <ID name="Copy file for transmission directory" mc="BpmnTask" uid="92c483a0-db10-4088-89ef-207fd0ef7772"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
@@ -458,78 +425,6 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Sequence Flow3" mc="BpmnSequenceFlow" uid="cfd15cc1-3f11-428b-b44f-d1b1a61cd818"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="NewFile" mc="BpmnIntermediateCatchEvent" uid="755b9f07-1cc4-4adc-8b92-d35db8899838"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Read configuration" mc="BpmnTask" uid="b6488e65-6344-43a0-90e3-0ad9492c3d7b"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow4" mc="BpmnSequenceFlow" uid="14f7df5e-e279-4b54-bb34-15d131319c1b"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Check File consistency" mc="BpmnSubProcess" uid="39bf5479-70fa-4d08-8b99-482002be9fad"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Start Diameter connection" mc="BpmnSubProcess" uid="842f8e4d-5d65-40ae-835d-2d47c3e4cfbd"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow5" mc="BpmnSequenceFlow" uid="38585177-a3c2-47b2-9d4b-bc7a5ca6d405"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Start Diameter connection" mc="BpmnSubProcess" uid="842f8e4d-5d65-40ae-835d-2d47c3e4cfbd"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Map CDRs to AVP" mc="BpmnSubProcess" uid="67572b5d-fa66-44b3-ae5a-2c32bc1c41ae"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="Sequence Flow6" mc="BpmnSequenceFlow" uid="d0e992ab-f589-41c9-a0ef-2a05303f7371"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
@@ -554,17 +449,6 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Alarm" mc="BpmnBoundaryEvent" uid="3e7322d7-cea5-46f2-8eed-916841d4809e"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="CancelActivity">true</ATT>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="Name"><![CDATA[Alarm]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="Alarm" mc="BpmnBoundaryEvent" uid="e246f153-5968-42ff-8a2b-422ca356d8bc"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
@@ -587,14 +471,14 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Generate statistics" mc="BpmnTask" uid="91d88560-398e-4def-afe7-d63852a4a009"/>
+                <ID name="Update statistics" mc="BpmnTask" uid="91d88560-398e-4def-afe7-d63852a4a009"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
                   <ATT name="IsGlobal">false</ATT>
                   <ATT name="IsForCompensation">false</ATT>
                   <ATT name="StartQuantity">1</ATT>
                   <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="Name"><![CDATA[Generate statistics]]></ATT>
+                  <ATT name="Name"><![CDATA[Update statistics]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -649,7 +533,7 @@
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Log CDR transmission" mc="BpmnTask" uid="10242555-e559-438c-bdf5-c798ca36b97a"/>
+                      <ID name="Update transmission statistics" mc="BpmnTask" uid="10242555-e559-438c-bdf5-c798ca36b97a"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
@@ -673,7 +557,7 @@
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Send CDRs" mc="BpmnSubProcess" uid="ad56ef43-89b8-46f5-b4ef-af268e4afe12"/>
+                      <ID name="Request Records" mc="BpmnSendTask" uid="1718aae1-86a0-4aa0-acd9-3628e11b371e"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
@@ -697,55 +581,7 @@
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Generate statistics" mc="BpmnTask" uid="91d88560-398e-4def-afe7-d63852a4a009"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow10" mc="BpmnSequenceFlow" uid="1a12f13a-ba69-4cd5-91a6-1bd53c1fbdfd"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Generate statistics" mc="BpmnTask" uid="91d88560-398e-4def-afe7-d63852a4a009"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Close Diameter connection" mc="BpmnTask" uid="10fae7ae-1db0-470e-b5a0-ab855ceae07c"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow11" mc="BpmnSequenceFlow" uid="4ced3d5d-4b1f-4186-ae62-e6a1790437bc"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Close Diameter connection" mc="BpmnTask" uid="10fae7ae-1db0-470e-b5a0-ab855ceae07c"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="File transmitted" mc="BpmnTask" uid="80aa3882-1484-44f0-b966-87825df488c2"/>
+                      <ID name="Mark file as processed" mc="BpmnTask" uid="c042498e-291e-4232-b9d1-823d437cb920"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
@@ -763,7 +599,7 @@
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="Backup and Erase File" mc="BpmnTask" uid="07b692d5-dcc6-42ec-b64e-bf1d6f4b1fd5"/>
+                      <ID name="Shutdown procedure" mc="BpmnTask" uid="6023d4cc-2f28-4ca6-a4c1-aba5a88fe719"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
@@ -1093,30 +929,6 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Sequence Flow19" mc="BpmnSequenceFlow" uid="66c4a436-279e-49fd-a638-523653c50b59"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Read configuration" mc="BpmnTask" uid="b6488e65-6344-43a0-90e3-0ad9492c3d7b"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Check File consistency" mc="BpmnSubProcess" uid="39bf5479-70fa-4d08-8b99-482002be9fad"/>
-                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="Statistics" mc="BpmnDataStore" uid="bfa961de-76d3-446f-a860-890076c50128"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
@@ -1128,14 +940,14 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Log CDR transmission" mc="BpmnTask" uid="10242555-e559-438c-bdf5-c798ca36b97a"/>
+                <ID name="Update transmission statistics" mc="BpmnTask" uid="10242555-e559-438c-bdf5-c798ca36b97a"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
                   <ATT name="IsGlobal">false</ATT>
                   <ATT name="IsForCompensation">false</ATT>
                   <ATT name="StartQuantity">1</ATT>
                   <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="Name"><![CDATA[Log CDR transmission]]></ATT>
+                  <ATT name="Name"><![CDATA[Update transmission statistics]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -1145,14 +957,14 @@
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
                   <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
                   <ATT name="Name"><![CDATA[Sequence Flow20]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="Log CDR transmission" mc="BpmnTask" uid="10242555-e559-438c-bdf5-c798ca36b97a"/>
+                      <ID name="Pending Records?" mc="BpmnExclusiveGateway" uid="538a0d98-b5a7-4a43-a643-dcf39e2da2bf"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
@@ -1194,19 +1006,6 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Close Diameter connection" mc="BpmnTask" uid="10fae7ae-1db0-470e-b5a0-ab855ceae07c"/>
-                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="Name"><![CDATA[Close Diameter connection]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="Alarm" mc="BpmnBoundaryEvent" uid="9755c2de-7d02-4a9e-9ab5-8277c0c67576"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
@@ -1218,7 +1017,807 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Sequence Flow21" mc="BpmnSequenceFlow" uid="4e2b2762-490d-447c-9b55-e0eb8662d175"/>
+                <ID name="Check new file in the directory" mc="BpmnSubProcess" uid="fd0f2f30-b953-4a33-a6be-0f2875c34921"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check new file in the directory]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Has pending files?" mc="BpmnExclusiveGateway" uid="dc4824e6-9525-4e44-9bc9-1a36b65083aa"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Has pending files?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="Note" mc="Note" uid="e6762b04-d35b-446e-9e50-8c89776faeb7"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[Pending file means file on the transmission directory]]></ATT>
+                        <ATT name="Name"><![CDATA[Note]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow26" mc="BpmnSequenceFlow" uid="ce87be34-6348-42af-a7ef-56c251a4f1c8"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow26]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Has pending files?" mc="BpmnExclusiveGateway" uid="dc4824e6-9525-4e44-9bc9-1a36b65083aa"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check new file in the directory" mc="BpmnSubProcess" uid="fd0f2f30-b953-4a33-a6be-0f2875c34921"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Fire an event to SLEE" mc="BpmnSendTask" uid="083e6340-9657-4475-a343-964d83196946"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Fire an event to SLEE]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DataInputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="772c6ca9-83e6-4c7d-af31-5f5a6958288c"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="TargetRef">
+                          <REFOBJ>
+                            <ID name="Activity" mc="BpmnDataOutput" uid="86c0978f-0708-4d34-81a3-724d7b968d56"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="New File" mc="BpmnBoundaryEvent" uid="69f08688-771f-465d-9163-f895dbe2ff02"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow2" mc="BpmnSequenceFlow" uid="a0980c69-7598-4595-92f5-bb0c12cca0a1"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Copy file for transmission directory" mc="BpmnTask" uid="92c483a0-db10-4088-89ef-207fd0ef7772"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check File consistency" mc="BpmnSubProcess" uid="39bf5479-70fa-4d08-8b99-482002be9fad"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow23" mc="BpmnSequenceFlow" uid="9993fc19-f07b-4032-80c6-13ba4e0c80fb"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow23]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Has pending files?" mc="BpmnExclusiveGateway" uid="dc4824e6-9525-4e44-9bc9-1a36b65083aa"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Fire an event to SLEE" mc="BpmnSendTask" uid="083e6340-9657-4475-a343-964d83196946"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="New File" mc="BpmnBoundaryEvent" uid="69f08688-771f-465d-9163-f895dbe2ff02"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[New File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Start Event" mc="BpmnStartEvent" uid="71a69da7-3a35-4cd4-a995-89fdbd68ed51"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Start Event]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check File consistency" mc="BpmnSubProcess" uid="39bf5479-70fa-4d08-8b99-482002be9fad"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check File consistency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="File consistent?" mc="BpmnExclusiveGateway" uid="eb6d590d-66ec-4955-a3ca-b129c5dba0f9"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[File consistent?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow3" mc="BpmnSequenceFlow" uid="e3cebad6-3098-432c-9b70-8ffaa9a7e7df"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check File consistency" mc="BpmnSubProcess" uid="39bf5479-70fa-4d08-8b99-482002be9fad"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="File consistent?" mc="BpmnExclusiveGateway" uid="eb6d590d-66ec-4955-a3ca-b129c5dba0f9"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow4" mc="BpmnSequenceFlow" uid="4f154c6a-3012-4438-9bab-d73fe582e815"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="File consistent?" mc="BpmnExclusiveGateway" uid="eb6d590d-66ec-4955-a3ca-b129c5dba0f9"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Fire an event to SLEE" mc="BpmnSendTask" uid="083e6340-9657-4475-a343-964d83196946"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Raise Alarm" mc="BpmnTask" uid="5476dc1b-2d75-4aa7-96cb-449893e995b3"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Raise Alarm]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="BoundaryEventRef">
+                    <REFOBJ>
+                      <ID name="Invalid File" mc="BpmnBoundaryEvent" uid="117c4bfd-ad9e-4eb4-80e3-9820cb81327a"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow19" mc="BpmnSequenceFlow" uid="d0fdd9b1-4203-43c0-91cc-6ea77aa31d15"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="File consistent?" mc="BpmnExclusiveGateway" uid="eb6d590d-66ec-4955-a3ca-b129c5dba0f9"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Raise Alarm" mc="BpmnTask" uid="5476dc1b-2d75-4aa7-96cb-449893e995b3"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow22" mc="BpmnSequenceFlow" uid="f881fcbc-b0ea-42a8-a40e-989b747a0cf1"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow22]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Raise Alarm" mc="BpmnTask" uid="5476dc1b-2d75-4aa7-96cb-449893e995b3"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check new file in the directory" mc="BpmnSubProcess" uid="fd0f2f30-b953-4a33-a6be-0f2875c34921"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Deactivate" mc="BpmnIntermediateCatchEvent" uid="cce1813a-e490-451d-940b-7fa4cfec0ef8"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Deactivate]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Shutdown procedure" mc="BpmnTask" uid="6023d4cc-2f28-4ca6-a4c1-aba5a88fe719"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Shutdown procedure]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow24" mc="BpmnSequenceFlow" uid="7008654b-ee7e-4aea-bcde-e300b56d86c3"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow24]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Deactivate" mc="BpmnIntermediateCatchEvent" uid="cce1813a-e490-451d-940b-7fa4cfec0ef8"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Shutdown procedure" mc="BpmnTask" uid="6023d4cc-2f28-4ca6-a4c1-aba5a88fe719"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Invalid File" mc="BpmnBoundaryEvent" uid="117c4bfd-ad9e-4eb4-80e3-9820cb81327a"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="CancelActivity">true</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Invalid File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow25" mc="BpmnSequenceFlow" uid="a9d08b0f-3019-4f83-a224-ca9502bb3339"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow25]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Start Event" mc="BpmnStartEvent" uid="71a69da7-3a35-4cd4-a995-89fdbd68ed51"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Read configuration" mc="BpmnTask" uid="b6488e65-6344-43a0-90e3-0ad9492c3d7b"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mark file as pending" mc="BpmnTask" uid="3e18f39b-7660-45c3-95cb-823bcb51b148"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Mark file as pending]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DataInputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="91ee6bc0-ece3-4c19-b05b-a8396d6f6665"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="TargetRef">
+                          <REFOBJ>
+                            <ID name="Store" mc="BpmnDataStore" uid="57e52145-1095-40d8-ae04-a8a940a809ae"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow27" mc="BpmnSequenceFlow" uid="c2787304-2eda-4af6-a36c-ab5cbf743754"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow27]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="NewFile" mc="BpmnIntermediateCatchEvent" uid="755b9f07-1cc4-4adc-8b92-d35db8899838"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Mark file as pending" mc="BpmnTask" uid="3e18f39b-7660-45c3-95cb-823bcb51b148"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Store" mc="BpmnDataStore" uid="57e52145-1095-40d8-ae04-a8a940a809ae"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Capacity">0</ATT>
+                  <ATT name="IsUnlimited">false</ATT>
+                  <ATT name="Name"><![CDATA[Store]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Request Records" mc="BpmnSendTask" uid="1718aae1-86a0-4aa0-acd9-3628e11b371e"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Request Records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DataInputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="532669d9-018b-40df-abe0-291f93810bfa"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="TargetRef">
+                          <REFOBJ>
+                            <ID name="Activity" mc="BpmnDataOutput" uid="86c0978f-0708-4d34-81a3-724d7b968d56"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow28" mc="BpmnSequenceFlow" uid="3e46b455-cf26-4092-851e-8f7a912aa1c7"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow28]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mark file as pending" mc="BpmnTask" uid="3e18f39b-7660-45c3-95cb-823bcb51b148"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check Diameter connection" mc="BpmnSubProcess" uid="279b8619-5000-424d-9f5e-9b8d6f34d879"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Activity" mc="BpmnDataOutput" uid="86c0978f-0708-4d34-81a3-724d7b968d56"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Activity]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="requestRecords" mc="BpmnIntermediateCatchEvent" uid="74106f3c-77f9-4df0-95f8-765de4b81579"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[requestRecords]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="giveRecords" mc="BpmnSendTask" uid="db1386fe-7ada-485a-90c8-76e3f1329515"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[giveRecords]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow29" mc="BpmnSequenceFlow" uid="31d60a6b-ba5a-48dc-b91e-ae0296dcaca8"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow29]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="requestRecords" mc="BpmnIntermediateCatchEvent" uid="74106f3c-77f9-4df0-95f8-765de4b81579"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="giveRecords" mc="BpmnSendTask" uid="db1386fe-7ada-485a-90c8-76e3f1329515"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Pending files?" mc="BpmnExclusiveGateway" uid="e6507236-4d3f-4818-91b2-b58ba8b90dfa"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Pending files?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check for pending or processing files" mc="BpmnTask" uid="4555c544-3671-4980-bd76-a6e64a0a35c7"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check for pending or processing files]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DataInputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="cf5f4f84-9f70-4fd6-8a0f-638634a1dbf2"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="TargetRef">
+                          <REFOBJ>
+                            <ID name="Store" mc="BpmnDataStore" uid="57e52145-1095-40d8-ae04-a8a940a809ae"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow30" mc="BpmnSequenceFlow" uid="f76ee35c-61a2-4083-b8ed-734d83e9a2a9"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow30]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Read configuration" mc="BpmnTask" uid="b6488e65-6344-43a0-90e3-0ad9492c3d7b"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check for pending or processing files" mc="BpmnTask" uid="4555c544-3671-4980-bd76-a6e64a0a35c7"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow31" mc="BpmnSequenceFlow" uid="f5c09aee-08ad-44f7-a156-142619cca358"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow31]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check for pending or processing files" mc="BpmnTask" uid="4555c544-3671-4980-bd76-a6e64a0a35c7"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Pending files?" mc="BpmnExclusiveGateway" uid="e6507236-4d3f-4818-91b2-b58ba8b90dfa"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check Diameter connection" mc="BpmnSubProcess" uid="279b8619-5000-424d-9f5e-9b8d6f34d879"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check Diameter connection]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Available?" mc="BpmnExclusiveGateway" uid="b9ca0827-b49f-4ce0-b53c-2aef10b56f93"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Available?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow32" mc="BpmnSequenceFlow" uid="4471e349-cd4c-4eaa-bc17-b06b54bc4938"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow32]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check Diameter connection" mc="BpmnSubProcess" uid="279b8619-5000-424d-9f5e-9b8d6f34d879"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Available?" mc="BpmnExclusiveGateway" uid="b9ca0827-b49f-4ce0-b53c-2aef10b56f93"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mark file as processing" mc="BpmnTask" uid="ca752935-0f1b-4c15-aa08-ecb2005016f0"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Mark file as processing]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow5" mc="BpmnSequenceFlow" uid="b58d3d20-f38d-4500-989e-15fa72d3d19d"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Available?" mc="BpmnExclusiveGateway" uid="b9ca0827-b49f-4ce0-b53c-2aef10b56f93"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Mark file as processing" mc="BpmnTask" uid="ca752935-0f1b-4c15-aa08-ecb2005016f0"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow33" mc="BpmnSequenceFlow" uid="552118ed-b62a-457e-a011-c28585985d05"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow33]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mark file as processing" mc="BpmnTask" uid="ca752935-0f1b-4c15-aa08-ecb2005016f0"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Open file statistics" mc="BpmnTask" uid="67ce8221-46fc-4f66-8109-4294e3bc1d42"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Get records" mc="BpmnReceiveTask" uid="25b27db7-8222-4723-b6a8-01a1e7641d1b"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Get records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow21" mc="BpmnSequenceFlow" uid="e182bb01-f0e3-4588-8336-9e033553a671"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
                   <ATT name="IsImmediate">false</ATT>
@@ -1229,27 +1828,513 @@
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="File transmitted" mc="BpmnTask" uid="80aa3882-1484-44f0-b966-87825df488c2"/>
+                      <ID name="Get records" mc="BpmnReceiveTask" uid="25b27db7-8222-4723-b6a8-01a1e7641d1b"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Backup and Erase File" mc="BpmnTask" uid="07b692d5-dcc6-42ec-b64e-bf1d6f4b1fd5"/>
+                      <ID name="Map CDRs to AVP" mc="BpmnSubProcess" uid="67572b5d-fa66-44b3-ae5a-2c32bc1c41ae"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="File transmitted" mc="BpmnTask" uid="80aa3882-1484-44f0-b966-87825df488c2"/>
+                <ID name="Open file statistics" mc="BpmnTask" uid="67ce8221-46fc-4f66-8109-4294e3bc1d42"/>
                 <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                 <ATTRIBUTES>
                   <ATT name="IsGlobal">false</ATT>
                   <ATT name="IsForCompensation">false</ATT>
                   <ATT name="StartQuantity">1</ATT>
                   <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Open file statistics]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow34" mc="BpmnSequenceFlow" uid="334bc117-2b43-4db4-8dc2-5b92f1fe2b50"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow34]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Open file statistics" mc="BpmnTask" uid="67ce8221-46fc-4f66-8109-4294e3bc1d42"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Request Records" mc="BpmnSendTask" uid="1718aae1-86a0-4aa0-acd9-3628e11b371e"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Pending Records?" mc="BpmnExclusiveGateway" uid="538a0d98-b5a7-4a43-a643-dcf39e2da2bf"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Pending Records?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Insert or update records in storage" mc="BpmnTask" uid="a32d0f80-f27e-43a4-ae1b-dded8f702867"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Insert or update records in storage]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DataInputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="29190123-c8a8-40f3-a5ef-93ef7dfe5953"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="TargetRef">
+                          <REFOBJ>
+                            <ID name="Store" mc="BpmnDataStore" uid="57e52145-1095-40d8-ae04-a8a940a809ae"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow35" mc="BpmnSequenceFlow" uid="572f6a16-5607-4afb-806e-4a70dea13b21"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow35]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Pending Records?" mc="BpmnExclusiveGateway" uid="538a0d98-b5a7-4a43-a643-dcf39e2da2bf"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Insert or update records in storage" mc="BpmnTask" uid="a32d0f80-f27e-43a4-ae1b-dded8f702867"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow36" mc="BpmnSequenceFlow" uid="bc0fd123-d373-49f7-96cd-02d7be1f0b82"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow36]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Update transmission statistics" mc="BpmnTask" uid="10242555-e559-438c-bdf5-c798ca36b97a"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Pending Records?" mc="BpmnExclusiveGateway" uid="538a0d98-b5a7-4a43-a643-dcf39e2da2bf"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow37" mc="BpmnSequenceFlow" uid="f8f07e1b-083c-43fa-b99b-600ec37145bf"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow37]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Insert or update records in storage" mc="BpmnTask" uid="a32d0f80-f27e-43a4-ae1b-dded8f702867"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End of File?" mc="BpmnExclusiveGateway" uid="2bc877bc-0552-4e24-9a01-6d8f2aa3b7b2"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="File transmitted" mc="BpmnSendTask" uid="97e343e9-d090-461d-b4bb-9d778d9c3ebe"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
                   <ATT name="Name"><![CDATA[File transmitted]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow10" mc="BpmnSequenceFlow" uid="186d71bd-1e0b-42c8-a4f3-d2c848342c86"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Update statistics" mc="BpmnTask" uid="91d88560-398e-4def-afe7-d63852a4a009"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="File transmitted" mc="BpmnSendTask" uid="97e343e9-d090-461d-b4bb-9d778d9c3ebe"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mark file as processed" mc="BpmnTask" uid="c042498e-291e-4232-b9d1-823d437cb920"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Mark file as processed]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow11" mc="BpmnSequenceFlow" uid="72bb1675-265e-42a7-b921-93a598ab3cfe"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mark file as processed" mc="BpmnTask" uid="c042498e-291e-4232-b9d1-823d437cb920"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Update statistics" mc="BpmnTask" uid="91d88560-398e-4def-afe7-d63852a4a009"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="End Event" mc="BpmnEndEvent" uid="41ebb7da-a075-40d5-8a3c-7fcbe23aefbe"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[End Event]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow38" mc="BpmnSequenceFlow" uid="372f9457-a66e-4bbd-a141-91cf2e94fa13"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow38]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="File transmitted" mc="BpmnSendTask" uid="97e343e9-d090-461d-b4bb-9d778d9c3ebe"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="End Event" mc="BpmnEndEvent" uid="41ebb7da-a075-40d5-8a3c-7fcbe23aefbe"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow39" mc="BpmnSequenceFlow" uid="c0ba2b49-cde9-4d86-a931-df52d66ecea4"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow39]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Pending files?" mc="BpmnExclusiveGateway" uid="e6507236-4d3f-4818-91b2-b58ba8b90dfa"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check Diameter connection" mc="BpmnSubProcess" uid="279b8619-5000-424d-9f5e-9b8d6f34d879"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow40" mc="BpmnSequenceFlow" uid="394008f8-db71-4ec8-94be-7f4e50180bc0"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow40]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Available?" mc="BpmnExclusiveGateway" uid="b9ca0827-b49f-4ce0-b53c-2aef10b56f93"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check Diameter connection" mc="BpmnSubProcess" uid="279b8619-5000-424d-9f5e-9b8d6f34d879"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check pending records" mc="BpmnSubProcess" uid="6b5330ce-2980-4dcd-879f-4af543e50370"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check pending records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DataInputAssociation">
+                    <OBJECT>
+                      <ID name="BpmnDataAssociation" mc="BpmnDataAssociation" uid="27a27b79-e2ad-4c16-b821-67073c78e162"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Assignment"></ATT>
+                        <ATT name="Transfomation"></ATT>
+                        <ATT name="Language"></ATT>
+                        <ATT name="Name"><![CDATA[BpmnDataAssociation]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="TargetRef">
+                          <REFOBJ>
+                            <ID name="Store" mc="BpmnDataStore" uid="57e52145-1095-40d8-ae04-a8a940a809ae"/>
+                            <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow41" mc="BpmnSequenceFlow" uid="cdf6c4cb-6d57-4447-b2af-79bea82cb13b"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow41]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Read configuration" mc="BpmnTask" uid="b6488e65-6344-43a0-90e3-0ad9492c3d7b"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check pending records" mc="BpmnSubProcess" uid="6b5330ce-2980-4dcd-879f-4af543e50370"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Pending records?" mc="BpmnExclusiveGateway" uid="005727d1-c404-4812-a9c7-e7976098ba89"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[Pending records?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow42" mc="BpmnSequenceFlow" uid="5694e637-3b62-4a66-a165-1f274d61be63"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow42]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check pending records" mc="BpmnSubProcess" uid="6b5330ce-2980-4dcd-879f-4af543e50370"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Pending records?" mc="BpmnExclusiveGateway" uid="005727d1-c404-4812-a9c7-e7976098ba89"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow43" mc="BpmnSequenceFlow" uid="e1a13428-e24f-467e-9c70-b44a3a02c07a"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow43]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Pending records?" mc="BpmnExclusiveGateway" uid="005727d1-c404-4812-a9c7-e7976098ba89"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Map CDRs to AVP" mc="BpmnSubProcess" uid="67572b5d-fa66-44b3-ae5a-2c32bc1c41ae"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Read configuration" mc="BpmnTask" uid="9e800d53-f368-436b-9515-a6be4e1280d2"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Read configuration]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow44" mc="BpmnSequenceFlow" uid="0f6e368c-8b1c-4165-b777-eec7100e3095"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow44]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Read configuration" mc="BpmnTask" uid="9e800d53-f368-436b-9515-a6be4e1280d2"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Has pending files?" mc="BpmnExclusiveGateway" uid="dc4824e6-9525-4e44-9bc9-1a36b65083aa"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow45" mc="BpmnSequenceFlow" uid="e1f246a2-cc52-4802-80c3-6aacdd59b523"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow45]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Pending files?" mc="BpmnExclusiveGateway" uid="e6507236-4d3f-4818-91b2-b58ba8b90dfa"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="NewFile" mc="BpmnIntermediateCatchEvent" uid="755b9f07-1cc4-4adc-8b92-d35db8899838"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Start Event" mc="BpmnStartEvent" uid="96c7fcc9-04de-4456-a8e3-eb31896edb0b"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Start Event]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -1278,15 +2363,97 @@
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="NewFile" mc="BpmnIntermediateCatchEvent" uid="755b9f07-1cc4-4adc-8b92-d35db8899838"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Message Flow" mc="BpmnMessageFlow" uid="8abad24d-29aa-4103-a5b2-58d8b3080c0b"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="Fire an event to SLEE" mc="BpmnTask" uid="d5a0face-a2d9-4ff4-b7bd-8b49ec6e4a15"/>
+                      <ID name="Fire an event to SLEE" mc="BpmnSendTask" uid="083e6340-9657-4475-a343-964d83196946"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
                       <ID name="NewFile" mc="BpmnIntermediateCatchEvent" uid="755b9f07-1cc4-4adc-8b92-d35db8899838"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="requestRecords" mc="BpmnMessageFlow" uid="0775d203-49a2-411b-b9a8-e5548030af2c"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[requestRecords]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Request Records" mc="BpmnSendTask" uid="1718aae1-86a0-4aa0-acd9-3628e11b371e"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="requestRecords" mc="BpmnIntermediateCatchEvent" uid="74106f3c-77f9-4df0-95f8-765de4b81579"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Records" mc="BpmnMessageFlow" uid="f8bb1936-0c64-4ad5-979a-c3d0bd2a86ae"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="giveRecords" mc="BpmnSendTask" uid="db1386fe-7ada-485a-90c8-76e3f1329515"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Get records" mc="BpmnReceiveTask" uid="25b27db7-8222-4723-b6a8-01a1e7641d1b"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="fileProcessed" mc="BpmnMessageFlow" uid="befcdf9f-0266-45c8-b2fd-6fa194c85585"/>
+                <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[fileProcessed]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="File transmitted" mc="BpmnSendTask" uid="97e343e9-d090-461d-b4bb-9d778d9c3ebe"/>
+                      <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Backup and Erase File" mc="BpmnTask" uid="07b692d5-dcc6-42ec-b64e-bf1d6f4b1fd5"/>
                       <PID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
                     </REFOBJ>
                   </LINK>
