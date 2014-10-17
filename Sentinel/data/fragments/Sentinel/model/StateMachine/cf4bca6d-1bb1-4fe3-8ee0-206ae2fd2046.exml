@@ -1,0 +1,252 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CDR Rf state machine" version="3">
+  <DEPS>
+    <ID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+    <COMPID name="CDR Rf state machine diagram" mc="StateMachineDiagram" uid="29d9a52f-ea47-4859-96f6-55eb1e54c6e8"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+    <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <ATTRIBUTES>
+      <ATT name="Kind">Dynamic</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[CDR Rf state machine]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Top">
+        <OBJECT>
+          <ID name="" mc="Region" uid="0bc33596-5b54-4850-86fc-a1f0beb0f84e"/>
+          <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Sub">
+              <OBJECT>
+                <ID name="Initial State" mc="InitialPseudoState" uid="f795221d-6aba-4b9b-a80a-15fefa239587"/>
+                <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Initial State]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="a5b9dc9f-72d4-44be-ac93-e95db778c01c"/>
+                      <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Check pending records" mc="State" uid="72931486-86ae-456d-808e-b9778950f730"/>
+                            <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check pending records" mc="State" uid="72931486-86ae-456d-808e-b9778950f730"/>
+                <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Check pending records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="633bc375-b7a7-4ed1-aed9-a75ce6e6c4cb"/>
+                      <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[found pending records]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Sending records" mc="State" uid="ad8ceccb-43b4-41d3-bae1-4c0d95635263"/>
+                            <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition1" mc="Transition" uid="21c4580f-d15f-465f-8c8a-ae577de2d40b"/>
+                      <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[no pending records]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Waiting for new file" mc="State" uid="e4d6413e-cc5e-4ed0-9c13-9f71502bc636"/>
+                            <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sending records" mc="State" uid="ad8ceccb-43b4-41d3-bae1-4c0d95635263"/>
+                <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Sending records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="f932d57e-8041-44ff-a419-ea503af33b19"/>
+                      <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[end of file records]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Final State" mc="FinalState" uid="42a4f550-efcc-4ad0-b1b0-44d2c29e5a5c"/>
+                            <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition1" mc="Transition" uid="12e7193b-31ca-4d2a-8a82-afb629353d25"/>
+                      <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[end of pending records]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Waiting for new file" mc="State" uid="e4d6413e-cc5e-4ed0-9c13-9f71502bc636"/>
+                            <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Waiting for new file" mc="State" uid="e4d6413e-cc5e-4ed0-9c13-9f71502bc636"/>
+                <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Waiting for new file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="7daef54f-9638-45d3-91fe-d97a81325310"/>
+                      <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[new file]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Requesting records" mc="State" uid="db9cfc58-af9f-4204-8191-0b124afd2fba"/>
+                            <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Requesting records" mc="State" uid="db9cfc58-af9f-4204-8191-0b124afd2fba"/>
+                <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Requesting records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="9c51f7e1-02b6-4169-adb2-199328264463"/>
+                      <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[received records]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Sending records" mc="State" uid="ad8ceccb-43b4-41d3-bae1-4c0d95635263"/>
+                            <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Final State" mc="FinalState" uid="42a4f550-efcc-4ad0-b1b0-44d2c29e5a5c"/>
+                <PID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Final State]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="CDR Rf state machine diagram" mc="StateMachineDiagram" uid="29d9a52f-ea47-4859-96f6-55eb1e54c6e8"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

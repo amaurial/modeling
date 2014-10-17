@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Rf interface" version="3">
+  <DEPS>
+    <ID name="Rf interface" mc="Interface" uid="b3f14ecc-7803-4857-9302-7b8848173f1e"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Rf interface" mc="Interface" uid="b3f14ecc-7803-4857-9302-7b8848173f1e"/>
+    <PID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Rf interface]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

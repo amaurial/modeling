@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Rf API" version="3">
+  <DEPS>
+    <ID name="Rf API" mc="Interface" uid="3061f476-f945-4b48-be5f-565ceca248df"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Rf API" mc="Interface" uid="3061f476-f945-4b48-be5f-565ceca248df"/>
+    <PID name="Sentinel Mediation" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Rf API]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

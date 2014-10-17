@@ -6,7 +6,7 @@
   </DEPS>
   <OBJECT>
     <ID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
-    <PID name="SLEE Solution" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
     <ATTRIBUTES>
       <ATT name="IsSingleExecution">false</ATT>
       <ATT name="IsReadOnly">false</ATT>
@@ -74,8 +74,8 @@
                 <ID name="1-Read Diameter connection configuration" mc="OpaqueAction" uid="50cbc875-abc0-4da1-94d8-79ef5d22fee6"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[-Read diameter connection information of the OCS.
--Read diameter redundant connection information of the OCS.]]></ATT>
+                  <ATT name="Body"><![CDATA[-Read diameter connection information of the CDF.
+-Read diameter redundant connection information of the CDF.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
                   <ATT name="Name"><![CDATA[1-Read Diameter connection configuration]]></ATT>
@@ -84,13 +84,13 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="2-Connect to the redundant OCS" mc="OpaqueAction" uid="8d0dcf6e-892d-4ed8-a34b-2836c958318c"/>
+                <ID name="2-Connect to the redundant CDF" mc="OpaqueAction" uid="8d0dcf6e-892d-4ed8-a34b-2836c958318c"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[In case of no communication with the major OCS, connect to the second one.]]></ATT>
+                  <ATT name="Body"><![CDATA[In case of no communication with the major CDF, connect to the second one.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[2-Connect to the redundant OCS]]></ATT>
+                  <ATT name="Name"><![CDATA[2-Connect to the redundant CDF]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -132,13 +132,13 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="11-Transmit CDR" mc="OpaqueAction" uid="cf326cc1-7707-4d8d-a91d-68d8717ccb16"/>
+                <ID name="11-Transmit CDR using Event based charging approach" mc="OpaqueAction" uid="cf326cc1-7707-4d8d-a91d-68d8717ccb16"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[Transmit the CDR using the Diameter protocol using ACR messages. The CDRs should be transmitted using the transaction feature of diameter.]]></ATT>
+                  <ATT name="Body"><![CDATA[Transmit the CDR using the Diameter protocol using ACR messages. The CDRs should be transmitted using the event based charging defined by 3GPP. One ACR for each CDR.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[11-Transmit CDR]]></ATT>
+                  <ATT name="Name"><![CDATA[11-Transmit CDR using Event based charging approach]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -220,7 +220,7 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 <ID name="14-Handle re-authentication" mc="OpaqueAction" uid="05b5b09f-8168-4b9a-9a55-6ddfa6992468"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[Re-authenticate on OCS in case it is requested.]]></ATT>
+                  <ATT name="Body"><![CDATA[Re-authenticate on CDF in case it is requested.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
                   <ATT name="Name"><![CDATA[14-Handle re-authentication]]></ATT>
@@ -232,7 +232,7 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 <ID name="7-Connect and authenticate on operator charging system" mc="OpaqueAction" uid="5648930c-bb47-4e04-9502-0c78478726cf"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[Connects and authenticate itself on the OCS.]]></ATT>
+                  <ATT name="Body"><![CDATA[Connects and authenticate itself on the CDF.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
                   <ATT name="Name"><![CDATA[7-Connect and authenticate on operator charging system]]></ATT>
@@ -241,37 +241,13 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="15-Configure AVP Mapping" mc="OpaqueAction" uid="f5829abf-b96c-466a-ba13-0056761bd2dc"/>
+                <ID name="15-Raise alarm for CDR not transmitted" mc="OpaqueAction" uid="57612b7d-1bb7-4a24-ae57-1bcd8daa82ed"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[Configure Mapping from CDR fields to AVP]]></ATT>
+                  <ATT name="Body"><![CDATA[Raise an alarm in case of failure of CDR transmission after n atempts.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[15-Configure AVP Mapping]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="16-Visualize transmitted file names and transmission details" mc="OpaqueAction" uid="a16d4875-3224-43bf-a2fa-2956dfce9ee9"/>
-                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
-                <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[Report of transmitted files with the amount of CDRs]]></ATT>
-                  <ATT name="IsMultipleInstance">false</ATT>
-                  <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[16-Visualize transmitted file names and transmission details]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="17-Visualize statistics" mc="OpaqueAction" uid="0e620c49-935a-42d4-9830-b70792d08e9d"/>
-                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
-                <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[Provide reports about the CDR files transmited,failed, corrupted files, etc ..]]></ATT>
-                  <ATT name="IsMultipleInstance">false</ATT>
-                  <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[17-Visualize statistics]]></ATT>
+                  <ATT name="Name"><![CDATA[15-Raise alarm for CDR not transmitted]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -280,13 +256,13 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="FindFiles RA" mc="StructuredActivityNode" uid="12355548-2bf0-4115-9317-d257fe574903"/>
+          <ID name="File Inspector RA" mc="StructuredActivityNode" uid="12355548-2bf0-4115-9317-d257fe574903"/>
           <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
           <ATTRIBUTES>
             <ATT name="MustIsolate">false</ATT>
             <ATT name="IsMultipleInstance">false</ATT>
             <ATT name="IsCompensation">false</ATT>
-            <ATT name="Name"><![CDATA[FindFiles RA]]></ATT>
+            <ATT name="Name"><![CDATA[File Inspector RA]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -351,6 +327,54 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
+              <OBJECT>
+                <ID name="6-Provide records" mc="OpaqueAction" uid="691d4f06-fbf4-41fa-b1e2-66b1eaddefef"/>
+                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[The application may request a specific amount of records for an fired filename.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[6-Provide records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="7-Cache records" mc="OpaqueAction" uid="b8bbd804-f390-4b41-8f96-4da856a276b3"/>
+                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Cache a configurable amount of records for the file being processed.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[7-Cache records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="8-Move bad files to a different location" mc="OpaqueAction" uid="4d6d2d2d-30cb-4ebc-8f06-301828dc5dbc"/>
+                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[The bad files need a different location for later treatment.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[8-Move bad files to a different location]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Raise alarm for bad files" mc="OpaqueAction" uid="c24446de-223b-4ccf-b407-a55df38cfee9"/>
+                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Raise an alarm in case of finding a bad formated file.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Raise alarm for bad files]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -370,7 +394,7 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 <ID name="1-Open Diameter connection" mc="OpaqueAction" uid="37909c1b-57a5-4249-8882-7666a99a4141"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[Open a diameter communication with the OCS.]]></ATT>
+                  <ATT name="Body"><![CDATA[Open a diameter communication with the CDF.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
                   <ATT name="Name"><![CDATA[1-Open Diameter connection]]></ATT>
@@ -398,6 +422,57 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
                   <ATT name="Name"><![CDATA[3-Retry to connect]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Need to be defined" mc="StructuredActivityNode" uid="153ebfe0-2a34-47fd-a0a3-82f380fd0ac9"/>
+          <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+          <ATTRIBUTES>
+            <ATT name="MustIsolate">false</ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Need to be defined]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Body">
+              <OBJECT>
+                <ID name="1-Configure AVP Mapping" mc="OpaqueAction" uid="f5829abf-b96c-466a-ba13-0056761bd2dc"/>
+                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Configure Mapping from CDR fields to AVP]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[1-Configure AVP Mapping]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="2-Visualize transmitted file names and transmission details" mc="OpaqueAction" uid="a16d4875-3224-43bf-a2fa-2956dfce9ee9"/>
+                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Report of transmitted files with the amount of CDRs]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[2-Visualize transmitted file names and transmission details]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="3-Visualize statistics" mc="OpaqueAction" uid="0e620c49-935a-42d4-9830-b70792d08e9d"/>
+                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Provide reports about the CDR files transmited,failed, corrupted files, etc ..]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[3-Visualize statistics]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>

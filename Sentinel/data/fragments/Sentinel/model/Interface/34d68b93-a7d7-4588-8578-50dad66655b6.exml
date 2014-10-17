@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CDR Request interface" version="3">
+  <DEPS>
+    <ID name="CDR Request interface" mc="Interface" uid="34d68b93-a7d7-4588-8578-50dad66655b6"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="CDR Request interface" mc="Interface" uid="34d68b93-a7d7-4588-8578-50dad66655b6"/>
+    <PID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[CDR Request interface]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

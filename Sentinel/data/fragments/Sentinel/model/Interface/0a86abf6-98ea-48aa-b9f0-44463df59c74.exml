@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CDR Ra interface" version="3">
+  <DEPS>
+    <ID name="CDR Ra interface" mc="Interface" uid="0a86abf6-98ea-48aa-b9f0-44463df59c74"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="CDR Ra interface" mc="Interface" uid="0a86abf6-98ea-48aa-b9f0-44463df59c74"/>
+    <PID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[CDR Ra interface]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

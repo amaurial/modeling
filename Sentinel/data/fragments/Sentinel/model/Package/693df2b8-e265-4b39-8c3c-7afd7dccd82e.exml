@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Converged Scenario" version="3">
+  <DEPS>
+    <ID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <COMPID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+    <COMPID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+    <COMPID name="Diameter Ro RA" mc="Component" uid="1a1e8e11-34e9-47c8-84ff-7b5fdac685f0"/>
+    <COMPID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+    <COMPID name="Operator CDF" mc="Component" uid="faffccc5-f2dd-48c7-bcc4-00f760e72e8b"/>
+    <COMPID name="Other protocol sentinel front end" mc="Component" uid="804fabdc-3b0e-4ad9-bd9e-3047a4a8214d"/>
+    <COMPID name="Rf service Sentinel Fron end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+    <COMPID name="SLEE Component Architecture" mc="ClassDiagram" uid="775f78c4-2082-4ed4-afe3-fccf268ccb39"/>
+    <COMPID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <PID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Converged Scenario]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Declared">
+        <OBJECT>
+          <ID name="CDR File" mc="Instance" uid="6eb4cfb5-c8f1-48d7-975b-76b7e2a880d0"/>
+          <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[CDR File]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CDR File" mc="Instance" uid="57ca38ad-652b-4e93-abb6-5121d246bc69"/>
+          <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[CDR File]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CDR File" mc="Instance" uid="9bd3aa30-6a55-4361-8040-cdeb73cea1a1"/>
+          <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[CDR File]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Rf service Sentinel Fron end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+        <COMPID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+        <COMPID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+        <COMPID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+        <COMPID name="Diameter Ro RA" mc="Component" uid="1a1e8e11-34e9-47c8-84ff-7b5fdac685f0"/>
+        <COMPID name="Operator CDF" mc="Component" uid="faffccc5-f2dd-48c7-bcc4-00f760e72e8b"/>
+        <COMPID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+        <COMPID name="Other protocol sentinel front end" mc="Component" uid="804fabdc-3b0e-4ad9-bd9e-3047a4a8214d"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="SLEE Component Architecture" mc="ClassDiagram" uid="775f78c4-2082-4ed4-afe3-fccf268ccb39"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

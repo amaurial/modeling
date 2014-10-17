@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diameter Rf RA" version="3">
+  <DEPS>
+    <ID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+    <COMPID name="Rf interface" mc="Interface" uid="b3f14ecc-7803-4857-9302-7b8848173f1e"/>
+    <EXTID name="Operator CDF" mc="Component" uid="faffccc5-f2dd-48c7-bcc4-00f760e72e8b"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+    <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Diameter Rf RA]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="InternalStructure">
+        <OBJECT>
+          <ID name="Port1" mc="Port" uid="d82068ee-df9f-4dd5-af7b-705b1075f4e9"/>
+          <PID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Port3" mc="Port" uid="2e25b077-3a7d-4ac4-b4b0-61b6085b7da2"/>
+          <PID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port3]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedEnd">
+              <OBJECT>
+                <ID name="port1" mc="ConnectorEnd" uid="b5e78747-e011-4dee-80b9-78777c05b31a"/>
+                <PID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="Name"><![CDATA[port1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Link">
+                    <OBJECT>
+                      <ID name="Rf interface" mc="Connector" uid="b287bbc5-0ef8-4a72-afa3-e2312696f798"/>
+                      <PID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Rf interface]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Port1" mc="Port" uid="45e464c2-2afd-4dac-8e14-1b616f89229e"/>
+                      <PID name="Operator CDF" mc="Component" uid="faffccc5-f2dd-48c7-bcc4-00f760e72e8b"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Opposite">
+                    <OBJECT>
+                      <ID name="" mc="ConnectorEnd" uid="37f3daea-d504-49a9-8b36-00e553ee8614"/>
+                      <PID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Link">
+                          <COMPID name="Rf interface" mc="Connector" uid="b287bbc5-0ef8-4a72-afa3-e2312696f798"/>
+                        </COMP>
+                        <COMP relation="Opposite">
+                          <COMPID name="port1" mc="ConnectorEnd" uid="b5e78747-e011-4dee-80b9-78777c05b31a"/>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Rf interface" mc="Interface" uid="b3f14ecc-7803-4857-9302-7b8848173f1e"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

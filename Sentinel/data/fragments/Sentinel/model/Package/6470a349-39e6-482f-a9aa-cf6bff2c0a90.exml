@@ -2,6 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DiameterTransmission" version="3">
   <DEPS>
     <ID name="DiameterTransmission" mc="Package" uid="6470a349-39e6-482f-a9aa-cf6bff2c0a90"/>
+    <COMPID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
     <COMPID name="Major diameter transmission workflow" mc="BpmnBehavior" uid="a7ebc4de-4740-4413-ab63-a47216aa3462"/>
     <COMPID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
     <COMPID name="Operator use cases file transmission" mc="Package" uid="76e3611c-95e4-432e-8b4b-dc6a8f717dfb"/>
@@ -31,6 +32,7 @@
         <COMPID name="Operator use cases diameter transmission" mc="Package" uid="fcf0293a-a151-4364-8a03-5e922d220815"/>
         <COMPID name="Operator use cases file transmission" mc="Package" uid="76e3611c-95e4-432e-8b4b-dc6a8f717dfb"/>
         <COMPID name="SLEE Solution CDR level" mc="Package" uid="4eee3849-fb15-4d79-9328-288da55b520d"/>
+        <COMPID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

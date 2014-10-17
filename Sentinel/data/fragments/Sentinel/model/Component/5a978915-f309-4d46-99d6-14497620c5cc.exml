@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CDR Ra" version="3">
+  <DEPS>
+    <ID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+    <COMPID name="CDR Ra interface" mc="Interface" uid="0a86abf6-98ea-48aa-b9f0-44463df59c74"/>
+    <EXTID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+    <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[CDR Ra]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="InternalStructure">
+        <OBJECT>
+          <ID name="Port" mc="Port" uid="ab5ffa03-016d-45bd-8d60-ca46307406ac"/>
+          <PID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="CDR Ra interface" mc="Interface" uid="0a86abf6-98ea-48aa-b9f0-44463df59c74"/>
+      </COMP>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="" mc="Usage" uid="e0b19322-0564-4f8b-868b-51243e2bc439"/>
+          <PID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+          <ATTRIBUTES>
+            <ATT name="DependsOnId"></ATT>
+            <ATT name="DependsOnName"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <REFOBJ>
+                <ID name="CDR File" mc="Instance" uid="6eb4cfb5-c8f1-48d7-975b-76b7e2a880d0"/>
+                <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="Note" mc="Note" uid="f7aebca9-dca9-445c-992a-2513f4d1be82"/>
+                <PID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[File generated]]></ATT>
+                  <ATT name="Name"><![CDATA[Note]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Dependency" uid="e474727b-59d6-463c-891f-a75b9c85f223"/>
+          <PID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+          <ATTRIBUTES>
+            <ATT name="DependsOnId"></ATT>
+            <ATT name="DependsOnName"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <REFOBJ>
+                <ID name="CDR File" mc="Instance" uid="57ca38ad-652b-4e93-abb6-5121d246bc69"/>
+                <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Dependency" uid="27da7c97-f561-4012-847b-034ef62b8e30"/>
+          <PID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+          <ATTRIBUTES>
+            <ATT name="DependsOnId"></ATT>
+            <ATT name="DependsOnName"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <REFOBJ>
+                <ID name="CDR File" mc="Instance" uid="9bd3aa30-6a55-4361-8040-cdeb73cea1a1"/>
+                <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
