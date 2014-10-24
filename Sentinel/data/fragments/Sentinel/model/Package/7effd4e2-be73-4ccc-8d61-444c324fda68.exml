@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ra" version="3">
+  <DEPS>
+    <ID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+    <COMPID name="FileHandle" mc="Class" uid="983419d6-d0fe-47f2-8af2-4852deac78ff"/>
+    <COMPID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+    <COMPID name="FileInspector" mc="Class" uid="56830258-095d-4339-9dc3-dff9df0a3c2c"/>
+    <COMPID name="FileInspectorResourceAdaptor" mc="Class" uid="6462f0d8-0107-4a00-9024-f626b6a83642"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+    <PID name="com.opencloud.fileinspectorra.resources" mc="Package" uid="997f1fcf-d0cd-4afa-b05d-eeaa1f923990"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ra]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="FileHandle" mc="Class" uid="983419d6-d0fe-47f2-8af2-4852deac78ff"/>
+        <COMPID name="FileInspectorResourceAdaptor" mc="Class" uid="6462f0d8-0107-4a00-9024-f626b6a83642"/>
+        <COMPID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+        <COMPID name="FileInspector" mc="Class" uid="56830258-095d-4339-9dc3-dff9df0a3c2c"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

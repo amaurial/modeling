@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="File inspector RA" version="3">
+  <DEPS>
+    <ID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+    <COMPID name="File inspector RA interface" mc="Interface" uid="05222a1d-c6e0-437e-9f75-aeb18261649a"/>
+    <EXTID name="CDR Rf" mc="Component" uid="02346eb1-e30a-43c7-8bee-fcbb860e8d00"/>
+    <EXTID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+    <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[File inspector RA]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="InternalStructure">
+        <OBJECT>
+          <ID name="Port" mc="Port" uid="ed83953e-4cb8-4221-9bfb-560c3c9b90a7"/>
+          <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Port1" mc="Port" uid="919b82b9-03ff-4b1b-8742-bd713ca4b269"/>
+          <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedEnd">
+              <OBJECT>
+                <ID name="port2" mc="ConnectorEnd" uid="9031d68f-d5a8-433c-821f-afa37cec4f24"/>
+                <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+                <ATTRIBUTES>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="Name"><![CDATA[port2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Link">
+                    <OBJECT>
+                      <ID name="fire  SLEE event" mc="Connector" uid="48cb7130-5805-4c80-8e54-a585de13b6b8"/>
+                      <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[fire  SLEE event]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Port2" mc="Port" uid="51615e12-7f28-4d78-8ef7-7bf386cf1d10"/>
+                      <PID name="CDR Rf" mc="Component" uid="02346eb1-e30a-43c7-8bee-fcbb860e8d00"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Opposite">
+                    <OBJECT>
+                      <ID name="" mc="ConnectorEnd" uid="2e053fc6-50a2-48f3-b904-8a575b9aa33d"/>
+                      <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Link">
+                          <COMPID name="fire  SLEE event" mc="Connector" uid="48cb7130-5805-4c80-8e54-a585de13b6b8"/>
+                        </COMP>
+                        <COMP relation="Opposite">
+                          <COMPID name="port2" mc="ConnectorEnd" uid="9031d68f-d5a8-433c-821f-afa37cec4f24"/>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="File inspector RA interface" mc="Interface" uid="05222a1d-c6e0-437e-9f75-aeb18261649a"/>
+      </COMP>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="" mc="Usage" uid="4a9d6dc0-a87c-44b3-a000-c07e27113717"/>
+          <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+          <ATTRIBUTES>
+            <ATT name="DependsOnId"></ATT>
+            <ATT name="DependsOnName"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <REFOBJ>
+                <ID name="CDR file n" mc="Instance" uid="cda97994-4b42-459b-86d8-5d60d84465b1"/>
+                <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Usage" uid="3cfae169-bb12-4c7e-b416-0b9f599bc6fc"/>
+          <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+          <ATTRIBUTES>
+            <ATT name="DependsOnId"></ATT>
+            <ATT name="DependsOnName"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <REFOBJ>
+                <ID name="CDR file 2" mc="Instance" uid="6f2b96e4-015f-421a-9547-0c9168c41925"/>
+                <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Usage" uid="92aff41a-db0b-48cd-ae7b-96814615961c"/>
+          <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+          <ATTRIBUTES>
+            <ATT name="DependsOnId"></ATT>
+            <ATT name="DependsOnName"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <REFOBJ>
+                <ID name="CDR file 1" mc="Instance" uid="3ed6467f-c5f0-4f8a-851d-dbb8ed485a9b"/>
+                <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

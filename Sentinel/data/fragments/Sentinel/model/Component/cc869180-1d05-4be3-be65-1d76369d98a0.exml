@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Sentinel" version="3">
+  <DEPS>
+    <ID name="Sentinel" mc="Component" uid="cc869180-1d05-4be3-be65-1d76369d98a0"/>
+    <EXTID name="CDR RA" mc="Component" uid="17771900-f063-4692-a4b0-ba690dd8785d"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Sentinel" mc="Component" uid="cc869180-1d05-4be3-be65-1d76369d98a0"/>
+    <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Sentinel]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="InternalStructure">
+        <OBJECT>
+          <ID name="Port" mc="Port" uid="04d55875-49ca-4ce3-9ab8-7688350a9293"/>
+          <PID name="Sentinel" mc="Component" uid="cc869180-1d05-4be3-be65-1d76369d98a0"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedEnd">
+              <OBJECT>
+                <ID name="port" mc="ConnectorEnd" uid="e301159c-add2-426f-ad06-8235d5a0046b"/>
+                <PID name="Sentinel" mc="Component" uid="cc869180-1d05-4be3-be65-1d76369d98a0"/>
+                <ATTRIBUTES>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="Name"><![CDATA[port]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Link">
+                    <OBJECT>
+                      <ID name="write CDR" mc="Connector" uid="8bd7240b-a703-488c-9e4f-e58b17c35f0b"/>
+                      <PID name="Sentinel" mc="Component" uid="cc869180-1d05-4be3-be65-1d76369d98a0"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[write CDR]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Port" mc="Port" uid="1d14948d-02db-481f-953f-591b29534051"/>
+                      <PID name="CDR RA" mc="Component" uid="17771900-f063-4692-a4b0-ba690dd8785d"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Opposite">
+                    <OBJECT>
+                      <ID name="" mc="ConnectorEnd" uid="0b1034b6-ebb2-497a-9937-93a7c1b6ff5e"/>
+                      <PID name="Sentinel" mc="Component" uid="cc869180-1d05-4be3-be65-1d76369d98a0"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Link">
+                          <COMPID name="write CDR" mc="Connector" uid="8bd7240b-a703-488c-9e4f-e58b17c35f0b"/>
+                        </COMP>
+                        <COMP relation="Opposite">
+                          <COMPID name="port" mc="ConnectorEnd" uid="e301159c-add2-426f-ad06-8235d5a0046b"/>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

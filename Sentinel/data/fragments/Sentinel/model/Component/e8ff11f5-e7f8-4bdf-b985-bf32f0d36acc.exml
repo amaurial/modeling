@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Sentinel Mediation Rf Layer" version="3">
+  <DEPS>
+    <ID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+    <COMPID name="Rf API" mc="Interface" uid="3061f476-f945-4b48-be5f-565ceca248df"/>
+    <EXTID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+    <EXTID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+    <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Sentinel Mediation Rf Layer]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="InternalStructure">
+        <OBJECT>
+          <ID name="Port" mc="Port" uid="954e04e5-1630-4530-911f-5b1223b0872d"/>
+          <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedEnd">
+              <OBJECT>
+                <ID name="port" mc="ConnectorEnd" uid="a60548f1-917c-4640-a0c2-be43836f2b44"/>
+                <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+                <ATTRIBUTES>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="Name"><![CDATA[port]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Link">
+                    <OBJECT>
+                      <ID name="CDR Ra Api" mc="Connector" uid="920fd022-0303-41dc-815a-c5aa34bc0b83"/>
+                      <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[CDR Ra Api]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Port" mc="Port" uid="ab5ffa03-016d-45bd-8d60-ca46307406ac"/>
+                      <PID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Opposite">
+                    <OBJECT>
+                      <ID name="" mc="ConnectorEnd" uid="c8d5f3dc-7ad9-4081-a860-f3bd9cdf1bf5"/>
+                      <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Link">
+                          <COMPID name="CDR Ra Api" mc="Connector" uid="920fd022-0303-41dc-815a-c5aa34bc0b83"/>
+                        </COMP>
+                        <COMP relation="Opposite">
+                          <COMPID name="port" mc="ConnectorEnd" uid="a60548f1-917c-4640-a0c2-be43836f2b44"/>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Port4" mc="Port" uid="9527c23e-f8bb-4dda-9782-ebba62e54c58"/>
+          <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port4]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Port2" mc="Port" uid="0a6b7587-fa5b-4531-a248-dd802bff17d2"/>
+          <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port2]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="OwnedEnd">
+              <OBJECT>
+                <ID name="port1" mc="ConnectorEnd" uid="d4061982-65e4-4939-b144-22935d0bf579"/>
+                <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+                <ATTRIBUTES>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="Name"><![CDATA[port1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Link">
+                    <OBJECT>
+                      <ID name="Rf API" mc="Connector" uid="3cb9dde9-cf5b-4785-b0aa-f49c67c88b5e"/>
+                      <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Rf API]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Port1" mc="Port" uid="d82068ee-df9f-4dd5-af7b-705b1075f4e9"/>
+                      <PID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Opposite">
+                    <OBJECT>
+                      <ID name="" mc="ConnectorEnd" uid="583a7018-ef2c-4811-b2ff-b8fec8b9fa70"/>
+                      <PID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsOrdered">false</ATT>
+                        <ATT name="IsUnique">false</ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Link">
+                          <COMPID name="Rf API" mc="Connector" uid="3cb9dde9-cf5b-4785-b0aa-f49c67c88b5e"/>
+                        </COMP>
+                        <COMP relation="Opposite">
+                          <COMPID name="port1" mc="ConnectorEnd" uid="d4061982-65e4-4939-b144-22935d0bf579"/>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Rf API" mc="Interface" uid="3061f476-f945-4b48-be5f-565ceca248df"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

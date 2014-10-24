@@ -1,0 +1,362 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CDR message lifecycle" version="3">
+  <DEPS>
+    <ID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+    <COMPID name="CDR lifecycle diagram" mc="StateMachineDiagram" uid="89b3c6bc-ca93-4271-bcd1-e8d7fd26b29d"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+    <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <ATTRIBUTES>
+      <ATT name="Kind">Dynamic</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[CDR message lifecycle]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Top">
+        <OBJECT>
+          <ID name="" mc="Region" uid="ef28a2b2-71c9-41f7-baf9-7bd34c0a2702"/>
+          <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Sub">
+              <OBJECT>
+                <ID name="Transmiting" mc="State" uid="9896b60a-359e-4562-ad42-af3d68c1b75c"/>
+                <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Transmiting]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="3c10875f-cc1c-45af-8f61-04d3fb647a21"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[OK]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Transmited" mc="State" uid="be1a3e5c-4d62-4d06-babc-f40f3d1994f7"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition1" mc="Transition" uid="9541446d-848b-4b70-b933-052b731f7c48"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[failed]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Failed" mc="State" uid="4259bfbe-084e-44e2-8e45-234b717b85b4"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="Note" mc="Note" uid="1ea54123-8da0-4714-841d-24487a53ea01"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[At this point the CDR is already a Rf message. It follows now the Rf message lifecycle]]></ATT>
+                        <ATT name="Name"><![CDATA[Note]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Initial State" mc="InitialPseudoState" uid="8ddd6ea3-fa43-4659-b516-44b0b73e0c2d"/>
+                <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Initial State]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="f389cd2a-fa2f-4613-9ef3-1c70b591cd4a"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Persisted" mc="State" uid="5705a439-755e-4aa4-937f-383cdffb7347"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Transmited" mc="State" uid="be1a3e5c-4d62-4d06-babc-f40f3d1994f7"/>
+                <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Transmited]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OwnedRegion">
+                    <OBJECT>
+                      <ID name="Region" mc="Region" uid="95b720bd-b58e-4303-852c-e1e6969041eb"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Region]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="762c75f8-ae68-4865-91e5-f1e09fb49bfc"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Final State" mc="FinalState" uid="97c0dba2-631d-424e-9cfe-db9ff59efa06"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Failed" mc="State" uid="4259bfbe-084e-44e2-8e45-234b717b85b4"/>
+                <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Failed]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="e1746989-ea38-4135-95e9-3465e1fc406d"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[re-send]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Retransmiting" mc="State" uid="4854769f-d1dd-41e6-88fb-98a81e7167ad"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Final State" mc="FinalState" uid="97c0dba2-631d-424e-9cfe-db9ff59efa06"/>
+                <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Final State]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Retransmiting" mc="State" uid="4854769f-d1dd-41e6-88fb-98a81e7167ad"/>
+                <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Retransmiting]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Internal">
+                    <OBJECT>
+                      <ID name="Do" mc="InternalTransition" uid="0d2e0792-0f3a-4bee-83c5-c29d5b7c2047"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"><![CDATA[Do]]></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[make n retries]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Do]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="66943c11-11b4-48a4-a609-4e0586054240"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[OK]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Transmited" mc="State" uid="be1a3e5c-4d62-4d06-babc-f40f3d1994f7"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition1" mc="Transition" uid="3f4b1255-7d35-4ee7-a1ae-1dbdac747725"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[failed]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Failed" mc="State" uid="4259bfbe-084e-44e2-8e45-234b717b85b4"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Persisted" mc="State" uid="5705a439-755e-4aa4-937f-383cdffb7347"/>
+                <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Persisted]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="1c01e408-2e7e-4a5f-b127-c0b0de2a649a"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[transmission request]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Mapped to Rf message" mc="State" uid="70284ba8-cd55-4549-a096-50f27364b37c"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mapped to Rf message" mc="State" uid="70284ba8-cd55-4549-a096-50f27364b37c"/>
+                <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Mapped to Rf message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="0ce0a7e7-edca-4b10-918c-abd26c219391"/>
+                      <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[ready for transmission]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Transmiting" mc="State" uid="9896b60a-359e-4562-ad42-af3d68c1b75c"/>
+                            <PID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="CDR lifecycle diagram" mc="StateMachineDiagram" uid="89b3c6bc-ca93-4271-bcd1-e8d7fd26b29d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="com.opencloud.fileinspectorra" version="3">
+  <DEPS>
+    <ID name="com.opencloud.fileinspectorra" mc="Package" uid="4642dca8-3286-4af4-a599-65e4e2af8b6c"/>
+    <COMPID name="File Inspector state machine" mc="StateMachine" uid="ac58ef80-70a0-43c2-8d08-18f498706d84"/>
+    <COMPID name="com.opencloud.fileinspectorra.resources" mc="Package" uid="997f1fcf-d0cd-4afa-b05d-eeaa1f923990"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="com.opencloud.fileinspectorra" mc="Package" uid="4642dca8-3286-4af4-a599-65e4e2af8b6c"/>
+    <PID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[com.opencloud.fileinspectorra]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="File Inspector state machine" mc="StateMachine" uid="ac58ef80-70a0-43c2-8d08-18f498706d84"/>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="com.opencloud.fileinspectorra.resources" mc="Package" uid="997f1fcf-d0cd-4afa-b05d-eeaa1f923990"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

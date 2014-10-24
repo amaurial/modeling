@@ -1,0 +1,276 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="macro view" version="3">
+  <DEPS>
+    <ID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+    <COMPID name="online Rf processing macro view" mc="ActivityDiagram" uid="9f32c0fc-62a8-4975-97f3-045d0e932856"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+    <PID name="online Rf messages" mc="Package" uid="29d4a727-c37c-48c0-aeb7-0ef1cb652fc2"/>
+    <ATTRIBUTES>
+      <ATT name="IsSingleExecution">false</ATT>
+      <ATT name="IsReadOnly">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[macro view]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedNode">
+        <OBJECT>
+          <ID name="other sentinel from end" mc="OpaqueAction" uid="9670db6b-b1fa-41c0-bf71-7b66e8e8ae75"/>
+          <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[send Rf message to CDF]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[other sentinel from end]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="b38eda3a-715e-4a4f-b578-3926e2d2fa3c"/>
+                <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Mediation Rf" mc="OpaqueAction" uid="6ec9a688-10e2-4c63-ad5b-06bd7003b55a"/>
+                      <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Mediation Rf" mc="OpaqueAction" uid="6ec9a688-10e2-4c63-ad5b-06bd7003b55a"/>
+          <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[Send the message to CDF via Diameter Rf. Inform CDR Ra to persist the message in different files: successfull and failed. Inform the Sentinel Rf if the message was delivered or not.]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Mediation Rf]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="177b5c62-06fe-448f-a281-c7597cef0eac"/>
+                <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Diameter Rf" mc="OpaqueAction" uid="0f395a86-fd9f-42e4-8fa3-ce588fb2c29b"/>
+                      <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="412bbedb-a01a-4e0f-aa7f-c7d6b81ad97c"/>
+                <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="CDR Ra" mc="OpaqueAction" uid="0c66c0dc-c947-46cf-aa00-3a9db10b549e"/>
+                      <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="f7f8f38f-9ac8-4db3-9549-69164b85a3b9"/>
+                <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Sentinel Rf front end" mc="OpaqueAction" uid="f8cdd5b0-39ce-4f1c-b28e-f6e26b73706e"/>
+                      <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Diameter Rf" mc="OpaqueAction" uid="0f395a86-fd9f-42e4-8fa3-ce588fb2c29b"/>
+          <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[Try to send the ACR message and waits for ACA messages. Report if the message was sent or not.]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Diameter Rf]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="a9c5eff4-6beb-42d2-ad4d-f73891b82365"/>
+                <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Mediation Rf" mc="OpaqueAction" uid="6ec9a688-10e2-4c63-ad5b-06bd7003b55a"/>
+                      <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CDR Ra" mc="OpaqueAction" uid="0c66c0dc-c947-46cf-aa00-3a9db10b549e"/>
+          <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[Save the raw Rf messages in different files.]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[CDR Ra]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="068e3264-e6c9-4596-9fac-2b8a3e19ec4f"/>
+                <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="File inspector Ra" mc="OpaqueAction" uid="a742727e-dda8-47f6-b398-e312841c0891"/>
+                      <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="File inspector Ra" mc="OpaqueAction" uid="a742727e-dda8-47f6-b398-e312841c0891"/>
+          <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[Check for new failed Rf message files and inform the Sentinel Rf about them.]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[File inspector Ra]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="da25b49f-400c-4b78-9ab7-960013b852b3"/>
+                <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Sentinel Rf front end" mc="OpaqueAction" uid="f8cdd5b0-39ce-4f1c-b28e-f6e26b73706e"/>
+                      <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Sentinel Rf front end" mc="OpaqueAction" uid="f8cdd5b0-39ce-4f1c-b28e-f6e26b73706e"/>
+          <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[Request the messages from the file, mark them as retransmission and increment the retry counter. For Rf messages from file no mapping is necessary because they are the same original message.
+Need to inform the mediation if the failed message should be persisted.]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Sentinel Rf front end]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="03269cd1-a06e-43c3-979b-54cd3d7f4ead"/>
+                <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Mediation Rf" mc="OpaqueAction" uid="6ec9a688-10e2-4c63-ad5b-06bd7003b55a"/>
+                      <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Collaboration" uid="a693aa98-e7b1-433b-b004-4c8f2800b917"/>
+          <PID name="macro view" mc="Activity" uid="4a523ca8-f102-4eb6-99ec-3804358a1573"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="online Rf processing macro view" mc="ActivityDiagram" uid="9f32c0fc-62a8-4975-97f3-045d0e932856"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

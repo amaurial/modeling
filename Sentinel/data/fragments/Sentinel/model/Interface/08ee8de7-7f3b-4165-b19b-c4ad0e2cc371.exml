@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CDRRequestActivityContext" version="3">
+  <DEPS>
+    <ID name="CDRRequestActivityContext" mc="Interface" uid="08ee8de7-7f3b-4165-b19b-c4ad0e2cc371"/>
+    <EXTID name="CDRRequestActivity" mc="Interface" uid="34d68b93-a7d7-4588-8578-50dad66655b6"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="CDRRequestActivityContext" mc="Interface" uid="08ee8de7-7f3b-4165-b19b-c4ad0e2cc371"/>
+    <PID name="ratype" mc="Package" uid="7ec612d1-1d15-457b-99b9-c7303bd2c88d"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[CDRRequestActivityContext]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="getActivityContextInterface" mc="Operation" uid="23273f15-0143-487e-90c1-5f7726d96b6b"/>
+          <PID name="CDRRequestActivityContext" mc="Interface" uid="08ee8de7-7f3b-4165-b19b-c4ad0e2cc371"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getActivityContextInterface]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="activity" mc="Parameter" uid="775d1977-fc88-4c7a-a82b-a141433cc12f"/>
+                <PID name="CDRRequestActivityContext" mc="Interface" uid="08ee8de7-7f3b-4165-b19b-c4ad0e2cc371"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[activity]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="CDRRequestActivity" mc="Interface" uid="34d68b93-a7d7-4588-8578-50dad66655b6"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

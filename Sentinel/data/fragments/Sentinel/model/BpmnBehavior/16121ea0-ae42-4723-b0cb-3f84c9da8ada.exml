@@ -1,0 +1,1381 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Recycling process of Rf messages" version="3">
+  <DEPS>
+    <ID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+    <COMPID name="Not sent Rf online messages" mc="BpmnProcessCollaborationDiagram" uid="460ed078-e82b-41ff-8306-78149be10fe7"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+    <PID name="online Rf messages" mc="Package" uid="29d4a727-c37c-48c0-aeb7-0ef1cb652fc2"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Recycling process of Rf messages]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="RootElement">
+        <OBJECT>
+          <ID name="Process" mc="BpmnProcess" uid="fa8b5d99-9637-4a65-be9e-29191af81fdb"/>
+          <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+          <ATTRIBUTES>
+            <ATT name="ProcessType">NoneProcess</ATT>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="IsExecutable">OUndefined</ATT>
+            <ATT name="Name"><![CDATA[Process]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="LaneSet">
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="34bf126b-a530-4eb0-a070-841f851bb32f"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Sentinel Rf front end" mc="BpmnLane" uid="4ed6a26d-2735-498e-8b5f-c0f737bb0cc6"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Sentinel Rf front end]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="new File" mc="BpmnIntermediateCatchEvent" uid="e5843f96-dd2f-4922-8bf9-6d8ebc27923a"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="request records" mc="BpmnSendTask" uid="2545305f-a923-4ab0-8c61-ace4a7e19eda"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Increment retries record" mc="BpmnTask" uid="4d0e41dd-6263-4de5-b19c-4fb95e991ded"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Mark retransmission flag" mc="BpmnTask" uid="0105d42b-e871-443d-8b65-602b730b962b"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send message" mc="BpmnSendTask" uid="5ed8ed1d-1a89-4417-bb11-87536b412b61"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="control message state?" mc="BpmnSubProcess" uid="959de3b8-b57e-4d24-b797-a4c2080ff95c"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="51b6e094-100b-4310-9db1-20c56f32efe5"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Diameter Ra" mc="BpmnLane" uid="8f476536-e6d9-4129-8edd-df627ea6fede"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Diameter Ra]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="send ACR message" mc="BpmnIntermediateCatchEvent" uid="a14a4216-79b4-4770-b5e6-80484d54ffa8"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send ACR" mc="BpmnSendTask" uid="1d61548c-6150-49ca-8410-8cf69079404d"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="wait for ACA" mc="BpmnSubProcess" uid="ddf8e55e-55ce-4234-b736-16e78191889a"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send ACA response" mc="BpmnSendTask" uid="5ab4d977-25cc-4643-bf5b-d5554dc53b30"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send failure response" mc="BpmnSendTask" uid="49223cd6-2a90-40c3-9924-c628f82df105"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="f213670c-42a0-4c2a-ba52-ef9246a47881"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="Mediation Rf layer" mc="BpmnLane" uid="b032b8b7-1252-4aea-9fd7-6737ceff97f2"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[Mediation Rf layer]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="identify as Rf batch message" mc="BpmnTask" uid="cf103144-6f47-417a-8a22-9be09abdbcd1"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="send ACR" mc="BpmnSendTask" uid="03d8062c-f1bd-4575-bd36-1fedab2e954c"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="wait for ACA" mc="BpmnReceiveTask" uid="dadfe86b-1388-4807-9354-269353ddcb96"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="create timer" mc="BpmnSubProcess" uid="11f33204-8539-4bcd-bdea-b0f2889cb9c1"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="analyse response" mc="BpmnTask" uid="8c2ad7c1-879f-4ef4-af7a-0fd84cbe3502"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="failed to transmit?" mc="BpmnExclusiveGateway" uid="27cb4522-4a66-400a-8832-24c8e381776b"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="write Rf message in the success file" mc="BpmnTask" uid="e6a31794-8595-4055-904d-1a69ed02ae6c"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="write Rf message in unsuccess file" mc="BpmnTask" uid="670e0df4-6d6c-4269-aae5-7ef3367962b6"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="sendMessage" mc="BpmnIntermediateCatchEvent" uid="f21680e2-f43a-4dca-b348-705bfc932909"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="276459da-92b0-4365-8bf0-29305f06dfb2"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="CDR Ra" mc="BpmnLane" uid="95279472-1a10-4687-9e8c-52d2db2635e2"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[CDR Ra]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="write successfull Rf message" mc="BpmnServiceTask" uid="733bf8b9-a7e4-4fa1-863e-cc62edc75a3a"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="write successfull Rf message" mc="BpmnServiceTask" uid="43398061-4489-43a0-a3b2-d4963c57da92"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="BpmnLaneSet" mc="BpmnLaneSet" uid="738a0fcc-ecb0-47d7-8f35-6f2764820903"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[BpmnLaneSet]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Lane">
+                    <OBJECT>
+                      <ID name="File inspector Ra" mc="BpmnLane" uid="0c31ddaf-b89d-413f-971f-7d1cb336ffd9"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[File inspector Ra]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="FlowElementRef">
+                          <REFOBJ>
+                            <ID name="Start Event" mc="BpmnStartEvent" uid="a78990bc-d75e-406b-814c-6a9082398186"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Check for new unsuccessfull sent Rf messages" mc="BpmnSubProcess" uid="3d017981-3ed3-4266-811e-598262a6e5ab"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Found new File" mc="BpmnTask" uid="c68103c3-2347-4c8d-9a47-8a8ac3631214"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="Inform new File" mc="BpmnSendTask" uid="df8e3f59-d319-4ea1-850a-9c204e4b1681"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                          <REFOBJ>
+                            <ID name="give Records" mc="BpmnReceiveTask" uid="ae794a2a-5fcf-4188-aab3-4d054faca836"/>
+                            <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="FlowElement">
+              <OBJECT>
+                <ID name="Start Event" mc="BpmnStartEvent" uid="a78990bc-d75e-406b-814c-6a9082398186"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[Start Event]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Check for new unsuccessfull sent Rf messages" mc="BpmnSubProcess" uid="3d017981-3ed3-4266-811e-598262a6e5ab"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Check for new unsuccessfull sent Rf messages]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Found new File" mc="BpmnTask" uid="c68103c3-2347-4c8d-9a47-8a8ac3631214"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Found new File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Inform new File" mc="BpmnSendTask" uid="df8e3f59-d319-4ea1-850a-9c204e4b1681"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Inform new File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="give Records" mc="BpmnReceiveTask" uid="ae794a2a-5fcf-4188-aab3-4d054faca836"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[give Records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow" mc="BpmnSequenceFlow" uid="0f18347f-ebe3-4d5d-ac57-f5aa3fce89ef"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Start Event" mc="BpmnStartEvent" uid="a78990bc-d75e-406b-814c-6a9082398186"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check for new unsuccessfull sent Rf messages" mc="BpmnSubProcess" uid="3d017981-3ed3-4266-811e-598262a6e5ab"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow1" mc="BpmnSequenceFlow" uid="87a862d2-801e-4cd3-9521-f5114bc3c8c6"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Check for new unsuccessfull sent Rf messages" mc="BpmnSubProcess" uid="3d017981-3ed3-4266-811e-598262a6e5ab"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Found new File" mc="BpmnTask" uid="c68103c3-2347-4c8d-9a47-8a8ac3631214"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow2" mc="BpmnSequenceFlow" uid="45212270-ec79-4091-b22f-69f7a5e80289"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Found new File" mc="BpmnTask" uid="c68103c3-2347-4c8d-9a47-8a8ac3631214"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Inform new File" mc="BpmnSendTask" uid="df8e3f59-d319-4ea1-850a-9c204e4b1681"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow3" mc="BpmnSequenceFlow" uid="56a8c323-9aef-49a9-93d1-914eb46a2d0f"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Inform new File" mc="BpmnSendTask" uid="df8e3f59-d319-4ea1-850a-9c204e4b1681"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="give Records" mc="BpmnReceiveTask" uid="ae794a2a-5fcf-4188-aab3-4d054faca836"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="new File" mc="BpmnIntermediateCatchEvent" uid="e5843f96-dd2f-4922-8bf9-6d8ebc27923a"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[new File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="request records" mc="BpmnSendTask" uid="2545305f-a923-4ab0-8c61-ace4a7e19eda"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[request records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow4" mc="BpmnSequenceFlow" uid="1a092727-2c50-417b-9bd3-9ce67c966143"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="new File" mc="BpmnIntermediateCatchEvent" uid="e5843f96-dd2f-4922-8bf9-6d8ebc27923a"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="request records" mc="BpmnSendTask" uid="2545305f-a923-4ab0-8c61-ace4a7e19eda"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Increment retries record" mc="BpmnTask" uid="4d0e41dd-6263-4de5-b19c-4fb95e991ded"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Increment retries record]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mark retransmission flag" mc="BpmnTask" uid="0105d42b-e871-443d-8b65-602b730b962b"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[Mark retransmission flag]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow5" mc="BpmnSequenceFlow" uid="c959cbed-6954-46e7-8f9f-a67cbb9c6c98"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="request records" mc="BpmnSendTask" uid="2545305f-a923-4ab0-8c61-ace4a7e19eda"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Increment retries record" mc="BpmnTask" uid="4d0e41dd-6263-4de5-b19c-4fb95e991ded"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow6" mc="BpmnSequenceFlow" uid="35d972c2-1b19-4cef-bf8c-e30ea7fedd77"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow6]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Increment retries record" mc="BpmnTask" uid="4d0e41dd-6263-4de5-b19c-4fb95e991ded"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Mark retransmission flag" mc="BpmnTask" uid="0105d42b-e871-443d-8b65-602b730b962b"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send message" mc="BpmnSendTask" uid="5ed8ed1d-1a89-4417-bb11-87536b412b61"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="identify as Rf batch message" mc="BpmnTask" uid="cf103144-6f47-417a-8a22-9be09abdbcd1"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[identify as Rf batch message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow8" mc="BpmnSequenceFlow" uid="9c0abe42-05a0-485f-9c2e-a1da04a32be8"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow8]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mark retransmission flag" mc="BpmnTask" uid="0105d42b-e871-443d-8b65-602b730b962b"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="control message state?" mc="BpmnSubProcess" uid="959de3b8-b57e-4d24-b797-a4c2080ff95c"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send ACR" mc="BpmnSendTask" uid="03d8062c-f1bd-4575-bd36-1fedab2e954c"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send ACR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="wait for ACA" mc="BpmnReceiveTask" uid="dadfe86b-1388-4807-9354-269353ddcb96"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="Instanciate">false</ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[wait for ACA]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow9" mc="BpmnSequenceFlow" uid="635a070f-e444-4beb-8777-620b80b78536"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow9]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="identify as Rf batch message" mc="BpmnTask" uid="cf103144-6f47-417a-8a22-9be09abdbcd1"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send ACR" mc="BpmnSendTask" uid="03d8062c-f1bd-4575-bd36-1fedab2e954c"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow10" mc="BpmnSequenceFlow" uid="623d7c7a-c85f-426f-a9f4-21570f99488f"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send ACR" mc="BpmnSendTask" uid="03d8062c-f1bd-4575-bd36-1fedab2e954c"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="create timer" mc="BpmnSubProcess" uid="11f33204-8539-4bcd-bdea-b0f2889cb9c1"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="create timer" mc="BpmnSubProcess" uid="11f33204-8539-4bcd-bdea-b0f2889cb9c1"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[create timer]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow11" mc="BpmnSequenceFlow" uid="9d0d0101-9d64-4734-b5af-95d9a1f06ad3"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="create timer" mc="BpmnSubProcess" uid="11f33204-8539-4bcd-bdea-b0f2889cb9c1"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="wait for ACA" mc="BpmnReceiveTask" uid="dadfe86b-1388-4807-9354-269353ddcb96"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="analyse response" mc="BpmnTask" uid="8c2ad7c1-879f-4ef4-af7a-0fd84cbe3502"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[analyse response]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="failed to transmit?" mc="BpmnExclusiveGateway" uid="27cb4522-4a66-400a-8832-24c8e381776b"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="Name"><![CDATA[failed to transmit?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow12" mc="BpmnSequenceFlow" uid="ed52a0e1-e433-46ad-b668-8f5b1a1d5e6e"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow12]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="wait for ACA" mc="BpmnReceiveTask" uid="dadfe86b-1388-4807-9354-269353ddcb96"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="analyse response" mc="BpmnTask" uid="8c2ad7c1-879f-4ef4-af7a-0fd84cbe3502"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow13" mc="BpmnSequenceFlow" uid="44ccb15b-dd6e-4178-a415-41ba118fdc64"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow13]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="create timer" mc="BpmnSubProcess" uid="11f33204-8539-4bcd-bdea-b0f2889cb9c1"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="analyse response" mc="BpmnTask" uid="8c2ad7c1-879f-4ef4-af7a-0fd84cbe3502"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow14" mc="BpmnSequenceFlow" uid="ed2f92a8-0abb-47bd-a555-540a48586338"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow14]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="analyse response" mc="BpmnTask" uid="8c2ad7c1-879f-4ef4-af7a-0fd84cbe3502"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="failed to transmit?" mc="BpmnExclusiveGateway" uid="27cb4522-4a66-400a-8832-24c8e381776b"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="write Rf message in the success file" mc="BpmnTask" uid="e6a31794-8595-4055-904d-1a69ed02ae6c"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[write Rf message in the success file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="write Rf message in unsuccess file" mc="BpmnTask" uid="670e0df4-6d6c-4269-aae5-7ef3367962b6"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[write Rf message in unsuccess file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow15" mc="BpmnSequenceFlow" uid="30da3803-9723-493b-b7d0-554b2cab34b2"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[yes]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow15]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="failed to transmit?" mc="BpmnExclusiveGateway" uid="27cb4522-4a66-400a-8832-24c8e381776b"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="write Rf message in the success file" mc="BpmnTask" uid="e6a31794-8595-4055-904d-1a69ed02ae6c"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow16" mc="BpmnSequenceFlow" uid="2dfa7cdc-4a78-48f7-86cb-5118565f32a6"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[no]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow16]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="failed to transmit?" mc="BpmnExclusiveGateway" uid="27cb4522-4a66-400a-8832-24c8e381776b"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="write Rf message in unsuccess file" mc="BpmnTask" uid="670e0df4-6d6c-4269-aae5-7ef3367962b6"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="write successfull Rf message" mc="BpmnServiceTask" uid="733bf8b9-a7e4-4fa1-863e-cc62edc75a3a"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[write successfull Rf message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="write successfull Rf message" mc="BpmnServiceTask" uid="43398061-4489-43a0-a3b2-d4963c57da92"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[write successfull Rf message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="sendMessage" mc="BpmnIntermediateCatchEvent" uid="f21680e2-f43a-4dca-b348-705bfc932909"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[sendMessage]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow7" mc="BpmnSequenceFlow" uid="aa168f9b-e0b0-4ac1-8b3b-0eb7e817192d"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow7]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="sendMessage" mc="BpmnIntermediateCatchEvent" uid="f21680e2-f43a-4dca-b348-705bfc932909"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="identify as Rf batch message" mc="BpmnTask" uid="cf103144-6f47-417a-8a22-9be09abdbcd1"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow17" mc="BpmnSequenceFlow" uid="85efc261-8053-4331-b80d-3992cf051920"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow17]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="write Rf message in unsuccess file" mc="BpmnTask" uid="670e0df4-6d6c-4269-aae5-7ef3367962b6"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="sendMessage" mc="BpmnIntermediateCatchEvent" uid="f21680e2-f43a-4dca-b348-705bfc932909"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send ACR message" mc="BpmnIntermediateCatchEvent" uid="a14a4216-79b4-4770-b5e6-80484d54ffa8"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="Name"><![CDATA[send ACR message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send ACR" mc="BpmnSendTask" uid="1d61548c-6150-49ca-8410-8cf69079404d"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send ACR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow18" mc="BpmnSequenceFlow" uid="6014b69e-7a13-4adb-afa3-bb20a3e63f69"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow18]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send ACR message" mc="BpmnIntermediateCatchEvent" uid="a14a4216-79b4-4770-b5e6-80484d54ffa8"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send ACR" mc="BpmnSendTask" uid="1d61548c-6150-49ca-8410-8cf69079404d"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="wait for ACA" mc="BpmnSubProcess" uid="ddf8e55e-55ce-4234-b736-16e78191889a"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[wait for ACA]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send ACA response" mc="BpmnSendTask" uid="5ab4d977-25cc-4643-bf5b-d5554dc53b30"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send ACA response]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="send failure response" mc="BpmnSendTask" uid="49223cd6-2a90-40c3-9924-c628f82df105"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[send failure response]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow19" mc="BpmnSequenceFlow" uid="146e347f-4932-4c51-9dca-b1800d98c899"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send ACR" mc="BpmnSendTask" uid="1d61548c-6150-49ca-8410-8cf69079404d"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="wait for ACA" mc="BpmnSubProcess" uid="ddf8e55e-55ce-4234-b736-16e78191889a"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow20" mc="BpmnSequenceFlow" uid="a9aa1efe-7ee9-4df2-b3a0-8642d13182a6"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow20]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="wait for ACA" mc="BpmnSubProcess" uid="ddf8e55e-55ce-4234-b736-16e78191889a"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send ACA response" mc="BpmnSendTask" uid="5ab4d977-25cc-4643-bf5b-d5554dc53b30"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow21" mc="BpmnSequenceFlow" uid="f03add06-3f3e-4fc6-b3de-eb567b14e7c4"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow21]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="wait for ACA" mc="BpmnSubProcess" uid="ddf8e55e-55ce-4234-b736-16e78191889a"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send failure response" mc="BpmnSendTask" uid="49223cd6-2a90-40c3-9924-c628f82df105"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="control message state?" mc="BpmnSubProcess" uid="959de3b8-b57e-4d24-b797-a4c2080ff95c"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="Name"><![CDATA[control message state?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow22" mc="BpmnSequenceFlow" uid="56fffe17-a1c9-4a53-b525-4051986e3263"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow22]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="control message state?" mc="BpmnSubProcess" uid="959de3b8-b57e-4d24-b797-a4c2080ff95c"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send message" mc="BpmnSendTask" uid="5ed8ed1d-1a89-4417-bb11-87536b412b61"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Product">
+              <COMPID name="Not sent Rf online messages" mc="BpmnProcessCollaborationDiagram" uid="460ed078-e82b-41ff-8306-78149be10fe7"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Collaboration" mc="BpmnCollaboration" uid="22b69ccf-8a34-40e6-9dec-ea81c7ac6e20"/>
+          <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+          <ATTRIBUTES>
+            <ATT name="IsClosed">false</ATT>
+            <ATT name="Name"><![CDATA[Collaboration]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="MessageFlow">
+              <OBJECT>
+                <ID name="new File" mc="BpmnMessageFlow" uid="c3019341-4c58-4800-bc56-6c75fd61d94b"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[new File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Inform new File" mc="BpmnSendTask" uid="df8e3f59-d319-4ea1-850a-9c204e4b1681"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="new File" mc="BpmnIntermediateCatchEvent" uid="e5843f96-dd2f-4922-8bf9-6d8ebc27923a"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="request records" mc="BpmnMessageFlow" uid="56b7837d-c824-42ba-b76a-6b9f66fbdbce"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[request records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="request records" mc="BpmnSendTask" uid="2545305f-a923-4ab0-8c61-ace4a7e19eda"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="give Records" mc="BpmnReceiveTask" uid="ae794a2a-5fcf-4188-aab3-4d054faca836"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Message Flow" mc="BpmnMessageFlow" uid="a69dccef-c601-4149-ad0c-09c78758c2bf"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Message Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send message" mc="BpmnSendTask" uid="5ed8ed1d-1a89-4417-bb11-87536b412b61"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="sendMessage" mc="BpmnIntermediateCatchEvent" uid="f21680e2-f43a-4dca-b348-705bfc932909"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="BpmnMessageFlow" uid="8226a759-28ae-4dbe-962d-2b5b4040f6c2"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="write Rf message in unsuccess file" mc="BpmnTask" uid="670e0df4-6d6c-4269-aae5-7ef3367962b6"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="write successfull Rf message" mc="BpmnServiceTask" uid="43398061-4489-43a0-a3b2-d4963c57da92"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="BpmnMessageFlow" uid="5bec5e74-02b1-416e-8121-9ff24e6d9047"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="write Rf message in the success file" mc="BpmnTask" uid="e6a31794-8595-4055-904d-1a69ed02ae6c"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="write successfull Rf message" mc="BpmnServiceTask" uid="733bf8b9-a7e4-4fa1-863e-cc62edc75a3a"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ACR" mc="BpmnMessageFlow" uid="bdfaacf9-609a-43e0-9a37-c3c825ca1b95"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[ACR]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send ACR" mc="BpmnSendTask" uid="03d8062c-f1bd-4575-bd36-1fedab2e954c"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="send ACR message" mc="BpmnIntermediateCatchEvent" uid="a14a4216-79b4-4770-b5e6-80484d54ffa8"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ACA" mc="BpmnMessageFlow" uid="2116bed0-e032-48dd-bc07-725732f98384"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[ACA]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send ACA response" mc="BpmnSendTask" uid="5ab4d977-25cc-4643-bf5b-d5554dc53b30"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="wait for ACA" mc="BpmnReceiveTask" uid="dadfe86b-1388-4807-9354-269353ddcb96"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="failure" mc="BpmnMessageFlow" uid="256e0f53-94d2-4b0b-bc07-9087479c0791"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[failure]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="send failure response" mc="BpmnSendTask" uid="49223cd6-2a90-40c3-9924-c628f82df105"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="wait for ACA" mc="BpmnReceiveTask" uid="dadfe86b-1388-4807-9354-269353ddcb96"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="new File" mc="BpmnMessageFlow" uid="68d66ec1-c46a-46c4-88e0-5265921d55d3"/>
+                <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[new File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="write successfull Rf message" mc="BpmnServiceTask" uid="733bf8b9-a7e4-4fa1-863e-cc62edc75a3a"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Check for new unsuccessfull sent Rf messages" mc="BpmnSubProcess" uid="3d017981-3ed3-4266-811e-598262a6e5ab"/>
+                      <PID name="Recycling process of Rf messages" mc="BpmnBehavior" uid="16121ea0-ae42-4723-b0cb-3f84c9da8ada"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

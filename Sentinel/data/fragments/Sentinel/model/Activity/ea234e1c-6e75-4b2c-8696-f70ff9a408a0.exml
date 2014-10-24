@@ -1,0 +1,839 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Activity" version="3">
+  <DEPS>
+    <ID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+    <COMPID name="Activity Activity diagram" mc="ActivityDiagram" uid="7b9889b2-0025-4d59-9578-9b2da89a5227"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+    <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <ATTRIBUTES>
+      <ATT name="IsSingleExecution">false</ATT>
+      <ATT name="IsReadOnly">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Activity]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedNode">
+        <OBJECT>
+          <ID name="Other protocol sentinel front end" mc="OpaqueAction" uid="76df4422-14f5-4428-bbda-7049c986099a"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Other protocol sentinel front end]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="sendMessage" mc="ControlFlow" uid="2f5e9b45-2e3f-4082-b5f5-7b72dcc85cf4"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[1.sendMessage]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[sendMessage]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Sentinel Mediation Rf Layer" mc="OpaqueAction" uid="bcb1e7e3-b0df-439c-a1b4-46a8d32cb1ae"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Sentinel Mediation Rf Layer" mc="OpaqueAction" uid="bcb1e7e3-b0df-439c-a1b4-46a8d32cb1ae"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Sentinel Mediation Rf Layer]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CDR Ra" mc="OpaqueAction" uid="166dfc83-6174-450d-b496-f71cd921d227"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[CDR Ra]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ObjectFlow" mc="ObjectFlow" uid="c07dac31-3f74-4a5e-8ed2-7eb2444b7bee"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="TransformationBehavior"></ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="IsMultiCast">false</ATT>
+                  <ATT name="IsMultiReceive">false</ATT>
+                  <ATT name="Effect">ReadFlow</ATT>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Unsuccessfull Rf messages" mc="DataStoreNode" uid="bc02b351-9f74-471e-b93b-8b7fe3349dc4"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ObjectFlow" mc="ObjectFlow" uid="5aea5dc4-1fc6-41e8-a583-3ba98a358977"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="TransformationBehavior"></ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="IsMultiCast">false</ATT>
+                  <ATT name="IsMultiReceive">false</ATT>
+                  <ATT name="Effect">ReadFlow</ATT>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Success Rf messages" mc="DataStoreNode" uid="9ab3d614-ed74-4430-b96a-5bb905b52f3d"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ObjectFlow" mc="ObjectFlow" uid="b198a23a-9fc8-4824-b5b0-731ad720a585"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="TransformationBehavior"></ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="IsMultiCast">false</ATT>
+                  <ATT name="IsMultiReceive">false</ATT>
+                  <ATT name="Effect">ReadFlow</ATT>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="CDR File" mc="DataStoreNode" uid="3a6b59a4-bce5-4c9a-8539-5d130269f6e4"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Send Rf message" mc="OpaqueAction" uid="14dfb8ea-db5d-46d1-83fb-59180351959f"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[no need for confirmation]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Send Rf message]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Send ACR message" mc="OpaqueAction" uid="e6c7d11b-8241-4f98-97b0-addb4ece91bd"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Send ACR message]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="cc4033fb-a062-4e99-9fc2-f481d6cd5dd2"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[2.ACR]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Diameter RA Rf" mc="OpaqueAction" uid="eaa986ae-9a6d-4347-a75f-dd0005ee729a"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Diameter RA Rf" mc="OpaqueAction" uid="eaa986ae-9a6d-4347-a75f-dd0005ee729a"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Diameter RA Rf]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="88142de5-7647-41b7-803f-58bb284bfa78"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[3.ACA]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="get ACA message" mc="OpaqueAction" uid="99d6bbbb-4442-4a65-a454-05674aca932e"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="get ACA message" mc="OpaqueAction" uid="99d6bbbb-4442-4a65-a454-05674aca932e"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[get ACA message]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="a3867058-838d-4326-91cc-2873796c3a62"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[4]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Persist message" mc="OpaqueAction" uid="999253e1-7389-4585-8601-ddc20927f361"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="3.no ACA" mc="AcceptTimeEventAction" uid="e15b4859-210b-4c0a-8d4d-44295ff562d2"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="TimeExpresion"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[3.no ACA]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="3fa4cbfd-b599-4987-a0be-c24c9da4e6a4"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[4]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Persist message" mc="OpaqueAction" uid="999253e1-7389-4585-8601-ddc20927f361"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="send Confirmation" mc="OpaqueAction" uid="5930c80e-b363-44e5-a1df-9145572cda16"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[send Confirmation]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="beed187a-be0a-4be4-a665-f5ea12a44c88"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[10]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Process confirmation" mc="OpaqueAction" uid="551377a2-65f9-486d-9cae-4f4926f39988"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Persist message" mc="OpaqueAction" uid="999253e1-7389-4585-8601-ddc20927f361"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[different files for succes and non success messages]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Persist message]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="9a82d4b7-b5de-4574-ba43-e686d0e7a02c"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[5]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Save message" mc="OpaqueAction" uid="481e2243-363b-40ea-a2b8-8e6776284252"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="339b67e6-741b-4fb8-b5fd-173e74119c00"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="send Confirmation" mc="OpaqueAction" uid="5930c80e-b363-44e5-a1df-9145572cda16"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Save message" mc="OpaqueAction" uid="481e2243-363b-40ea-a2b8-8e6776284252"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Save message]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Save CDR" mc="OpaqueAction" uid="5753eb9c-0eeb-477b-a1b5-7cb64e9a5095"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Save CDR]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="write CDR" mc="OpaqueAction" uid="308d42a0-c9bc-436f-96c1-554d416a406a"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[write CDR]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="74241e0b-0cf4-485f-b76f-f41d7b4468d4"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[any time]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Save CDR" mc="OpaqueAction" uid="5753eb9c-0eeb-477b-a1b5-7cb64e9a5095"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CDR File" mc="DataStoreNode" uid="3a6b59a4-bce5-4c9a-8539-5d130269f6e4"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="IsControlType">false</ATT>
+            <ATT name="Ordering">FIFO</ATT>
+            <ATT name="SelectionBehavior"></ATT>
+            <ATT name="UpperBound"><![CDATA[1]]></ATT>
+            <ATT name="Name"><![CDATA[CDR File]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="" mc="BindableInstance" uid="c8897a23-9909-4c90-83ca-72e62260d969"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ObjectFlow" mc="ObjectFlow" uid="fdc4395e-eddf-4104-9ecd-0e282669b0c5"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="TransformationBehavior"></ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="IsMultiCast">false</ATT>
+                  <ATT name="IsMultiReceive">false</ATT>
+                  <ATT name="Effect">ReadFlow</ATT>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="File Inspector RA" mc="OpaqueAction" uid="b32f457c-c396-4574-a152-83dfb1cbd41d"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Success Rf messages" mc="DataStoreNode" uid="9ab3d614-ed74-4430-b96a-5bb905b52f3d"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="IsControlType">false</ATT>
+            <ATT name="Ordering">FIFO</ATT>
+            <ATT name="SelectionBehavior"></ATT>
+            <ATT name="UpperBound"><![CDATA[1]]></ATT>
+            <ATT name="Name"><![CDATA[Success Rf messages]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="" mc="BindableInstance" uid="ea140187-6d79-4e99-a37c-da252afeb6b9"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Unsuccessfull Rf messages" mc="DataStoreNode" uid="bc02b351-9f74-471e-b93b-8b7fe3349dc4"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="IsControlType">false</ATT>
+            <ATT name="Ordering">FIFO</ATT>
+            <ATT name="SelectionBehavior"></ATT>
+            <ATT name="UpperBound"><![CDATA[1]]></ATT>
+            <ATT name="Name"><![CDATA[Unsuccessfull Rf messages]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="" mc="BindableInstance" uid="e79f6b0a-6da9-4ce9-b164-edf2940bedac"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+              </REFOBJ>
+            </LINK>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ObjectFlow" mc="ObjectFlow" uid="4b5811a8-94a9-47ed-bacb-18df32c0472a"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="TransformationBehavior"></ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="IsMultiCast">false</ATT>
+                  <ATT name="IsMultiReceive">false</ATT>
+                  <ATT name="Effect">ReadFlow</ATT>
+                  <ATT name="Guard"></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="File Inspector RA" mc="OpaqueAction" uid="b32f457c-c396-4574-a152-83dfb1cbd41d"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="File Inspector RA" mc="OpaqueAction" uid="b32f457c-c396-4574-a152-83dfb1cbd41d"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[File Inspector RA]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="302ee0ca-90b2-4569-b159-841a66004166"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[6.new file]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="request records" mc="OpaqueAction" uid="85c8e214-d2c6-46de-9602-c0af6baf1b93"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="got new file" mc="OpaqueAction" uid="d56016b0-4107-4ebe-824b-4c28c5c82be8"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[got new file]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Sentinel Rf Front end" mc="OpaqueAction" uid="6be7aa5a-c652-47aa-b2a4-45da0917a0d9"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Sentinel Rf Front end]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="request records" mc="OpaqueAction" uid="85c8e214-d2c6-46de-9602-c0af6baf1b93"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[request records]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="f787773d-f2f1-4772-8177-a6e7f89a3c6f"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[7]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="if CDR file map to AVPs" mc="OpaqueAction" uid="c0d95458-5dbf-4283-8246-04378c6ad0be"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="2d6f476b-2905-4d82-b517-563102823841"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[7]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="process Rf messages" mc="OpaqueAction" uid="aa1a5e18-76b5-44d4-a94b-7e7834aad81d"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="if CDR file map to AVPs" mc="OpaqueAction" uid="c0d95458-5dbf-4283-8246-04378c6ad0be"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[if CDR file map to AVPs]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="544270dc-05bb-4743-9ca2-cc725804bf81"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[8]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="send Rf messages" mc="OpaqueAction" uid="76c8fd22-127a-4017-aea2-72989148bce6"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="process Rf messages" mc="OpaqueAction" uid="aa1a5e18-76b5-44d4-a94b-7e7834aad81d"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[process Rf messages]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="8370d368-3e51-4a75-a6b3-f232060b7f1b"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[8]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="send Rf messages" mc="OpaqueAction" uid="76c8fd22-127a-4017-aea2-72989148bce6"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="send Rf messages" mc="OpaqueAction" uid="76c8fd22-127a-4017-aea2-72989148bce6"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"><![CDATA[with confirmation]]></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[send Rf messages]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Outgoing">
+              <OBJECT>
+                <ID name="ControlFlow" mc="ControlFlow" uid="35422545-20ee-4900-95af-8a9f03ac0f3e"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="Guard"><![CDATA[9]]></ATT>
+                  <ATT name="Weight"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Target">
+                    <REFOBJ>
+                      <ID name="Sentinel Mediation Rf Layer" mc="OpaqueAction" uid="bcb1e7e3-b0df-439c-a1b4-46a8d32cb1ae"/>
+                      <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Process confirmation" mc="OpaqueAction" uid="551377a2-65f9-486d-9cae-4f4926f39988"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Process confirmation]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Collaboration" uid="5ce96bd2-0c40-453b-81be-a202ab3ba1a3"/>
+          <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Declared">
+              <OBJECT>
+                <ID name="CDR File" mc="BindableInstance" uid="80830eb7-a307-4461-b4a2-4d33af838452"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[CDR File]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="BindableInstance" uid="c8897a23-9909-4c90-83ca-72e62260d969"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="BindableInstance" uid="ea140187-6d79-4e99-a37c-da252afeb6b9"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="BindableInstance" uid="e79f6b0a-6da9-4ce9-b164-edf2940bedac"/>
+                <PID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Activity Activity diagram" mc="ActivityDiagram" uid="7b9889b2-0025-4d59-9578-9b2da89a5227"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

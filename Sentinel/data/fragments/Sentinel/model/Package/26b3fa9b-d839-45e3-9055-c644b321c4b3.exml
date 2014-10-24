@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CDR messages" version="3">
+  <DEPS>
+    <ID name="CDR messages" mc="Package" uid="26b3fa9b-d839-45e3-9055-c644b321c4b3"/>
+    <COMPID name="macro view" mc="Activity" uid="f3c78fc2-f9c0-489f-a3e7-91bddee269e9"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="CDR messages" mc="Package" uid="26b3fa9b-d839-45e3-9055-c644b321c4b3"/>
+    <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[CDR messages]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="macro view" mc="Activity" uid="f3c78fc2-f9c0-489f-a3e7-91bddee269e9"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

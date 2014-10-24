@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ActivityContextInterface" version="3">
+  <DEPS>
+    <ID name="ActivityContextInterface" mc="Class" uid="d426e73f-208a-4966-ac2d-97465c63afa7"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="ActivityContextInterface" mc="Class" uid="d426e73f-208a-4966-ac2d-97465c63afa7"/>
+    <PID name="SLEE" mc="Package" uid="f48127f6-19ce-47c5-950d-26c6f7d2b562"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ActivityContextInterface]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

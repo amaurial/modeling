@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="File inspector RA interface" version="3">
+  <DEPS>
+    <ID name="File inspector RA interface" mc="Interface" uid="05222a1d-c6e0-437e-9f75-aeb18261649a"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="File inspector RA interface" mc="Interface" uid="05222a1d-c6e0-437e-9f75-aeb18261649a"/>
+    <PID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[File inspector RA interface]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

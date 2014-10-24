@@ -3,10 +3,17 @@
   <DEPS>
     <ID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
     <COMPID name="Basic interation flow" mc="Interaction" uid="923342b7-8984-4a5a-bc84-4869381d2032"/>
+    <COMPID name="CDR RA" mc="Component" uid="17771900-f063-4692-a4b0-ba690dd8785d"/>
+    <COMPID name="CDR Rf" mc="Component" uid="02346eb1-e30a-43c7-8bee-fcbb860e8d00"/>
     <COMPID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
     <COMPID name="CDR state" mc="StateMachine" uid="cd927634-c862-470b-80a5-28b8271a7e39"/>
+    <COMPID name="Diameter Rf RA" mc="Component" uid="9dd30ae4-7b02-4640-b810-5e833a77410a"/>
     <COMPID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+    <COMPID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+    <COMPID name="Operator CDF" mc="Component" uid="5f486e39-a8a7-4a02-bcc6-bb6816371d5f"/>
+    <COMPID name="SLEE Solution File Level Class diagram" mc="ClassDiagram" uid="54904fca-6aba-4513-9cf3-7b6330048713"/>
     <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="7f29a671-f860-4b76-9289-3e6706212e4c"/>
+    <COMPID name="Sentinel" mc="Component" uid="cc869180-1d05-4be3-be65-1d76369d98a0"/>
     <COMPID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
     <COMPID name="file state" mc="StateMachine" uid="a08df445-0fc7-4f25-a5dd-ba2112a6d219"/>
   </DEPS>
@@ -31,6 +38,58 @@
         <COMPID name="CDR state" mc="StateMachine" uid="cd927634-c862-470b-80a5-28b8271a7e39"/>
         <COMPID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
         <COMPID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
+      </COMP>
+      <COMP relation="Declared">
+        <OBJECT>
+          <ID name="CDR file n" mc="Instance" uid="cda97994-4b42-459b-86d8-5d60d84465b1"/>
+          <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[CDR file n]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CDR file 2" mc="Instance" uid="6f2b96e4-015f-421a-9547-0c9168c41925"/>
+          <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[CDR file 2]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CDR file 1" mc="Instance" uid="3ed6467f-c5f0-4f8a-851d-dbb8ed485a9b"/>
+          <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+          <ATTRIBUTES>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[CDR file 1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="File inspector RA" mc="Component" uid="e7e99f3b-5241-4e64-973f-fc136df830ef"/>
+        <COMPID name="CDR Rf" mc="Component" uid="02346eb1-e30a-43c7-8bee-fcbb860e8d00"/>
+        <COMPID name="Diameter Rf RA" mc="Component" uid="9dd30ae4-7b02-4640-b810-5e833a77410a"/>
+        <COMPID name="CDR RA" mc="Component" uid="17771900-f063-4692-a4b0-ba690dd8785d"/>
+        <COMPID name="Operator CDF" mc="Component" uid="5f486e39-a8a7-4a02-bcc6-bb6816371d5f"/>
+        <COMPID name="Sentinel" mc="Component" uid="cc869180-1d05-4be3-be65-1d76369d98a0"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="SLEE Solution File Level Class diagram" mc="ClassDiagram" uid="54904fca-6aba-4513-9cf3-7b6330048713"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

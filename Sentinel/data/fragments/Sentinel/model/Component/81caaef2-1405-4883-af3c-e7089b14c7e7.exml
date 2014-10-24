@@ -2,14 +2,14 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="File inspector RA" version="3">
   <DEPS>
     <ID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
-    <COMPID name="CDR Request interface" mc="Interface" uid="34d68b93-a7d7-4588-8578-50dad66655b6"/>
-    <EXTID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <COMPID name="com.opencloud.fileinspectorra" mc="Package" uid="4642dca8-3286-4af4-a599-65e4e2af8b6c"/>
+    <EXTID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
     <EXTID name="Rf service Sentinel Fron end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
     <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
   </DEPS>
   <OBJECT>
     <ID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
-    <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -115,7 +115,7 @@
         </OBJECT>
       </COMP>
       <COMP relation="OwnedElement">
-        <COMPID name="CDR Request interface" mc="Interface" uid="34d68b93-a7d7-4588-8578-50dad66655b6"/>
+        <COMPID name="com.opencloud.fileinspectorra" mc="Package" uid="4642dca8-3286-4af4-a599-65e4e2af8b6c"/>
       </COMP>
       <COMP relation="DependsOnDependency">
         <OBJECT>
@@ -130,8 +130,8 @@
           <DEPENDENCIES>
             <LINK relation="DependsOn">
               <REFOBJ>
-                <ID name="CDR File" mc="Instance" uid="6eb4cfb5-c8f1-48d7-975b-76b7e2a880d0"/>
-                <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+                <ID name="CDR File n" mc="Instance" uid="6eb4cfb5-c8f1-48d7-975b-76b7e2a880d0"/>
+                <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
               </REFOBJ>
             </LINK>
             <COMP relation="Descriptor">
@@ -164,8 +164,8 @@
           <DEPENDENCIES>
             <LINK relation="DependsOn">
               <REFOBJ>
-                <ID name="CDR File" mc="Instance" uid="57ca38ad-652b-4e93-abb6-5121d246bc69"/>
-                <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+                <ID name="CDR File 2" mc="Instance" uid="57ca38ad-652b-4e93-abb6-5121d246bc69"/>
+                <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -182,8 +182,8 @@
           <DEPENDENCIES>
             <LINK relation="DependsOn">
               <REFOBJ>
-                <ID name="CDR File" mc="Instance" uid="9bd3aa30-6a55-4361-8040-cdeb73cea1a1"/>
-                <PID name="Converged Scneario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+                <ID name="CDR File 1 " mc="Instance" uid="9bd3aa30-6a55-4361-8040-cdeb73cea1a1"/>
+                <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>

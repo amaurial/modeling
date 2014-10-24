@@ -2,15 +2,27 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Converged Scenario" version="3">
   <DEPS>
     <ID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
+    <COMPID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+    <COMPID name="Basic interation flow" mc="Interaction" uid="077c7f74-192c-49fd-a387-85e50bb5f8d1"/>
     <COMPID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
+    <COMPID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+    <COMPID name="CDR messages" mc="Package" uid="26b3fa9b-d839-45e3-9055-c644b321c4b3"/>
+    <COMPID name="CDR state" mc="StateMachine" uid="ba4400fb-cc5f-4bac-af17-ad2b94d1d0be"/>
     <COMPID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
     <COMPID name="Diameter Ro RA" mc="Component" uid="1a1e8e11-34e9-47c8-84ff-7b5fdac685f0"/>
     <COMPID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+    <COMPID name="List" mc="DataType" uid="01a88c71-d966-4ba2-9210-1c01c52f041f"/>
     <COMPID name="Operator CDF" mc="Component" uid="faffccc5-f2dd-48c7-bcc4-00f760e72e8b"/>
     <COMPID name="Other protocol sentinel front end" mc="Component" uid="804fabdc-3b0e-4ad9-bd9e-3047a4a8214d"/>
-    <COMPID name="Rf service Sentinel Fron end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
-    <COMPID name="SLEE Component Architecture" mc="ClassDiagram" uid="775f78c4-2082-4ed4-afe3-fccf268ccb39"/>
+    <COMPID name="Rf message lifecycle" mc="StateMachine" uid="1ec86fc6-e2fc-4056-94de-875b8dfc0973"/>
+    <COMPID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+    <COMPID name="SLEE Converged Component Architecture" mc="ClassDiagram" uid="775f78c4-2082-4ed4-afe3-fccf268ccb39"/>
+    <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="ee46ffe3-ac6f-49da-9eb9-71da5714eb3e"/>
     <COMPID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+    <COMPID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+    <COMPID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
+    <COMPID name="file state" mc="StateMachine" uid="8b7e10ac-e1de-46ef-acbd-0de7295e7564"/>
+    <COMPID name="online Rf messages" mc="Package" uid="29d4a727-c37c-48c0-aeb7-0ef1cb652fc2"/>
   </DEPS>
   <OBJECT>
     <ID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
@@ -25,49 +37,59 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="ee46ffe3-ac6f-49da-9eb9-71da5714eb3e"/>
+        <COMPID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
+        <COMPID name="CDR state" mc="StateMachine" uid="ba4400fb-cc5f-4bac-af17-ad2b94d1d0be"/>
+        <COMPID name="file state" mc="StateMachine" uid="8b7e10ac-e1de-46ef-acbd-0de7295e7564"/>
+        <COMPID name="Basic interation flow" mc="Interaction" uid="077c7f74-192c-49fd-a387-85e50bb5f8d1"/>
+        <COMPID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
+        <COMPID name="Rf message lifecycle" mc="StateMachine" uid="1ec86fc6-e2fc-4056-94de-875b8dfc0973"/>
+        <COMPID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+      </COMP>
       <COMP relation="Declared">
         <OBJECT>
-          <ID name="CDR File" mc="Instance" uid="6eb4cfb5-c8f1-48d7-975b-76b7e2a880d0"/>
+          <ID name="CDR File n" mc="Instance" uid="6eb4cfb5-c8f1-48d7-975b-76b7e2a880d0"/>
           <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
           <ATTRIBUTES>
             <ATT name="IsConstant">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
             <ATT name="Value"></ATT>
-            <ATT name="Name"><![CDATA[CDR File]]></ATT>
+            <ATT name="Name"><![CDATA[CDR File n]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="CDR File" mc="Instance" uid="57ca38ad-652b-4e93-abb6-5121d246bc69"/>
+          <ID name="CDR File 2" mc="Instance" uid="57ca38ad-652b-4e93-abb6-5121d246bc69"/>
           <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
           <ATTRIBUTES>
             <ATT name="IsConstant">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
             <ATT name="Value"></ATT>
-            <ATT name="Name"><![CDATA[CDR File]]></ATT>
+            <ATT name="Name"><![CDATA[CDR File 2]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="CDR File" mc="Instance" uid="9bd3aa30-6a55-4361-8040-cdeb73cea1a1"/>
+          <ID name="CDR File 1 " mc="Instance" uid="9bd3aa30-6a55-4361-8040-cdeb73cea1a1"/>
           <PID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
           <ATTRIBUTES>
             <ATT name="IsConstant">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
             <ATT name="Value"></ATT>
-            <ATT name="Name"><![CDATA[CDR File]]></ATT>
+            <ATT name="Name"><![CDATA[CDR File 1 ]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="OwnedElement">
-        <COMPID name="Rf service Sentinel Fron end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+        <COMPID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
         <COMPID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
         <COMPID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
         <COMPID name="CDR Ra" mc="Component" uid="5a978915-f309-4d46-99d6-14497620c5cc"/>
@@ -75,9 +97,13 @@
         <COMPID name="Operator CDF" mc="Component" uid="faffccc5-f2dd-48c7-bcc4-00f760e72e8b"/>
         <COMPID name="Diameter Rf RA" mc="Component" uid="d0d0e0a5-b0be-4660-8185-5ec8cf816d1c"/>
         <COMPID name="Other protocol sentinel front end" mc="Component" uid="804fabdc-3b0e-4ad9-bd9e-3047a4a8214d"/>
+        <COMPID name="List" mc="DataType" uid="01a88c71-d966-4ba2-9210-1c01c52f041f"/>
+        <COMPID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
+        <COMPID name="online Rf messages" mc="Package" uid="29d4a727-c37c-48c0-aeb7-0ef1cb652fc2"/>
+        <COMPID name="CDR messages" mc="Package" uid="26b3fa9b-d839-45e3-9055-c644b321c4b3"/>
       </COMP>
       <COMP relation="Product">
-        <COMPID name="SLEE Component Architecture" mc="ClassDiagram" uid="775f78c4-2082-4ed4-afe3-fccf268ccb39"/>
+        <COMPID name="SLEE Converged Component Architecture" mc="ClassDiagram" uid="775f78c4-2082-4ed4-afe3-fccf268ccb39"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SLEE" version="3">
+  <DEPS>
+    <ID name="SLEE" mc="Package" uid="f48127f6-19ce-47c5-950d-26c6f7d2b562"/>
+    <COMPID name="ActivityContextInterface" mc="Class" uid="d426e73f-208a-4966-ac2d-97465c63afa7"/>
+    <COMPID name="ActivityHandle" mc="Interface" uid="c2f9f4c7-0a57-462a-abf5-6574f6d4d548"/>
+    <COMPID name="ResourceAdaptor" mc="Interface" uid="90b84169-94d1-436f-9fc9-619449ac89ff"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SLEE" mc="Package" uid="f48127f6-19ce-47c5-950d-26c6f7d2b562"/>
+    <PID name="sentinel" mc="Package" uid="06ff29ae-171e-4dc6-a79d-7912ea97cdd8"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SLEE]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="ActivityContextInterface" mc="Class" uid="d426e73f-208a-4966-ac2d-97465c63afa7"/>
+        <COMPID name="ActivityHandle" mc="Interface" uid="c2f9f4c7-0a57-462a-abf5-6574f6d4d548"/>
+        <COMPID name="ResourceAdaptor" mc="Interface" uid="90b84169-94d1-436f-9fc9-619449ac89ff"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

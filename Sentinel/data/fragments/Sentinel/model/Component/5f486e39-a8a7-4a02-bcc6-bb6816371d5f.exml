@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Operator CDF" version="3">
+  <DEPS>
+    <ID name="Operator CDF" mc="Component" uid="5f486e39-a8a7-4a02-bcc6-bb6816371d5f"/>
+    <COMPID name="Rf interface" mc="Interface" uid="e0530778-a4ff-4580-8a52-b6d899717d43"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Operator CDF" mc="Component" uid="5f486e39-a8a7-4a02-bcc6-bb6816371d5f"/>
+    <PID name="SLEE Solution File Level" mc="Package" uid="f4efcf4b-078a-4d92-b98b-94dc215e40df"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Operator CDF]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="InternalStructure">
+        <OBJECT>
+          <ID name="Port" mc="Port" uid="113771ef-a207-4e8d-8777-0c25e25e9d02"/>
+          <PID name="Operator CDF" mc="Component" uid="5f486e39-a8a7-4a02-bcc6-bb6816371d5f"/>
+          <ATTRIBUTES>
+            <ATT name="IsBehavior">false</ATT>
+            <ATT name="IsService">true</ATT>
+            <ATT name="IsConjugated">false</ATT>
+            <ATT name="Direction">None</ATT>
+            <ATT name="IsConstant">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="Name"><![CDATA[Port]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Rf interface" mc="Interface" uid="e0530778-a4ff-4580-8a52-b6d899717d43"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

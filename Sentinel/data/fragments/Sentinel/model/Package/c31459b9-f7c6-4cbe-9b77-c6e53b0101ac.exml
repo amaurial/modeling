@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="events" version="3">
+  <DEPS>
+    <ID name="events" mc="Package" uid="c31459b9-f7c6-4cbe-9b77-c6e53b0101ac"/>
+    <COMPID name="Class" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+    <COMPID name="NewFileEvent" mc="Interface" uid="f22d98df-9eaa-407b-9c92-7c15b3eee4ee"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="events" mc="Package" uid="c31459b9-f7c6-4cbe-9b77-c6e53b0101ac"/>
+    <PID name="com.opencloud.fileinspectorra.resources" mc="Package" uid="997f1fcf-d0cd-4afa-b05d-eeaa1f923990"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[events]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Class" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+        <COMPID name="NewFileEvent" mc="Interface" uid="f22d98df-9eaa-407b-9c92-7c15b3eee4ee"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
