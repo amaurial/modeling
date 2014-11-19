@@ -2,8 +2,10 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Rf service Sentinel Front end" version="3">
   <DEPS>
     <ID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+    <COMPID name="send CDR file basic interaction not success" mc="Interaction" uid="9b4a201d-6543-471d-80f9-b7fc3108c26e"/>
+    <COMPID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
     <EXTID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
-    <EXTID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+    <EXTID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
   </DEPS>
   <OBJECT>
     <ID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
@@ -184,6 +186,10 @@
           </ATTRIBUTES>
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
+      </COMP>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+        <COMPID name="send CDR file basic interaction not success" mc="Interaction" uid="9b4a201d-6543-471d-80f9-b7fc3108c26e"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

@@ -1,0 +1,1573 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="send CDR file basic interaction success" version="3">
+  <DEPS>
+    <ID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+    <COMPID name="send CDR file basic interaction success diagram" mc="SequenceDiagram" uid="a3c2698b-6665-4182-be76-2080781f62d4"/>
+    <EXTID name="Diameter Ro RA" mc="Component" uid="1a1e8e11-34e9-47c8-84ff-7b5fdac685f0"/>
+    <EXTID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+    <EXTID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+    <EXTID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+    <PID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+    <ATTRIBUTES>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[send CDR file basic interaction success]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Fragment">
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="1445d54d-d4e2-4e53-8a1e-f197644515fa"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">60</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="new file" mc="Message" uid="c2cdb325-4e2e-4e1b-936d-1d1a8e0921db"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[new file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="40fb43f1-a633-408e-bb3f-877b5ab4caff"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="40fb43f1-a633-408e-bb3f-877b5ab4caff"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">60</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="5f4d3112-cf5f-449f-8fcb-4524fc0cbdbe"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="6b579880-6ae2-4591-9eb1-5348d6224c78"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">80</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="5f4d3112-cf5f-449f-8fcb-4524fc0cbdbe"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">60</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="6b579880-6ae2-4591-9eb1-5348d6224c78"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="cf2df64a-8430-4d1d-adcd-176a3bec2f8f"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">72</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="check Diameter Peer availability" mc="Message" uid="969bcd84-0239-4e18-92d6-c0b0ec4f9a55"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[check Diameter Peer availability]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="385ab54c-8368-4b59-b362-c97459404aba"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="385ab54c-8368-4b59-b362-c97459404aba"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">72</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="5945e2a0-a0d9-463f-a1b8-ba5ff161faed"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="fa919c91-3380-4cd8-b716-7c8004624797"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">92</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="5945e2a0-a0d9-463f-a1b8-ba5ff161faed"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">72</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="fa919c91-3380-4cd8-b716-7c8004624797"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="346b2f26-fcee-448a-b838-dba1894c66e3"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">107</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="diameter available" mc="Message" uid="79ed471e-11a5-4d98-95be-f3906cefb265"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[diameter available]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="dfa3a3d1-e083-4f82-b126-625c8ff29a69"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="dfa3a3d1-e083-4f82-b126-625c8ff29a69"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">107</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="a1a32e5a-a5dc-4826-bf57-bd55486354ce"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="80cbf397-2696-4b1a-965b-4bc4a95005d7"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">127</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="a1a32e5a-a5dc-4826-bf57-bd55486354ce"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">107</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="80cbf397-2696-4b1a-965b-4bc4a95005d7"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="1e733855-a19b-4a80-bee7-c670480ea9ac"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">105</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="4e42ddb1-e74c-427a-9c1f-ae3dff728c87"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">127</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="e60d9c5c-a43f-4d65-85b3-b1f11c99e264"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">147</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="a5b751bd-9aca-46c1-ad97-7bdb50591581"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">131</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="request records" mc="Message" uid="4a4851ad-c9c7-4ac2-81c2-cef1b097570f"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">SyncCall</ATT>
+                  <ATT name="Name"><![CDATA[request records]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="418c11e4-8cef-4e8f-a86e-1df46f04c974"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="Note" mc="Note" uid="aa46b7dd-fa7e-42a3-9845-285efe701f05"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[return list of records]]></ATT>
+                        <ATT name="Name"><![CDATA[Note]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="418c11e4-8cef-4e8f-a86e-1df46f04c974"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">131</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="b2fa43b1-f5c2-4791-ae2e-a07d826f82c9"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">160</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="send each record as Rf message" mc="Message" uid="20f09c24-4817-47ab-b15d-659979da3697"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[send each record as Rf message]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="ad5a3843-f880-495f-855c-aca440fc3502"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="ad5a3843-f880-495f-855c-aca440fc3502"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">160</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="5ade72fa-59c3-410b-ad3d-6c17628f3730"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="d3509619-2cef-4625-959a-ac8dd1920edf"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">180</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="5ade72fa-59c3-410b-ad3d-6c17628f3730"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">160</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="d3509619-2cef-4625-959a-ac8dd1920edf"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="0d811a2d-50c9-4f55-873f-0810f6e249e7"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">175</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="persist messages" mc="Message" uid="4103ba9e-3f61-40ef-8808-ff42e2bfb91d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[persist messages]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="e799d39b-d247-446b-99bf-20fa9bb29b1a"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="Note" mc="Note" uid="7e4b122c-d1a6-4d84-a423-318f5091ae80"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[save failed and successful messages in different files]]></ATT>
+                        <ATT name="Name"><![CDATA[Note]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="e799d39b-d247-446b-99bf-20fa9bb29b1a"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">209</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="5a45ac70-6ca5-4708-a8fd-609b51efb117"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="59c163a3-6112-4981-a92d-66e7b91d5ac1"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">229</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="5a45ac70-6ca5-4708-a8fd-609b51efb117"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">209</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="59c163a3-6112-4981-a92d-66e7b91d5ac1"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="6c357235-3e02-4121-b375-f114c9153759"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">222</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="send result" mc="Message" uid="81c5363f-2aa3-4b27-af7a-4a94772fb666"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[send result]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="6462260e-b76f-434b-ae67-d12c3df32e04"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="6462260e-b76f-434b-ae67-d12c3df32e04"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">222</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="f18e5e58-b865-40d8-b71b-3110742d4a47"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="4cd294bc-b0da-4698-a3d2-2efc6cae14a1"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">242</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="f18e5e58-b865-40d8-b71b-3110742d4a47"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">222</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="4cd294bc-b0da-4698-a3d2-2efc6cae14a1"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="8b5b7c51-321d-4cd3-bad0-84faeb00d510"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">233</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="process result" mc="Message" uid="09035da5-b038-4c3d-9695-41268b23f61b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[process result]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="1010c73b-4b92-4c05-ab80-adfc4bd4229c"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="1010c73b-4b92-4c05-ab80-adfc4bd4229c"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">273</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="49274cae-2759-48fa-9b7c-537223876ac3"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="e6c12228-1420-4236-b55a-d4f15549691b"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">293</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="49274cae-2759-48fa-9b7c-537223876ac3"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">273</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="e6c12228-1420-4236-b55a-d4f15549691b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="5f69d3a0-4596-4692-9ba1-fcb1ad18fbd2"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">285</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="file processed" mc="Message" uid="f51747f3-fb88-4c1a-bc0a-16d6166a850a"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[file processed]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="57256f5c-fbd9-4032-8024-97ef7c52cce0"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="57256f5c-fbd9-4032-8024-97ef7c52cce0"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">285</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="66d7486a-3ec8-4622-a816-2a2e6d57c8f8"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="3818118f-747e-4774-ae3d-02c824c9110d"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">305</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="66d7486a-3ec8-4622-a816-2a2e6d57c8f8"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">285</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="3818118f-747e-4774-ae3d-02c824c9110d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="424867f9-782f-4ca1-8b50-d68418f88a31"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">306</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="SentMessage">
+              <OBJECT>
+                <ID name="close file, erase it and end activity" mc="Message" uid="be80d74b-7668-421d-ac25-f602b4e4515b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="Argument"></ATT>
+                  <ATT name="KindOfMessage">CompleteKind</ATT>
+                  <ATT name="SortOfMessage">ASyncCall</ATT>
+                  <ATT name="Name"><![CDATA[close file, erase it and end activity]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ReceiveEvent">
+                    <REFOBJ>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="d9940e92-7c00-49c1-9203-2a8069877cb0"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="d9940e92-7c00-49c1-9203-2a8069877cb0"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">344</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="0ce65c55-3287-46f4-8d69-a7dca9d334a8"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="9160ad95-c199-4c21-bf51-a3a7e48a1b0c"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">364</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="0ce65c55-3287-46f4-8d69-a7dca9d334a8"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">344</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="9160ad95-c199-4c21-bf51-a3a7e48a1b0c"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="9befa4ab-0628-4add-abf8-b06b929a07d8"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">100</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="4349f5fc-17ac-4059-a187-99e0f13b053f"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">150</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="2e567e6d-3525-41bc-9350-b6cad9eb6a7f"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">113</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="edc5b7fb-30a0-4e8e-84ba-46d4050236e4"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">113</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="f32b6dcc-b21c-40a1-84e7-7c13b75761f0"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">195</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="53dfee7f-7bff-45bf-a071-11e1349f0227"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">165</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="aa9e72cf-4859-482d-99fc-a34060846463"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">120</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Started">
+              <REFOBJ>
+                <ID name="" mc="ExecutionSpecification" uid="67277774-304c-466c-a77d-3ad6d319936a"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="37f34405-4c5a-4b62-a48b-522ec600c590"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">170</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ExecutionSpecification" uid="67277774-304c-466c-a77d-3ad6d319936a"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="LineNumber">120</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Finish">
+              <REFOBJ>
+                <ID name="" mc="ExecutionOccurenceSpecification" uid="37f34405-4c5a-4b62-a48b-522ec600c590"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+            <LINK relation="Covered">
+              <REFOBJ>
+                <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedLine">
+        <OBJECT>
+          <ID name="this" mc="Lifeline" uid="867f891e-8339-448b-873b-46b5a2fc76b9"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[this]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="this" mc="BindableInstance" uid="199dc6b6-c0cd-4d38-8f41-074faed60b74"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r" mc="Lifeline" uid="31fa770b-441a-4bad-bb60-92026bc1802b"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="r" mc="BindableInstance" uid="966ae04b-8939-46e4-8161-57ad44136b35"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="r1" mc="Lifeline" uid="49fd4c6d-3da2-4ef7-86ad-1d02e503155d"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="Selector"></ATT>
+            <ATT name="Name"><![CDATA[r1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Represented">
+              <REFOBJ>
+                <ID name="r1" mc="BindableInstance" uid="c59caa27-2190-4ee7-b3f3-50313c95b0f6"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+              </REFOBJ>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Collaboration" uid="96efc873-0e6d-4223-9c11-7e277062ac13"/>
+          <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Declared">
+              <OBJECT>
+                <ID name="this" mc="BindableInstance" uid="199dc6b6-c0cd-4d38-8f41-074faed60b74"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[this]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="r" mc="BindableInstance" uid="966ae04b-8939-46e4-8161-57ad44136b35"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[r]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+                  </LINK>
+                  <COMP relation="Part">
+                    <OBJECT>
+                      <ID name="Port" mc="Port" uid="20155bc2-99e8-4664-99c2-47038fbe0539"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsBehavior">false</ATT>
+                        <ATT name="IsService">true</ATT>
+                        <ATT name="IsConjugated">false</ATT>
+                        <ATT name="Direction">None</ATT>
+                        <ATT name="IsConstant">false</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="Value"></ATT>
+                        <ATT name="Name"><![CDATA[Port]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="RepresentedFeature">
+                          <REFOBJ>
+                            <ID name="Port" mc="Port" uid="c2f06a5c-e9dd-4aa4-933a-8d6521d75f4e"/>
+                            <PID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Port1" mc="Port" uid="58b8d120-6424-4e67-b3a7-befac2b3820b"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsBehavior">false</ATT>
+                        <ATT name="IsService">true</ATT>
+                        <ATT name="IsConjugated">false</ATT>
+                        <ATT name="Direction">None</ATT>
+                        <ATT name="IsConstant">false</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="Value"></ATT>
+                        <ATT name="Name"><![CDATA[Port1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="RepresentedFeature">
+                          <REFOBJ>
+                            <ID name="Port1" mc="Port" uid="7dbf831e-197d-454c-84d4-5b11f8393d73"/>
+                            <PID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
+                          </REFOBJ>
+                        </LINK>
+                        <COMP relation="OwnedEnd">
+                          <OBJECT>
+                            <ID name="port2" mc="ConnectorEnd" uid="92d8a448-e44a-47c3-92a4-8b4b15f33ab0"/>
+                            <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                            <ATTRIBUTES>
+                              <ATT name="IsOrdered">false</ATT>
+                              <ATT name="IsUnique">false</ATT>
+                              <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                              <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                              <ATT name="Name"><![CDATA[port2]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES>
+                              <COMP relation="Link">
+                                <OBJECT>
+                                  <ID name="Fire SLEE event" mc="Connector" uid="70acdd26-dea0-42d0-add0-6e0579ec2444"/>
+                                  <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Name"><![CDATA[Fire SLEE event]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES></DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                              <LINK relation="Target">
+                                <REFOBJ>
+                                  <ID name="Port2" mc="Port" uid="24f74d11-4d41-46ed-b886-71a1e42a4ab0"/>
+                                  <PID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+                                </REFOBJ>
+                              </LINK>
+                              <COMP relation="Opposite">
+                                <OBJECT>
+                                  <ID name="" mc="ConnectorEnd" uid="50f676c2-92a7-416b-ae41-c79a693a2cbd"/>
+                                  <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="IsOrdered">false</ATT>
+                                    <ATT name="IsUnique">false</ATT>
+                                    <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                                    <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                                    <ATT name="Name"></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES>
+                                    <COMP relation="Link">
+                                      <COMPID name="Fire SLEE event" mc="Connector" uid="70acdd26-dea0-42d0-add0-6e0579ec2444"/>
+                                    </COMP>
+                                    <COMP relation="Opposite">
+                                      <COMPID name="port2" mc="ConnectorEnd" uid="92d8a448-e44a-47c3-92a4-8b4b15f33ab0"/>
+                                    </COMP>
+                                  </DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                            </DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="r1" mc="BindableInstance" uid="c59caa27-2190-4ee7-b3f3-50313c95b0f6"/>
+                <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[r1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+                  </LINK>
+                  <COMP relation="Part">
+                    <OBJECT>
+                      <ID name="Port1" mc="Port" uid="c55a0649-fada-44d8-ab6b-f37d66e0fb4e"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsBehavior">false</ATT>
+                        <ATT name="IsService">true</ATT>
+                        <ATT name="IsConjugated">false</ATT>
+                        <ATT name="Direction">None</ATT>
+                        <ATT name="IsConstant">false</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="Value"></ATT>
+                        <ATT name="Name"><![CDATA[Port1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="RepresentedFeature">
+                          <REFOBJ>
+                            <ID name="Port1" mc="Port" uid="dba3d9eb-ab43-46b5-b03d-56f056ece955"/>
+                            <PID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+                          </REFOBJ>
+                        </LINK>
+                        <COMP relation="OwnedEnd">
+                          <OBJECT>
+                            <ID name="port" mc="ConnectorEnd" uid="70ea5cd2-fc29-4add-86ac-301b5b86ae20"/>
+                            <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                            <ATTRIBUTES>
+                              <ATT name="IsOrdered">false</ATT>
+                              <ATT name="IsUnique">false</ATT>
+                              <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                              <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                              <ATT name="Name"><![CDATA[port]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES>
+                              <COMP relation="Link">
+                                <OBJECT>
+                                  <ID name="Ro API" mc="Connector" uid="319f3838-bffb-4e54-9633-f22c2a6d9aba"/>
+                                  <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Name"><![CDATA[Ro API]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES></DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                              <LINK relation="Target">
+                                <REFOBJ>
+                                  <ID name="Port" mc="Port" uid="437cf715-6b14-4538-9989-98727d719f0c"/>
+                                  <PID name="Diameter Ro RA" mc="Component" uid="1a1e8e11-34e9-47c8-84ff-7b5fdac685f0"/>
+                                </REFOBJ>
+                              </LINK>
+                              <COMP relation="Opposite">
+                                <OBJECT>
+                                  <ID name="" mc="ConnectorEnd" uid="57463fac-2449-43a8-842d-066bb6ef72ec"/>
+                                  <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="IsOrdered">false</ATT>
+                                    <ATT name="IsUnique">false</ATT>
+                                    <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                                    <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                                    <ATT name="Name"></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES>
+                                    <COMP relation="Link">
+                                      <COMPID name="Ro API" mc="Connector" uid="319f3838-bffb-4e54-9633-f22c2a6d9aba"/>
+                                    </COMP>
+                                    <COMP relation="Opposite">
+                                      <COMPID name="port" mc="ConnectorEnd" uid="70ea5cd2-fc29-4add-86ac-301b5b86ae20"/>
+                                    </COMP>
+                                  </DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                            </DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Port3" mc="Port" uid="78bdb8e9-5e7c-4211-a249-55deee55e226"/>
+                      <PID name="send CDR file basic interaction success" mc="Interaction" uid="2a0919c7-187c-41a3-9891-b0165e75057e"/>
+                      <ATTRIBUTES>
+                        <ATT name="IsBehavior">false</ATT>
+                        <ATT name="IsService">true</ATT>
+                        <ATT name="IsConjugated">false</ATT>
+                        <ATT name="Direction">None</ATT>
+                        <ATT name="IsConstant">false</ATT>
+                        <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                        <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                        <ATT name="Value"></ATT>
+                        <ATT name="Name"><![CDATA[Port3]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="RepresentedFeature">
+                          <REFOBJ>
+                            <ID name="Port3" mc="Port" uid="d4847a8a-2d9b-48e8-bdc2-aa732c06e6b9"/>
+                            <PID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="send CDR file basic interaction success diagram" mc="SequenceDiagram" uid="a3c2698b-6665-4182-be76-2080781f62d4"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

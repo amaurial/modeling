@@ -17,7 +17,8 @@
     <COMPID name="Rf message lifecycle" mc="StateMachine" uid="1ec86fc6-e2fc-4056-94de-875b8dfc0973"/>
     <COMPID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
     <COMPID name="SLEE Converged Component Architecture" mc="ClassDiagram" uid="775f78c4-2082-4ed4-afe3-fccf268ccb39"/>
-    <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="ee46ffe3-ac6f-49da-9eb9-71da5714eb3e"/>
+    <COMPID name="SLEE workflow diagram CDR" mc="BpmnBehavior" uid="ee46ffe3-ac6f-49da-9eb9-71da5714eb3e"/>
+    <COMPID name="SLEE workflow diagram Rf message" mc="BpmnBehavior" uid="3f6a6867-66d5-45f2-ba37-1589d5eced72"/>
     <COMPID name="Sentinel Mediation Layer" mc="Component" uid="71539cb2-f390-48d1-bca1-4433a5b7cf66"/>
     <COMPID name="Sentinel Mediation Rf Layer" mc="Component" uid="e8ff11f5-e7f8-4bdf-b985-bf32f0d36acc"/>
     <COMPID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
@@ -38,7 +39,7 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedBehavior">
-        <COMPID name="SLEE workflow diagram" mc="BpmnBehavior" uid="ee46ffe3-ac6f-49da-9eb9-71da5714eb3e"/>
+        <COMPID name="SLEE workflow diagram CDR" mc="BpmnBehavior" uid="ee46ffe3-ac6f-49da-9eb9-71da5714eb3e"/>
         <COMPID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
         <COMPID name="CDR state" mc="StateMachine" uid="ba4400fb-cc5f-4bac-af17-ad2b94d1d0be"/>
         <COMPID name="file state" mc="StateMachine" uid="8b7e10ac-e1de-46ef-acbd-0de7295e7564"/>
@@ -46,6 +47,7 @@
         <COMPID name="Activity" mc="Activity" uid="ea234e1c-6e75-4b2c-8696-f70ff9a408a0"/>
         <COMPID name="Rf message lifecycle" mc="StateMachine" uid="1ec86fc6-e2fc-4056-94de-875b8dfc0973"/>
         <COMPID name="CDR message lifecycle" mc="StateMachine" uid="bd4ce9e6-d6a6-48d4-85a1-ba08cbf56390"/>
+        <COMPID name="SLEE workflow diagram Rf message" mc="BpmnBehavior" uid="3f6a6867-66d5-45f2-ba37-1589d5eced72"/>
       </COMP>
       <COMP relation="Declared">
         <OBJECT>

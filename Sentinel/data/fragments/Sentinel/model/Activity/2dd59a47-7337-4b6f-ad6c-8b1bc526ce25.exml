@@ -71,25 +71,25 @@
           <DEPENDENCIES>
             <COMP relation="Body">
               <OBJECT>
-                <ID name="4-Read the mapping config of CDR fields to AVPs" mc="OpaqueAction" uid="766d4791-f080-4c9b-afab-4000ac6b8eec"/>
+                <ID name="3-Read the mapping config of CDR fields to AVPs" mc="OpaqueAction" uid="766d4791-f080-4c9b-afab-4000ac6b8eec"/>
                 <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
                 <ATTRIBUTES>
                   <ATT name="Body"><![CDATA[Get the configuration set of the mapping from CDR fields to AVPs.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[4-Read the mapping config of CDR fields to AVPs]]></ATT>
+                  <ATT name="Name"><![CDATA[3-Read the mapping config of CDR fields to AVPs]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="5-Put CDR fields on the AVPs" mc="OpaqueAction" uid="2bd7ff9f-a40d-450f-84c2-09a2b4cd3a8e"/>
+                <ID name="4-Put CDR fields on the AVPs" mc="OpaqueAction" uid="2bd7ff9f-a40d-450f-84c2-09a2b4cd3a8e"/>
                 <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
                 <ATTRIBUTES>
                   <ATT name="Body"><![CDATA[Using the configuration, put the CDR field to an AVP.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[5-Put CDR fields on the AVPs]]></ATT>
+                  <ATT name="Name"><![CDATA[4-Put CDR fields on the AVPs]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -119,19 +119,6 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="1-Check CDR consistency" mc="OpaqueAction" uid="ea05270f-6544-4871-a211-35ac91b8181f"/>
-                <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
-                <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[Check if the generated CDR file is consistent.
-The bad formed CDRs should be put in a different storage for reprocessing.]]></ATT>
-                  <ATT name="IsMultipleInstance">false</ATT>
-                  <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[1-Check CDR consistency]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="8-Raise CDR alarm" mc="OpaqueAction" uid="6b6c0e5e-8104-4529-be29-6c17d2f17a63"/>
                 <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
                 <ATTRIBUTES>
@@ -144,37 +131,37 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="6-Transmitt CDR file" mc="OpaqueAction" uid="ef5ea676-9b45-4965-9451-87a28f923f7e"/>
+                <ID name="5-Transmitt CDR file" mc="OpaqueAction" uid="ef5ea676-9b45-4965-9451-87a28f923f7e"/>
                 <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
                 <ATTRIBUTES>
                   <ATT name="Body"><![CDATA[Transmitt each CDR present in a file and log the file transmission.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[6-Transmitt CDR file]]></ATT>
+                  <ATT name="Name"><![CDATA[5-Transmitt CDR file]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="2-Restart CDR transmission" mc="OpaqueAction" uid="ea01b4c2-81ec-4114-8c15-62bef5e1c24e"/>
+                <ID name="1-Restart CDR transmission" mc="OpaqueAction" uid="ea01b4c2-81ec-4114-8c15-62bef5e1c24e"/>
                 <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
                 <ATTRIBUTES>
                   <ATT name="Body"><![CDATA[In case of a file is not totally transmitted. Use the log information and transmit the remaining CDRs.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[2-Restart CDR transmission]]></ATT>
+                  <ATT name="Name"><![CDATA[1-Restart CDR transmission]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="3-Monitor failed transmissions" mc="OpaqueAction" uid="dbcadd99-8b06-435e-92f8-6b5732cbee90"/>
+                <ID name="2-Monitor failed transmissions" mc="OpaqueAction" uid="dbcadd99-8b06-435e-92f8-6b5732cbee90"/>
                 <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
                 <ATTRIBUTES>
                   <ATT name="Body"><![CDATA[keep checking for failed transmissions and trigger the restart CDR transmission.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[3-Monitor failed transmissions]]></ATT>
+                  <ATT name="Name"><![CDATA[2-Monitor failed transmissions]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -223,6 +210,18 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
                   <ATT name="Name"><![CDATA[12-Configure AVP Mapping]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="13-Differentiate between CDRs and Rf messages" mc="OpaqueAction" uid="7fa055de-55b9-4723-8b3d-a95a5a3058c8"/>
+                <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Be able to identify a CDR from a Rf message.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[13-Differentiate between CDRs and Rf messages]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -350,6 +349,31 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
+              <OBJECT>
+                <ID name="10-Support multiple file system" mc="OpaqueAction" uid="0a3f3c53-06a0-4248-9791-04de25ad32c0"/>
+                <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Be able to inspect different file systems and file masks.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[10-Support multiple file system]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="1-Check CDR consistency" mc="OpaqueAction" uid="ea05270f-6544-4871-a211-35ac91b8181f"/>
+                <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Check if the generated CDR file is consistent.
+The bad formed CDRs should be put in a different storage for reprocessing.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[1-Check CDR consistency]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -444,13 +468,13 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Sentinel Mediation layer" mc="StructuredActivityNode" uid="43044f7c-f7c5-43a5-98ed-982e8f91a24f"/>
+          <ID name="Sentinel Mediation Rf layer" mc="StructuredActivityNode" uid="43044f7c-f7c5-43a5-98ed-982e8f91a24f"/>
           <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
           <ATTRIBUTES>
             <ATT name="MustIsolate">false</ATT>
             <ATT name="IsMultipleInstance">false</ATT>
             <ATT name="IsCompensation">false</ATT>
-            <ATT name="Name"><![CDATA[Sentinel Mediation layer]]></ATT>
+            <ATT name="Name"><![CDATA[Sentinel Mediation Rf layer]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -524,6 +548,18 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
                   <ATT name="Name"><![CDATA[6-Handle re-authentication]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="7-Persist the messages" mc="OpaqueAction" uid="488cf42d-f939-4ffc-abf0-61f912f92eeb"/>
+                <PID name="UseCases" mc="Activity" uid="2dd59a47-7337-4b6f-ad6c-8b1bc526ce25"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Use CDR Ra to persist the successful and failed Rf messages.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[7-Persist the messages]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>

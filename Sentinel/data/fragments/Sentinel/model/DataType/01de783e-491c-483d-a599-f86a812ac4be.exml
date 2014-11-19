@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ProtobuffMessage" version="3">
+  <DEPS>
+    <ID name="ProtobuffMessage" mc="DataType" uid="01de783e-491c-483d-a599-f86a812ac4be"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="ProtobuffMessage" mc="DataType" uid="01de783e-491c-483d-a599-f86a812ac4be"/>
+    <PID name="protobuf" mc="Package" uid="6c27635c-d671-4fbb-9a87-3f788b23a65d"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ProtobuffMessage]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

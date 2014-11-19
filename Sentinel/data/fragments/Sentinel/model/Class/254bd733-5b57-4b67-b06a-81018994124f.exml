@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="NewFileEventImpl" version="3">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ASCIIFileReader" version="3">
   <DEPS>
-    <ID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
-    <EXTID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
-    <EXTID name="NewFileEvent" mc="Interface" uid="f22d98df-9eaa-407b-9c92-7c15b3eee4ee"/>
+    <ID name="ASCIIFileReader" mc="Class" uid="254bd733-5b57-4b67-b06a-81018994124f"/>
+    <EXTID name="FILE" mc="Class" uid="2613b80a-fcf1-4ab9-ab2c-840552fa20dd"/>
+    <EXTID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
   </DEPS>
   <OBJECT>
-    <ID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
-    <PID name="events" mc="Package" uid="c31459b9-f7c6-4cbe-9b77-c6e53b0101ac"/>
+    <ID name="ASCIIFileReader" mc="Class" uid="254bd733-5b57-4b67-b06a-81018994124f"/>
+    <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -16,14 +16,14 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[NewFileEventImpl]]></ATT>
+      <ATT name="Name"><![CDATA[ASCIIFileReader]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="fileHandleActivityImpl" mc="AssociationEnd" uid="eba53c6a-cae7-495c-ae9b-bb8a3b9dd99f"/>
-          <PID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+          <ID name="fILE" mc="AssociationEnd" uid="0e68b544-3f3e-4211-b9d7-e19af0dbd676"/>
+          <PID name="ASCIIFileReader" mc="Class" uid="254bd733-5b57-4b67-b06a-81018994124f"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -36,17 +36,17 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[fileHandleActivityImpl]]></ATT>
+            <ATT name="Name"><![CDATA[fILE]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+              <ID name="FILE" mc="Class" uid="2613b80a-fcf1-4ab9-ab2c-840552fa20dd"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="b51e2b78-1a0c-46df-b157-d3e5e748ce30"/>
-                <PID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+                <ID name="" mc="AssociationEnd" uid="7c00ac62-733e-4aa4-8df8-d2bd49ff0742"/>
+                <PID name="ASCIIFileReader" mc="Class" uid="254bd733-5b57-4b67-b06a-81018994124f"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -64,14 +64,14 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="fileHandleActivityImpl" mc="AssociationEnd" uid="eba53c6a-cae7-495c-ae9b-bb8a3b9dd99f"/>
+                    <COMPID name="fILE" mc="AssociationEnd" uid="0e68b544-3f3e-4211-b9d7-e19af0dbd676"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="is attached to" mc="Association" uid="87417f98-8478-4ec6-aa45-2c6a41a6e0f8"/>
-                      <PID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+                      <ID name="handles" mc="Association" uid="21c0408c-3ec9-41e5-9217-9256be397a21"/>
+                      <PID name="ASCIIFileReader" mc="Class" uid="254bd733-5b57-4b67-b06a-81018994124f"/>
                       <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[is attached to]]></ATT>
+                        <ATT name="Name"><![CDATA[handles]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES></DEPENDENCIES>
@@ -81,22 +81,23 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="is attached to" mc="Association" uid="87417f98-8478-4ec6-aa45-2c6a41a6e0f8"/>
+              <COMPID name="handles" mc="Association" uid="21c0408c-3ec9-41e5-9217-9256be397a21"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
-      <COMP relation="Realized">
+      <COMP relation="Parent">
         <OBJECT>
-          <ID name="InterfaceRealization" mc="InterfaceRealization" uid="48260d15-a9c2-43ba-ab8a-d76b69a442d7"/>
-          <PID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+          <ID name="Generalization" mc="Generalization" uid="5b1423d4-8aec-487d-bf9b-ff8ebef7a6c0"/>
+          <PID name="ASCIIFileReader" mc="Class" uid="254bd733-5b57-4b67-b06a-81018994124f"/>
           <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"><![CDATA[Generalization]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="Implemented">
-              <ID name="NewFileEvent" mc="Interface" uid="f22d98df-9eaa-407b-9c92-7c15b3eee4ee"/>
+            <LINK relation="SuperType">
+              <ID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

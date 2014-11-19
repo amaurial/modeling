@@ -1,16 +1,19 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="com.opencloud.fileinspectorra.resources" version="3">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="request records view" version="3">
   <DEPS>
-    <ID name="com.opencloud.fileinspectorra.resources" mc="Package" uid="997f1fcf-d0cd-4afa-b05d-eeaa1f923990"/>
+    <ID name="request records view" mc="Package" uid="997f1fcf-d0cd-4afa-b05d-eeaa1f923990"/>
     <COMPID name="JavaHashMap" mc="Class" uid="7d9764e6-b50d-41d2-80f0-33a235d9dc01"/>
     <COMPID name="Thread" mc="Class" uid="3924f0b1-9269-429d-bb42-2ff3a77952f0"/>
     <COMPID name="com.opencloud.fileinspectorra.resource Class diagram" mc="ClassDiagram" uid="63411489-8c53-4c30-8c9c-2b3302c6fae0"/>
+    <COMPID name="com.opencloud.fileinspectorra.resource containerView" mc="ClassDiagram" uid="7c4ddef0-f9a5-43ea-bfd0-08f8e3e87fb1"/>
+    <COMPID name="com.opencloud.fileinspectorra.resource request records view" mc="ClassDiagram" uid="db308b1a-8a13-4b00-bb7b-7110fb6f18de"/>
     <COMPID name="events" mc="Package" uid="c31459b9-f7c6-4cbe-9b77-c6e53b0101ac"/>
+    <COMPID name="protobuf" mc="Package" uid="6c27635c-d671-4fbb-9a87-3f788b23a65d"/>
     <COMPID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
     <COMPID name="ratype" mc="Package" uid="7ec612d1-1d15-457b-99b9-c7303bd2c88d"/>
   </DEPS>
   <OBJECT>
-    <ID name="com.opencloud.fileinspectorra.resources" mc="Package" uid="997f1fcf-d0cd-4afa-b05d-eeaa1f923990"/>
+    <ID name="request records view" mc="Package" uid="997f1fcf-d0cd-4afa-b05d-eeaa1f923990"/>
     <PID name="com.opencloud.fileinspectorra" mc="Package" uid="4642dca8-3286-4af4-a599-65e4e2af8b6c"/>
     <ATTRIBUTES>
       <ATT name="IsInstantiable">false</ATT>
@@ -18,7 +21,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[com.opencloud.fileinspectorra.resources]]></ATT>
+      <ATT name="Name"><![CDATA[request records view]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
@@ -28,9 +31,12 @@
         <COMPID name="ratype" mc="Package" uid="7ec612d1-1d15-457b-99b9-c7303bd2c88d"/>
         <COMPID name="JavaHashMap" mc="Class" uid="7d9764e6-b50d-41d2-80f0-33a235d9dc01"/>
         <COMPID name="Thread" mc="Class" uid="3924f0b1-9269-429d-bb42-2ff3a77952f0"/>
+        <COMPID name="protobuf" mc="Package" uid="6c27635c-d671-4fbb-9a87-3f788b23a65d"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="com.opencloud.fileinspectorra.resource Class diagram" mc="ClassDiagram" uid="63411489-8c53-4c30-8c9c-2b3302c6fae0"/>
+        <COMPID name="com.opencloud.fileinspectorra.resource containerView" mc="ClassDiagram" uid="7c4ddef0-f9a5-43ea-bfd0-08f8e3e87fb1"/>
+        <COMPID name="com.opencloud.fileinspectorra.resource request records view" mc="ClassDiagram" uid="db308b1a-8a13-4b00-bb7b-7110fb6f18de"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

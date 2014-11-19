@@ -2,10 +2,16 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ra" version="3">
   <DEPS>
     <ID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+    <COMPID name="ASCIIFileReader" mc="Class" uid="254bd733-5b57-4b67-b06a-81018994124f"/>
+    <COMPID name="ActivityInfoContainer" mc="Class" uid="8e782992-96eb-433a-a62d-2e6b8bcf99c7"/>
+    <COMPID name="FILE" mc="Class" uid="2613b80a-fcf1-4ab9-ab2c-840552fa20dd"/>
     <COMPID name="FileHandle" mc="Class" uid="983419d6-d0fe-47f2-8af2-4852deac78ff"/>
     <COMPID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
     <COMPID name="FileInspector" mc="Class" uid="56830258-095d-4339-9dc3-dff9df0a3c2c"/>
     <COMPID name="FileInspectorResourceAdaptor" mc="Class" uid="6462f0d8-0107-4a00-9024-f626b6a83642"/>
+    <COMPID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
+    <COMPID name="FileReaderEntryPoint" mc="Interface" uid="5f43a3f4-ae9b-45cc-a107-837204f84690"/>
+    <COMPID name="RecordMessage" mc="Class" uid="03b2d20c-7ecc-4389-acb1-b388b0e69c48"/>
   </DEPS>
   <OBJECT>
     <ID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
@@ -25,6 +31,100 @@
         <COMPID name="FileInspectorResourceAdaptor" mc="Class" uid="6462f0d8-0107-4a00-9024-f626b6a83642"/>
         <COMPID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
         <COMPID name="FileInspector" mc="Class" uid="56830258-095d-4339-9dc3-dff9df0a3c2c"/>
+        <OBJECT>
+          <ID name="FILESTATUS" mc="Enumeration" uid="0e4946fc-0b79-48ed-9019-1a9bc62e3f55"/>
+          <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[FILESTATUS]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="OPENED" mc="EnumerationLiteral" uid="cf0adb7a-56b6-4b48-84b4-6a660cab4e3e"/>
+                <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[OPENED]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="CLOSED" mc="EnumerationLiteral" uid="da696923-0ed7-4719-a4d9-699daa2db214"/>
+                <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[CLOSED]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="READYTOCLOSE" mc="EnumerationLiteral" uid="db762911-9841-45f8-93ff-157df42887ea"/>
+                <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[READYTOCLOSE]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="READING" mc="EnumerationLiteral" uid="58e88365-9544-4f0a-86c7-5c9adc8ca115"/>
+                <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[READING]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <COMPID name="FILE" mc="Class" uid="2613b80a-fcf1-4ab9-ab2c-840552fa20dd"/>
+        <COMPID name="ActivityInfoContainer" mc="Class" uid="8e782992-96eb-433a-a62d-2e6b8bcf99c7"/>
+        <COMPID name="FileReaderEntryPoint" mc="Interface" uid="5f43a3f4-ae9b-45cc-a107-837204f84690"/>
+        <OBJECT>
+          <ID name="FILETYPE" mc="Enumeration" uid="49c46679-3060-4dd3-b620-531d8964e0a2"/>
+          <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[FILETYPE]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="PROTOBUF" mc="EnumerationLiteral" uid="fb0659e1-a523-41f9-b6b0-271731dacbc8"/>
+                <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[PROTOBUF]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="ASCII" mc="EnumerationLiteral" uid="ce9d99ec-f120-4d0a-b177-91e4a666b942"/>
+                <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[ASCII]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <COMPID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
+        <COMPID name="ASCIIFileReader" mc="Class" uid="254bd733-5b57-4b67-b06a-81018994124f"/>
+        <COMPID name="RecordMessage" mc="Class" uid="03b2d20c-7ecc-4389-acb1-b388b0e69c48"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

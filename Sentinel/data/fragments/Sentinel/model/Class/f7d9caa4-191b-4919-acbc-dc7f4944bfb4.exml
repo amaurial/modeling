@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="NewFileEventImpl" version="3">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FileReader" version="3">
   <DEPS>
-    <ID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
-    <EXTID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
-    <EXTID name="NewFileEvent" mc="Interface" uid="f22d98df-9eaa-407b-9c92-7c15b3eee4ee"/>
+    <ID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
+    <EXTID name="FileReaderEntryPoint" mc="Interface" uid="5f43a3f4-ae9b-45cc-a107-837204f84690"/>
+    <EXTID name="RecordMessage" mc="Class" uid="03b2d20c-7ecc-4389-acb1-b388b0e69c48"/>
   </DEPS>
   <OBJECT>
-    <ID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
-    <PID name="events" mc="Package" uid="c31459b9-f7c6-4cbe-9b77-c6e53b0101ac"/>
+    <ID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
+    <PID name="ra" mc="Package" uid="7effd4e2-be73-4ccc-8d61-444c324fda68"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -16,14 +16,14 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[NewFileEventImpl]]></ATT>
+      <ATT name="Name"><![CDATA[FileReader]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="fileHandleActivityImpl" mc="AssociationEnd" uid="eba53c6a-cae7-495c-ae9b-bb8a3b9dd99f"/>
-          <PID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+          <ID name="recordMessage" mc="AssociationEnd" uid="e4198265-80f0-491d-859c-d31915f2906c"/>
+          <PID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -31,22 +31,22 @@
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[fileHandleActivityImpl]]></ATT>
+            <ATT name="Name"><![CDATA[recordMessage]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+              <ID name="RecordMessage" mc="Class" uid="03b2d20c-7ecc-4389-acb1-b388b0e69c48"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="b51e2b78-1a0c-46df-b157-d3e5e748ce30"/>
-                <PID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+                <ID name="" mc="AssociationEnd" uid="79b61701-d28c-4b8c-aadc-1a13bfdd0858"/>
+                <PID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -64,14 +64,14 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="fileHandleActivityImpl" mc="AssociationEnd" uid="eba53c6a-cae7-495c-ae9b-bb8a3b9dd99f"/>
+                    <COMPID name="recordMessage" mc="AssociationEnd" uid="e4198265-80f0-491d-859c-d31915f2906c"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="is attached to" mc="Association" uid="87417f98-8478-4ec6-aa45-2c6a41a6e0f8"/>
-                      <PID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+                      <ID name="Compose" mc="Association" uid="916e2ed2-00c9-43bc-a8c8-30d0aaced427"/>
+                      <PID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
                       <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[is attached to]]></ATT>
+                        <ATT name="Name"><![CDATA[Compose]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES></DEPENDENCIES>
@@ -81,22 +81,22 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="is attached to" mc="Association" uid="87417f98-8478-4ec6-aa45-2c6a41a6e0f8"/>
+              <COMPID name="Compose" mc="Association" uid="916e2ed2-00c9-43bc-a8c8-30d0aaced427"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="Realized">
         <OBJECT>
-          <ID name="InterfaceRealization" mc="InterfaceRealization" uid="48260d15-a9c2-43ba-ab8a-d76b69a442d7"/>
-          <PID name="NewFileEventImpl" mc="Class" uid="6cbdccac-3385-43e3-bf3a-de4eb1f92624"/>
+          <ID name="InterfaceRealization" mc="InterfaceRealization" uid="56112556-f641-4874-ab30-00c5cd4fb7ff"/>
+          <PID name="FileReader" mc="Class" uid="f7d9caa4-191b-4919-acbc-dc7f4944bfb4"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Implemented">
-              <ID name="NewFileEvent" mc="Interface" uid="f22d98df-9eaa-407b-9c92-7c15b3eee4ee"/>
+              <ID name="FileReaderEntryPoint" mc="Interface" uid="5f43a3f4-ae9b-45cc-a107-837204f84690"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

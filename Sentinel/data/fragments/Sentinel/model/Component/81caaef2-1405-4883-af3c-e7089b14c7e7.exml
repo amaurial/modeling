@@ -4,7 +4,7 @@
     <ID name="File inspector RA" mc="Component" uid="81caaef2-1405-4883-af3c-e7089b14c7e7"/>
     <COMPID name="com.opencloud.fileinspectorra" mc="Package" uid="4642dca8-3286-4af4-a599-65e4e2af8b6c"/>
     <EXTID name="Converged Scenario" mc="Package" uid="693df2b8-e265-4b39-8c3c-7afd7dccd82e"/>
-    <EXTID name="Rf service Sentinel Fron end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+    <EXTID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
     <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
   </DEPS>
   <OBJECT>
@@ -83,7 +83,7 @@
                   <LINK relation="Target">
                     <REFOBJ>
                       <ID name="Port2" mc="Port" uid="24f74d11-4d41-46ed-b886-71a1e42a4ab0"/>
-                      <PID name="Rf service Sentinel Fron end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
+                      <PID name="Rf service Sentinel Front end" mc="Component" uid="a482cd14-e69d-49d4-9d19-76bebe7a296f"/>
                     </REFOBJ>
                   </LINK>
                   <COMP relation="Opposite">

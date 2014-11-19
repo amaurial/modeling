@@ -5,6 +5,7 @@
     <EXTID name="CDRRequestActivity" mc="Interface" uid="34d68b93-a7d7-4588-8578-50dad66655b6"/>
     <EXTID name="FileHandle" mc="Class" uid="983419d6-d0fe-47f2-8af2-4852deac78ff"/>
     <EXTID name="FileInspectorResourceAdaptor" mc="Class" uid="6462f0d8-0107-4a00-9024-f626b6a83642"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
   </DEPS>
   <OBJECT>
     <ID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
@@ -133,10 +134,10 @@
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="has ra" mc="Association" uid="a67a96a6-1821-486b-916a-c798b2528bb2"/>
+                      <ID name="has reference to" mc="Association" uid="a67a96a6-1821-486b-916a-c798b2528bb2"/>
                       <PID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
                       <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[has ra]]></ATT>
+                        <ATT name="Name"><![CDATA[has reference to]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES></DEPENDENCIES>
@@ -146,7 +147,107 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="has ra" mc="Association" uid="a67a96a6-1821-486b-916a-c798b2528bb2"/>
+              <COMPID name="has reference to" mc="Association" uid="a67a96a6-1821-486b-916a-c798b2528bb2"/>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="fileInspectorResourceAdaptor" mc="AssociationEnd" uid="d6d2b187-81ac-41cf-a358-c5420e3f7bcc"/>
+          <PID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[fileInspectorResourceAdaptor]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="FileInspectorResourceAdaptor" mc="Class" uid="6462f0d8-0107-4a00-9024-f626b6a83642"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="92c836ab-8395-4152-a7d9-3521ae61fe8c"/>
+                <PID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="fileInspectorResourceAdaptor" mc="AssociationEnd" uid="d6d2b187-81ac-41cf-a358-c5420e3f7bcc"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="request records" mc="Association" uid="92178f99-82e6-42d0-b8f4-ac032dbc2bdd"/>
+                      <PID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[request records]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="request records" mc="Association" uid="92178f99-82e6-42d0-b8f4-ac032dbc2bdd"/>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="Note" mc="Note" uid="df34096d-014c-4dca-af4e-69db9daa5e39"/>
+                <PID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[the response is a list of RecordMessage]]></ATT>
+                  <ATT name="Name"><![CDATA[Note]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                  <COMP relation="DependsOnDependency">
+                    <OBJECT>
+                      <ID name="" mc="Dependency" uid="f65201aa-abc7-42b2-99f5-fbe5421907b0"/>
+                      <PID name="FileHandleActivityImpl" mc="Class" uid="57d412d7-23fd-4fa2-b350-a0a0d8c5178b"/>
+                      <ATTRIBUTES>
+                        <ATT name="DependsOnId"></ATT>
+                        <ATT name="DependsOnName"></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="fileReader" mc="AssociationEnd" uid="519dba5c-aa13-4d4e-b671-2c2de4cb006b"/>
+                            <PID name="FileInspectorResourceAdaptor" mc="Class" uid="6462f0d8-0107-4a00-9024-f626b6a83642"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
