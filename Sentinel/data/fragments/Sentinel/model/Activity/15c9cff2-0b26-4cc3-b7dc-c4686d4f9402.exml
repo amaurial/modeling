@@ -208,7 +208,7 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 <ID name="6-Monitor failed transmissions" mc="OpaqueAction" uid="45915079-88bd-4ee5-8f10-6fd77bbc76e7"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
-                  <ATT name="Body"><![CDATA[keep checking for failed transmissions and trigger the restart CDR transmission.]]></ATT>
+                  <ATT name="Body"><![CDATA[keep checking for failed transmissions and drop the entire transmission and start again.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
                   <ATT name="Name"><![CDATA[6-Monitor failed transmissions]]></ATT>
@@ -241,13 +241,13 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="15-Raise alarm for CDR not transmitted" mc="OpaqueAction" uid="57612b7d-1bb7-4a24-ae57-1bcd8daa82ed"/>
+                <ID name="15-Raise alarm for file not transmitted" mc="OpaqueAction" uid="57612b7d-1bb7-4a24-ae57-1bcd8daa82ed"/>
                 <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
                 <ATTRIBUTES>
                   <ATT name="Body"><![CDATA[Raise an alarm in case of failure of CDR transmission after n atempts.]]></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[15-Raise alarm for CDR not transmitted]]></ATT>
+                  <ATT name="Name"><![CDATA[15-Raise alarm for file not transmitted]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
@@ -426,6 +426,18 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
                 </ATTRIBUTES>
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
+              <OBJECT>
+                <ID name="Report peer connection" mc="OpaqueAction" uid="8cda6c67-fb25-4917-9a6a-b97bc83e1f60"/>
+                <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"><![CDATA[Be able to report if the remote peer is active.]]></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Report peer connection]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -479,6 +491,42 @@ The bad formed CDRs should be put in a different storage for reprocessing.]]></A
               </OBJECT>
             </COMP>
           </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Action" mc="OpaqueAction" uid="9b3a28ce-3414-481a-9804-1aeb10f2da8b"/>
+          <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Action]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Action1" mc="OpaqueAction" uid="a914274c-e90a-422c-b08e-d73eb724fff0"/>
+          <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Action1]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Action2" mc="OpaqueAction" uid="4d58237d-c39d-4c30-b517-3720c05d51ca"/>
+          <PID name="UseCases" mc="Activity" uid="15c9cff2-0b26-4cc3-b7dc-c4686d4f9402"/>
+          <ATTRIBUTES>
+            <ATT name="Body"></ATT>
+            <ATT name="IsMultipleInstance">false</ATT>
+            <ATT name="IsCompensation">false</ATT>
+            <ATT name="Name"><![CDATA[Action2]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="OwnedCollaboration">

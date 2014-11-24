@@ -5,7 +5,6 @@
     <COMPID name="Basic interation flow" mc="Interaction" uid="923342b7-8984-4a5a-bc84-4869381d2032"/>
     <COMPID name="CDR RA" mc="Component" uid="17771900-f063-4692-a4b0-ba690dd8785d"/>
     <COMPID name="CDR Rf" mc="Component" uid="02346eb1-e30a-43c7-8bee-fcbb860e8d00"/>
-    <COMPID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
     <COMPID name="CDR state" mc="StateMachine" uid="cd927634-c862-470b-80a5-28b8271a7e39"/>
     <COMPID name="Diameter Rf RA" mc="Component" uid="9dd30ae4-7b02-4640-b810-5e833a77410a"/>
     <COMPID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
@@ -37,7 +36,6 @@
         <COMPID name="file state" mc="StateMachine" uid="a08df445-0fc7-4f25-a5dd-ba2112a6d219"/>
         <COMPID name="CDR state" mc="StateMachine" uid="cd927634-c862-470b-80a5-28b8271a7e39"/>
         <COMPID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
-        <COMPID name="CDR Rf state machine" mc="StateMachine" uid="cf4bca6d-1bb1-4fe3-8ee0-206ae2fd2046"/>
       </COMP>
       <COMP relation="Declared">
         <OBJECT>

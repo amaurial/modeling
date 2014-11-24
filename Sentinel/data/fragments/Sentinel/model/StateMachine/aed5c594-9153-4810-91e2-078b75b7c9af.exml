@@ -34,7 +34,7 @@
                 <DEPENDENCIES>
                   <COMP relation="OutGoing">
                     <OBJECT>
-                      <ID name="Transition" mc="Transition" uid="2ef710d7-9cd6-4293-b250-87aa206372ce"/>
+                      <ID name="Transition" mc="Transition" uid="5419c603-6a0f-4895-9eb1-320d5d11abb1"/>
                       <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                       <ATTRIBUTES>
                         <ATT name="Effect"></ATT>
@@ -48,7 +48,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Checking Pending files" mc="State" uid="1daef62a-41df-40f7-8240-854d5f60ba34"/>
+                            <ID name="Checking for new files" mc="State" uid="44defb6e-219d-46a8-a79e-18e16a3ef342"/>
                             <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                           </REFOBJ>
                         </LINK>
@@ -58,64 +58,10 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Checking Pending files" mc="State" uid="1daef62a-41df-40f7-8240-854d5f60ba34"/>
+                <ID name="Checking for new files" mc="State" uid="44defb6e-219d-46a8-a79e-18e16a3ef342"/>
                 <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                 <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Checking Pending files]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="OutGoing">
-                    <OBJECT>
-                      <ID name="Transition" mc="Transition" uid="9b2a12c3-3d0d-4c0d-9f32-d0db6bee3762"/>
-                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
-                      <ATTRIBUTES>
-                        <ATT name="Effect"></ATT>
-                        <ATT name="ReceivedEvents"></ATT>
-                        <ATT name="SentEvents"></ATT>
-                        <ATT name="Guard"><![CDATA[no pending files]]></ATT>
-                        <ATT name="PostCondition"></ATT>
-                        <ATT name="Name"><![CDATA[Transition]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Target">
-                          <REFOBJ>
-                            <ID name="Waiting for new files" mc="State" uid="44defb6e-219d-46a8-a79e-18e16a3ef342"/>
-                            <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                    <OBJECT>
-                      <ID name="Transition1" mc="Transition" uid="e9a0d326-38bc-41cd-91cb-d1c68189a230"/>
-                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
-                      <ATTRIBUTES>
-                        <ATT name="Effect"></ATT>
-                        <ATT name="ReceivedEvents"></ATT>
-                        <ATT name="SentEvents"></ATT>
-                        <ATT name="Guard"><![CDATA[pending files]]></ATT>
-                        <ATT name="PostCondition"></ATT>
-                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Target">
-                          <REFOBJ>
-                            <ID name="Processing file" mc="State" uid="df4fac91-0e55-4512-9c4f-5de8c495f00f"/>
-                            <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Waiting for new files" mc="State" uid="44defb6e-219d-46a8-a79e-18e16a3ef342"/>
-                <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Waiting for new files]]></ATT>
+                  <ATT name="Name"><![CDATA[Checking for new files]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -142,13 +88,13 @@
                       </DEPENDENCIES>
                     </OBJECT>
                     <OBJECT>
-                      <ID name="Transition1" mc="Transition" uid="a66bfa63-d8ae-4eab-a832-5d269f37b208"/>
+                      <ID name="Transition1" mc="Transition" uid="e595ddc5-81e4-41fb-9c28-5c450f75e848"/>
                       <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                       <ATTRIBUTES>
                         <ATT name="Effect"></ATT>
                         <ATT name="ReceivedEvents"></ATT>
                         <ATT name="SentEvents"></ATT>
-                        <ATT name="Guard"><![CDATA[no new file]]></ATT>
+                        <ATT name="Guard"><![CDATA[no files]]></ATT>
                         <ATT name="PostCondition"></ATT>
                         <ATT name="Name"><![CDATA[Transition1]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -156,7 +102,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Checking Pending files" mc="State" uid="1daef62a-41df-40f7-8240-854d5f60ba34"/>
+                            <ID name="Checking for new files" mc="State" uid="44defb6e-219d-46a8-a79e-18e16a3ef342"/>
                             <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                           </REFOBJ>
                         </LINK>
@@ -173,6 +119,36 @@
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
+                  <COMP relation="Internal">
+                    <OBJECT>
+                      <ID name="Do" mc="InternalTransition" uid="767846f6-d4f4-4a79-a1e6-dbf305037c8d"/>
+                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"><![CDATA[Do]]></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[fire Event]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Do]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Do" mc="InternalTransition" uid="272715a5-0b1a-457e-be64-463fd15c0dd9"/>
+                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"><![CDATA[Do]]></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[start timer]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Do]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
                   <COMP relation="OutGoing">
                     <OBJECT>
                       <ID name="Transition" mc="Transition" uid="f0223fd7-2226-4fdb-9874-f4cb14b301b5"/>
@@ -181,7 +157,7 @@
                         <ATT name="Effect"></ATT>
                         <ATT name="ReceivedEvents"></ATT>
                         <ATT name="SentEvents"></ATT>
-                        <ATT name="Guard"><![CDATA[event sucessfull received]]></ATT>
+                        <ATT name="Guard"><![CDATA[event fired]]></ATT>
                         <ATT name="PostCondition"></ATT>
                         <ATT name="Name"><![CDATA[Transition]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -196,13 +172,13 @@
                       </DEPENDENCIES>
                     </OBJECT>
                     <OBJECT>
-                      <ID name="Transition1" mc="Transition" uid="32416df5-bfab-4998-83b2-e6acc7b9d595"/>
+                      <ID name="Transition1" mc="Transition" uid="ac8de4d2-15bf-4ef3-b1c5-c72359987e8c"/>
                       <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                       <ATTRIBUTES>
                         <ATT name="Effect"></ATT>
                         <ATT name="ReceivedEvents"></ATT>
                         <ATT name="SentEvents"></ATT>
-                        <ATT name="Guard"><![CDATA[fire Event]]></ATT>
+                        <ATT name="Guard"><![CDATA[file processed]]></ATT>
                         <ATT name="PostCondition"></ATT>
                         <ATT name="Name"><![CDATA[Transition1]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -210,7 +186,28 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Processing file" mc="State" uid="df4fac91-0e55-4512-9c4f-5de8c495f00f"/>
+                            <ID name="Store file" mc="State" uid="74ae3750-ba13-4f6a-9da4-646cfad5ced3"/>
+                            <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition2" mc="Transition" uid="89de0041-6ec5-43cd-b829-87d683521378"/>
+                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[deactivate]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition2]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Final State" mc="FinalState" uid="c5c779ae-03dd-4327-b17c-c52a62c9e9a2"/>
                             <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                           </REFOBJ>
                         </LINK>
@@ -249,6 +246,90 @@
                         </LINK>
                       </DEPENDENCIES>
                     </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition1" mc="Transition" uid="9dbddba7-232d-4202-bb3c-602522900877"/>
+                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[timeout]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Closed" mc="State" uid="64fc811f-0340-4c7e-aa3b-1c242a4563ea"/>
+                            <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition2" mc="Transition" uid="d30264aa-e662-4168-81f4-d80af39afd13"/>
+                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[file processed]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition2]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Store file" mc="State" uid="74ae3750-ba13-4f6a-9da4-646cfad5ced3"/>
+                            <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition3" mc="Transition" uid="9c9dffcb-b8ca-4c8d-ba8c-25f875552127"/>
+                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[file not processed]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition3]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Closed" mc="State" uid="64fc811f-0340-4c7e-aa3b-1c242a4563ea"/>
+                            <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="Transition4" mc="Transition" uid="4e680032-d772-4dfc-b6c3-19ec5699ad40"/>
+                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"><![CDATA[deactivate]]></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition4]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Final State" mc="FinalState" uid="c5c779ae-03dd-4327-b17c-c52a62c9e9a2"/>
+                            <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
                   </COMP>
                 </DEPENDENCIES>
               </OBJECT>
@@ -282,22 +363,34 @@
                         </LINK>
                       </DEPENDENCIES>
                     </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Closed" mc="State" uid="64fc811f-0340-4c7e-aa3b-1c242a4563ea"/>
+                <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Closed]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
                     <OBJECT>
-                      <ID name="Transition1" mc="Transition" uid="21a7d976-ae75-40e0-b21e-59ab770b4e2e"/>
+                      <ID name="Transition" mc="Transition" uid="de7d334b-d3a7-4255-9b88-32ed90bc53bf"/>
                       <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                       <ATTRIBUTES>
                         <ATT name="Effect"></ATT>
                         <ATT name="ReceivedEvents"></ATT>
                         <ATT name="SentEvents"></ATT>
-                        <ATT name="Guard"><![CDATA[end of file]]></ATT>
+                        <ATT name="Guard"></ATT>
                         <ATT name="PostCondition"></ATT>
-                        <ATT name="Name"><![CDATA[Transition1]]></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Checking Pending files" mc="State" uid="1daef62a-41df-40f7-8240-854d5f60ba34"/>
+                            <ID name="Checking for new files" mc="State" uid="44defb6e-219d-46a8-a79e-18e16a3ef342"/>
                             <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
                           </REFOBJ>
                         </LINK>
@@ -305,6 +398,48 @@
                     </OBJECT>
                   </COMP>
                 </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Store file" mc="State" uid="74ae3750-ba13-4f6a-9da4-646cfad5ced3"/>
+                <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Store file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="OutGoing">
+                    <OBJECT>
+                      <ID name="Transition" mc="Transition" uid="6c934813-88ee-4e8d-b262-3f53c172e4b2"/>
+                      <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                      <ATTRIBUTES>
+                        <ATT name="Effect"></ATT>
+                        <ATT name="ReceivedEvents"></ATT>
+                        <ATT name="SentEvents"></ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="PostCondition"></ATT>
+                        <ATT name="Name"><![CDATA[Transition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Closed" mc="State" uid="64fc811f-0340-4c7e-aa3b-1c242a4563ea"/>
+                            <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Final State" mc="FinalState" uid="c5c779ae-03dd-4327-b17c-c52a62c9e9a2"/>
+                <PID name="File Inspector state machine" mc="StateMachine" uid="aed5c594-9153-4810-91e2-078b75b7c9af"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Final State]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
             </COMP>
           </DEPENDENCIES>
